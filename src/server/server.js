@@ -1000,7 +1000,7 @@ app.post("/api/fund-wallet", async (req, res) => {
 
         currency: "NGN",
 
-        redirect_url: "http://localhost:5000/api/payment-callback",
+       redirect_url: "https://giftly-1.onrender.com/api/payment-callback",
 
         customer: {
           email: user.email,
