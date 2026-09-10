@@ -1,0 +1,1155 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Buy Data — Giftly</title>
+
+    <link
+        rel="stylesheet"
+        href="./output.css"
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+</head>
+
+
+<body class="min-h-screen bg-[#FAFAF8] text-[#17201E] font-['Inter']">
+
+
+    <!-- =====================================================
+         MOBILE HEADER
+    ====================================================== -->
+
+    <header
+        class="lg:hidden sticky top-0 z-40 bg-white border-b border-gray-200"
+    >
+
+        <div
+            class="h-16 px-5 flex items-center justify-between"
+        >
+
+            <a
+                href="dashboard.html"
+                class="flex items-center gap-2.5"
+            >
+
+                <div
+                    class="w-9 h-9 rounded-xl bg-[#D97706] text-white flex items-center justify-center font-extrabold"
+                >
+                    G
+                </div>
+
+                <span class="font-extrabold text-lg">
+                    Giftly
+                </span>
+
+            </a>
+
+
+            <button
+                id="mobileMenuBtn"
+                type="button"
+                class="w-10 h-10 rounded-xl border border-gray-200 flex items-center justify-center"
+            >
+
+                <svg
+                    class="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.8"
+                >
+
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M4 6h16M4 12h16M4 18h16"
+                    />
+
+                </svg>
+
+            </button>
+
+        </div>
+
+
+        <!-- MOBILE MENU -->
+
+        <div
+            id="mobileMenu"
+            class="hidden border-t border-gray-100 bg-white px-5 py-4"
+        >
+
+            <nav class="space-y-1">
+
+                <a
+                    href="dashboard.html"
+                    class="block px-3 py-3 rounded-xl text-sm text-gray-600 hover:bg-gray-50"
+                >
+                    Dashboard
+                </a>
+
+                <a
+                    href="sell-giftcard.html"
+                    class="block px-3 py-3 rounded-xl text-sm text-gray-600 hover:bg-gray-50"
+                >
+                    Sell Gift Card
+                </a>
+
+                <a
+                    href="airtime.html"
+                    class="block px-3 py-3 rounded-xl text-sm text-gray-600 hover:bg-gray-50"
+                >
+                    Airtime
+                </a>
+
+                <a
+                    href="data.html"
+                    class="block px-3 py-3 rounded-xl bg-orange-50 text-[#D97706] text-sm font-bold"
+                >
+                    Data
+                </a>
+
+                <a
+                    href="transactions.html"
+                    class="block px-3 py-3 rounded-xl text-sm text-gray-600 hover:bg-gray-50"
+                >
+                    Transactions
+                </a>
+
+                <a
+                    href="profile.html"
+                    class="block px-3 py-3 rounded-xl text-sm text-gray-600 hover:bg-gray-50"
+                >
+                    Profile & Settings
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         DESKTOP SIDEBAR
+    ====================================================== -->
+
+    <aside
+        class="hidden lg:flex fixed inset-y-0 left-0 z-40 w-64 bg-white border-r border-gray-200 flex-col"
+    >
+
+        <!-- LOGO -->
+
+        <div class="h-20 px-6 flex items-center">
+
+            <a
+                href="dashboard.html"
+                class="flex items-center gap-3"
+            >
+
+                <div
+                    class="w-10 h-10 rounded-xl bg-[#D97706] text-white flex items-center justify-center font-extrabold"
+                >
+                    G
+                </div>
+
+                <span
+                    class="text-xl font-extrabold tracking-tight"
+                >
+                    Giftly
+                </span>
+
+            </a>
+
+        </div>
+
+
+
+        <!-- NAVIGATION -->
+
+        <nav class="flex-1 px-4 py-5 space-y-1">
+
+            <a
+                href="dashboard.html"
+                class="flex items-center gap-3 px-3 py-3 rounded-xl text-sm font-medium text-gray-600 hover:bg-gray-50 transition"
+            >
+                🏠
+                Dashboard
+            </a>
+
+
+            <a
+                href="sell-giftcard.html"
+                class="flex items-center gap-3 px-3 py-3 rounded-xl text-sm font-medium text-gray-600 hover:bg-gray-50 transition"
+            >
+                🎁
+                Sell Gift Card
+            </a>
+
+
+            <a
+                href="airtime.html"
+                class="flex items-center gap-3 px-3 py-3 rounded-xl text-sm font-medium text-gray-600 hover:bg-gray-50 transition"
+            >
+                📱
+                Airtime
+            </a>
+
+
+            <a
+                href="data.html"
+                class="flex items-center gap-3 px-3 py-3 rounded-xl bg-orange-50 text-[#D97706] text-sm font-bold"
+            >
+                📶
+                Data
+            </a>
+
+
+            <a
+                href="transactions.html"
+                class="flex items-center gap-3 px-3 py-3 rounded-xl text-sm font-medium text-gray-600 hover:bg-gray-50 transition"
+            >
+                ↔
+                Transactions
+            </a>
+
+
+            <div class="pt-7">
+
+                <p
+                    class="px-3 mb-3 text-[10px] uppercase tracking-widest font-bold text-gray-400"
+                >
+                    Account
+                </p>
+
+
+                <a
+                    href="profile.html"
+                    class="flex items-center gap-3 px-3 py-3 rounded-xl text-sm font-medium text-gray-600 hover:bg-gray-50 transition"
+                >
+                    ⚙
+                    Profile & Settings
+                </a>
+
+            </div>
+
+        </nav>
+
+
+        <!-- USER -->
+
+        <div class="border-t border-gray-100 p-4">
+
+            <div class="flex items-center gap-3">
+
+                <div
+                    class="w-10 h-10 rounded-full bg-[#17201E] text-white flex items-center justify-center text-xs font-bold"
+                >
+                    FS
+                </div>
+
+
+                <div class="min-w-0">
+
+                    <p class="text-sm font-bold truncate">
+                        Favour Samuel
+                    </p>
+
+                    <p class="text-xs text-gray-400 truncate">
+                        user@example.com
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <div class="lg:ml-64 min-h-screen">
+
+
+        <!-- DESKTOP HEADER -->
+
+        <header
+            class="hidden lg:flex h-20 bg-white border-b border-gray-200 px-8 items-center"
+        >
+
+            <div>
+
+                <p class="text-sm text-gray-400">
+                    Services
+                </p>
+
+                <h1 class="text-xl font-extrabold">
+                    Buy Data
+                </h1>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- CONTENT -->
+
+        <main
+            class="p-5 sm:p-7 lg:p-8 max-w-6xl"
+        >
+
+
+            <!-- MOBILE TITLE -->
+
+            <div class="lg:hidden mb-7">
+
+                <p class="text-sm text-gray-400">
+                    Services
+                </p>
+
+                <h1 class="text-2xl font-extrabold mt-1">
+                    Buy Data
+                </h1>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 INTRO
+            ================================================== -->
+
+            <div class="mb-8">
+
+                <h2
+                    class="text-2xl sm:text-3xl font-extrabold tracking-tight"
+                >
+                    Choose a data bundle
+                </h2>
+
+                <p
+                    class="mt-2 text-sm sm:text-base text-gray-400"
+                >
+                    Buy mobile data directly from your Giftly wallet.
+                </p>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 MAIN GRID
+            ================================================== -->
+
+            <div
+                class="grid grid-cols-1 lg:grid-cols-3 gap-6"
+            >
+
+
+                <!-- =================================================
+                     DATA FORM
+                ================================================== -->
+
+                <section
+                    class="lg:col-span-2 bg-white border border-gray-200 rounded-2xl p-5 sm:p-7"
+                >
+
+                    <form id="dataForm">
+
+
+                        <!-- NETWORK -->
+
+                        <div>
+
+                            <label class="block text-sm font-bold">
+                                Select network
+                            </label>
+
+
+                            <div
+                                class="mt-3 grid grid-cols-2 sm:grid-cols-4 gap-3"
+                            >
+
+
+                                <label class="cursor-pointer">
+
+                                    <input
+                                        type="radio"
+                                        name="network"
+                                        value="MTN"
+                                        class="peer sr-only"
+                                        checked
+                                    >
+
+                                    <div
+                                        class="h-20 rounded-xl border border-gray-200 flex flex-col items-center justify-center peer-checked:border-[#D97706] peer-checked:bg-orange-50 transition"
+                                    >
+
+                                        <span class="text-xl">
+                                            📱
+                                        </span>
+
+                                        <span
+                                            class="mt-1 text-xs font-bold"
+                                        >
+                                            MTN
+                                        </span>
+
+                                    </div>
+
+                                </label>
+
+
+                                <label class="cursor-pointer">
+
+                                    <input
+                                        type="radio"
+                                        name="network"
+                                        value="Airtel"
+                                        class="peer sr-only"
+                                    >
+
+                                    <div
+                                        class="h-20 rounded-xl border border-gray-200 flex flex-col items-center justify-center peer-checked:border-[#D97706] peer-checked:bg-orange-50 transition"
+                                    >
+
+                                        <span class="text-xl">
+                                            📱
+                                        </span>
+
+                                        <span
+                                            class="mt-1 text-xs font-bold"
+                                        >
+                                            Airtel
+                                        </span>
+
+                                    </div>
+
+                                </label>
+
+
+                                <label class="cursor-pointer">
+
+                                    <input
+                                        type="radio"
+                                        name="network"
+                                        value="Glo"
+                                        class="peer sr-only"
+                                    >
+
+                                    <div
+                                        class="h-20 rounded-xl border border-gray-200 flex flex-col items-center justify-center peer-checked:border-[#D97706] peer-checked:bg-orange-50 transition"
+                                    >
+
+                                        <span class="text-xl">
+                                            📱
+                                        </span>
+
+                                        <span
+                                            class="mt-1 text-xs font-bold"
+                                        >
+                                            Glo
+                                        </span>
+
+                                    </div>
+
+                                </label>
+
+
+                                <label class="cursor-pointer">
+
+                                    <input
+                                        type="radio"
+                                        name="network"
+                                        value="9mobile"
+                                        class="peer sr-only"
+                                    >
+
+                                    <div
+                                        class="h-20 rounded-xl border border-gray-200 flex flex-col items-center justify-center peer-checked:border-[#D97706] peer-checked:bg-orange-50 transition"
+                                    >
+
+                                        <span class="text-xl">
+                                            📱
+                                        </span>
+
+                                        <span
+                                            class="mt-1 text-xs font-bold"
+                                        >
+                                            9mobile
+                                        </span>
+
+                                    </div>
+
+                                </label>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- PHONE NUMBER -->
+
+                        <div class="mt-6">
+
+                            <label
+                                for="phoneNumber"
+                                class="block text-sm font-bold"
+                            >
+                                Phone number
+                            </label>
+
+
+                            <input
+                                id="phoneNumber"
+                                type="tel"
+                                inputmode="numeric"
+                                maxlength="11"
+                                placeholder="08012345678"
+                                class="mt-2 w-full h-12 px-4 rounded-xl border border-gray-200 text-sm outline-none focus:border-[#D97706] focus:ring-4 focus:ring-orange-100 transition"
+                            >
+
+                        </div>
+
+
+
+                        <!-- DATA BUNDLES -->
+
+                        <div class="mt-6">
+
+                            <label class="block text-sm font-bold">
+                                Choose data bundle
+                            </label>
+
+
+                            <div
+                                class="mt-3 grid grid-cols-2 sm:grid-cols-3 gap-3"
+                            >
+
+
+                                <label class="cursor-pointer">
+
+                                    <input
+                                        type="radio"
+                                        name="bundle"
+                                        value="500MB"
+                                        data-price="150"
+                                        class="peer sr-only"
+                                    >
+
+                                    <div
+                                        class="rounded-xl border border-gray-200 p-4 peer-checked:border-[#D97706] peer-checked:bg-orange-50 transition"
+                                    >
+
+                                        <p class="text-sm font-extrabold">
+                                            500 MB
+                                        </p>
+
+                                        <p
+                                            class="mt-1 text-xs text-gray-400"
+                                        >
+                                            ₦150
+                                        </p>
+
+                                    </div>
+
+                                </label>
+
+
+
+                                <label class="cursor-pointer">
+
+                                    <input
+                                        type="radio"
+                                        name="bundle"
+                                        value="1GB"
+                                        data-price="300"
+                                        class="peer sr-only"
+                                        checked
+                                    >
+
+                                    <div
+                                        class="rounded-xl border border-gray-200 p-4 peer-checked:border-[#D97706] peer-checked:bg-orange-50 transition"
+                                    >
+
+                                        <p class="text-sm font-extrabold">
+                                            1 GB
+                                        </p>
+
+                                        <p
+                                            class="mt-1 text-xs text-gray-400"
+                                        >
+                                            ₦300
+                                        </p>
+
+                                    </div>
+
+                                </label>
+
+
+
+                                <label class="cursor-pointer">
+
+                                    <input
+                                        type="radio"
+                                        name="bundle"
+                                        value="2GB"
+                                        data-price="600"
+                                        class="peer sr-only"
+                                    >
+
+                                    <div
+                                        class="rounded-xl border border-gray-200 p-4 peer-checked:border-[#D97706] peer-checked:bg-orange-50 transition"
+                                    >
+
+                                        <p class="text-sm font-extrabold">
+                                            2 GB
+                                        </p>
+
+                                        <p
+                                            class="mt-1 text-xs text-gray-400"
+                                        >
+                                            ₦600
+                                        </p>
+
+                                    </div>
+
+                                </label>
+
+
+
+                                <label class="cursor-pointer">
+
+                                    <input
+                                        type="radio"
+                                        name="bundle"
+                                        value="3GB"
+                                        data-price="900"
+                                        class="peer sr-only"
+                                    >
+
+                                    <div
+                                        class="rounded-xl border border-gray-200 p-4 peer-checked:border-[#D97706] peer-checked:bg-orange-50 transition"
+                                    >
+
+                                        <p class="text-sm font-extrabold">
+                                            3 GB
+                                        </p>
+
+                                        <p
+                                            class="mt-1 text-xs text-gray-400"
+                                        >
+                                            ₦900
+                                        </p>
+
+                                    </div>
+
+                                </label>
+
+
+
+                                <label class="cursor-pointer">
+
+                                    <input
+                                        type="radio"
+                                        name="bundle"
+                                        value="5GB"
+                                        data-price="1500"
+                                        class="peer sr-only"
+                                    >
+
+                                    <div
+                                        class="rounded-xl border border-gray-200 p-4 peer-checked:border-[#D97706] peer-checked:bg-orange-50 transition"
+                                    >
+
+                                        <p class="text-sm font-extrabold">
+                                            5 GB
+                                        </p>
+
+                                        <p
+                                            class="mt-1 text-xs text-gray-400"
+                                        >
+                                            ₦1,500
+                                        </p>
+
+                                    </div>
+
+                                </label>
+
+
+
+                                <label class="cursor-pointer">
+
+                                    <input
+                                        type="radio"
+                                        name="bundle"
+                                        value="10GB"
+                                        data-price="3000"
+                                        class="peer sr-only"
+                                    >
+
+                                    <div
+                                        class="rounded-xl border border-gray-200 p-4 peer-checked:border-[#D97706] peer-checked:bg-orange-50 transition"
+                                    >
+
+                                        <p class="text-sm font-extrabold">
+                                            10 GB
+                                        </p>
+
+                                        <p
+                                            class="mt-1 text-xs text-gray-400"
+                                        >
+                                            ₦3,000
+                                        </p>
+
+                                    </div>
+
+                                </label>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- ERROR -->
+
+                        <div
+                            id="errorMessage"
+                            class="hidden mt-5 rounded-xl bg-red-50 border border-red-100 px-4 py-3 text-xs font-medium text-red-600"
+                        ></div>
+
+
+
+                        <!-- SUBMIT -->
+
+                        <button
+                            type="submit"
+                            class="mt-6 w-full h-12 rounded-xl bg-[#D97706] text-white text-sm font-bold hover:bg-[#B45309] transition"
+                        >
+                            Continue to Payment
+                        </button>
+
+
+                    </form>
+
+                </section>
+
+
+
+                <!-- =================================================
+                     SUMMARY
+                ================================================== -->
+
+                <aside>
+
+                    <div
+                        class="bg-white border border-gray-200 rounded-2xl p-5 sm:p-6 lg:sticky lg:top-8"
+                    >
+
+                        <h3 class="font-extrabold">
+                            Order summary
+                        </h3>
+
+
+                        <p
+                            class="mt-1 text-xs text-gray-400"
+                        >
+                            Review before payment.
+                        </p>
+
+
+
+                        <!-- WALLET -->
+
+                        <div
+                            class="mt-5 rounded-xl bg-[#17201E] text-white p-4"
+                        >
+
+                            <p class="text-xs text-gray-400">
+                                Wallet balance
+                            </p>
+
+
+                            <p
+                                id="walletBalance"
+                                class="mt-1 text-xl font-extrabold"
+                            >
+                                ₦0.00
+                            </p>
+
+                        </div>
+
+
+
+                        <!-- SUMMARY -->
+
+                        <div class="mt-5 space-y-4">
+
+
+                            <div
+                                class="flex items-center justify-between gap-4"
+                            >
+
+                                <span
+                                    class="text-sm text-gray-500"
+                                >
+                                    Network
+                                </span>
+
+                                <span
+                                    id="summaryNetwork"
+                                    class="text-sm font-bold"
+                                >
+                                    MTN
+                                </span>
+
+                            </div>
+
+
+                            <div
+                                class="flex items-center justify-between gap-4"
+                            >
+
+                                <span
+                                    class="text-sm text-gray-500"
+                                >
+                                    Phone
+                                </span>
+
+                                <span
+                                    id="summaryPhone"
+                                    class="text-sm font-bold"
+                                >
+                                    —
+                                </span>
+
+                            </div>
+
+
+                            <div
+                                class="flex items-center justify-between gap-4"
+                            >
+
+                                <span
+                                    class="text-sm text-gray-500"
+                                >
+                                    Bundle
+                                </span>
+
+                                <span
+                                    id="summaryBundle"
+                                    class="text-sm font-bold"
+                                >
+                                    1 GB
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- TOTAL -->
+
+                        <div
+                            class="border-t border-gray-200 mt-5 pt-5"
+                        >
+
+                            <div
+                                class="flex items-center justify-between"
+                            >
+
+                                <span class="text-sm font-bold">
+                                    Total
+                                </span>
+
+
+                                <span
+                                    id="summaryTotal"
+                                    class="text-xl font-extrabold text-[#D97706]"
+                                >
+                                    ₦300.00
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- NOTE -->
+
+                        <div
+                            class="mt-5 rounded-xl bg-orange-50 border border-orange-100 p-4"
+                        >
+
+                            <p
+                                class="text-xs leading-5 text-orange-800"
+                            >
+                                Payment will be deducted from your Giftly wallet after confirmation.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </aside>
+
+            </div>
+
+
+
+            <!-- FOOTER -->
+
+            <footer
+                class="py-8 text-center text-xs text-gray-400"
+            >
+                © 2026 Giftly. All rights reserved.
+            </footer>
+
+
+        </main>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script>
+
+        // =====================================================
+        // MOBILE MENU
+        // =====================================================
+
+        const mobileMenuBtn =
+            document.getElementById("mobileMenuBtn");
+
+        const mobileMenu =
+            document.getElementById("mobileMenu");
+
+
+        mobileMenuBtn.addEventListener("click", () => {
+
+            mobileMenu.classList.toggle("hidden");
+
+        });
+
+
+
+        // =====================================================
+        // ELEMENTS
+        // =====================================================
+
+        const phoneNumber =
+            document.getElementById("phoneNumber");
+
+        const summaryPhone =
+            document.getElementById("summaryPhone");
+
+        const summaryNetwork =
+            document.getElementById("summaryNetwork");
+
+        const summaryBundle =
+            document.getElementById("summaryBundle");
+
+        const summaryTotal =
+            document.getElementById("summaryTotal");
+
+        const errorMessage =
+            document.getElementById("errorMessage");
+
+
+
+        // =====================================================
+        // NETWORK
+        // =====================================================
+
+        const networkInputs =
+            document.querySelectorAll(
+                'input[name="network"]'
+            );
+
+
+        networkInputs.forEach(input => {
+
+            input.addEventListener("change", () => {
+
+                summaryNetwork.textContent =
+                    input.value;
+
+            });
+
+        });
+
+
+
+        // =====================================================
+        // DATA BUNDLES
+        // =====================================================
+
+        const bundleInputs =
+            document.querySelectorAll(
+                'input[name="bundle"]'
+            );
+
+
+        bundleInputs.forEach(input => {
+
+            input.addEventListener("change", () => {
+
+                summaryBundle.textContent =
+                    input.value;
+
+                summaryTotal.textContent =
+                    `₦${Number(input.dataset.price).toLocaleString()}`;
+
+            });
+
+        });
+
+
+
+        // =====================================================
+        // PHONE
+        // =====================================================
+
+        phoneNumber.addEventListener(
+            "input",
+            () => {
+
+                summaryPhone.textContent =
+                    phoneNumber.value || "—";
+
+            }
+        );
+
+
+
+        // =====================================================
+        // FORM
+        // =====================================================
+
+        const dataForm =
+            document.getElementById("dataForm");
+
+
+        dataForm.addEventListener(
+            "submit",
+            (event) => {
+
+                event.preventDefault();
+
+
+                errorMessage.classList.add("hidden");
+
+
+                const selectedNetwork =
+                    document.querySelector(
+                        'input[name="network"]:checked'
+                    );
+
+
+                const selectedBundle =
+                    document.querySelector(
+                        'input[name="bundle"]:checked'
+                    );
+
+
+                const phone =
+                    phoneNumber.value.trim();
+
+
+                if (!selectedNetwork) {
+
+                    showError(
+                        "Please select a network."
+                    );
+
+                    return;
+
+                }
+
+
+                if (
+                    !/^0[789][01]\d{8}$/.test(phone)
+                ) {
+
+                    showError(
+                        "Please enter a valid Nigerian phone number."
+                    );
+
+                    return;
+
+                }
+
+
+                if (!selectedBundle) {
+
+                    showError(
+                        "Please select a data bundle."
+                    );
+
+                    return;
+
+                }
+
+
+                alert(
+                    `Data order ready: ${selectedNetwork.value} — ${selectedBundle.value} — ${phone}`
+                );
+
+            }
+        );
+
+
+
+        // =====================================================
+        // ERROR
+        // =====================================================
+
+        function showError(message) {
+
+            errorMessage.textContent =
+                message;
+
+            errorMessage.classList.remove(
+                "hidden"
+            );
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
+

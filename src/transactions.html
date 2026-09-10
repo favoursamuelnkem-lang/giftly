@@ -1,0 +1,1304 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Transactions — Giftly</title>
+
+    <link
+        rel="stylesheet"
+        href="./output.css"
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+</head>
+
+
+<body class="min-h-screen bg-[#FAFAF8] text-[#17201E] font-['Inter']">
+
+
+    <!-- =====================================================
+         MOBILE HEADER
+    ====================================================== -->
+
+    <header
+        class="lg:hidden sticky top-0 z-40 bg-white border-b border-gray-200"
+    >
+
+        <div
+            class="h-16 px-5 flex items-center justify-between"
+        >
+
+            <a
+                href="dashboard.html"
+                class="flex items-center gap-2.5"
+            >
+
+                <div
+                    class="w-9 h-9 rounded-xl bg-[#D97706] text-white flex items-center justify-center font-extrabold"
+                >
+                    G
+                </div>
+
+                <span class="font-extrabold text-lg">
+                    Giftly
+                </span>
+
+            </a>
+
+
+            <button
+                id="mobileMenuBtn"
+                type="button"
+                class="w-10 h-10 rounded-xl border border-gray-200 flex items-center justify-center"
+            >
+
+                <svg
+                    class="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.8"
+                >
+
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M4 6h16M4 12h16M4 18h16"
+                    />
+
+                </svg>
+
+            </button>
+
+        </div>
+
+
+        <!-- MOBILE MENU -->
+
+        <div
+            id="mobileMenu"
+            class="hidden border-t border-gray-100 bg-white px-5 py-4"
+        >
+
+            <nav class="space-y-1">
+
+                <a
+                    href="dashboard.html"
+                    class="block px-3 py-3 rounded-xl text-sm text-gray-600 hover:bg-gray-50"
+                >
+                    Dashboard
+                </a>
+
+
+                <a
+                    href="sell-giftcard.html"
+                    class="block px-3 py-3 rounded-xl text-sm text-gray-600 hover:bg-gray-50"
+                >
+                    Sell Gift Card
+                </a>
+
+
+                <a
+                    href="airtime.html"
+                    class="block px-3 py-3 rounded-xl text-sm text-gray-600 hover:bg-gray-50"
+                >
+                    Airtime
+                </a>
+
+
+                <a
+                    href="data.html"
+                    class="block px-3 py-3 rounded-xl text-sm text-gray-600 hover:bg-gray-50"
+                >
+                    Data
+                </a>
+
+
+                <a
+                    href="transactions.html"
+                    class="block px-3 py-3 rounded-xl bg-orange-50 text-[#D97706] text-sm font-bold"
+                >
+                    Transactions
+                </a>
+
+
+                <a
+                    href="profile.html"
+                    class="block px-3 py-3 rounded-xl text-sm text-gray-600 hover:bg-gray-50"
+                >
+                    Profile & Settings
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         DESKTOP SIDEBAR
+    ====================================================== -->
+
+    <aside
+        class="hidden lg:flex fixed inset-y-0 left-0 z-40 w-64 bg-white border-r border-gray-200 flex-col"
+    >
+
+        <!-- LOGO -->
+
+        <div class="h-20 px-6 flex items-center">
+
+            <a
+                href="dashboard.html"
+                class="flex items-center gap-3"
+            >
+
+                <div
+                    class="w-10 h-10 rounded-xl bg-[#D97706] text-white flex items-center justify-center font-extrabold"
+                >
+                    G
+                </div>
+
+                <span
+                    class="text-xl font-extrabold tracking-tight"
+                >
+                    Giftly
+                </span>
+
+            </a>
+
+        </div>
+
+
+
+        <!-- NAVIGATION -->
+
+        <nav class="flex-1 px-4 py-5 space-y-1">
+
+            <a
+                href="dashboard.html"
+                class="flex items-center gap-3 px-3 py-3 rounded-xl text-sm font-medium text-gray-600 hover:bg-gray-50 transition"
+            >
+                🏠
+                Dashboard
+            </a>
+
+
+            <a
+                href="sell-giftcard.html"
+                class="flex items-center gap-3 px-3 py-3 rounded-xl text-sm font-medium text-gray-600 hover:bg-gray-50 transition"
+            >
+                🎁
+                Sell Gift Card
+            </a>
+
+
+            <a
+                href="airtime.html"
+                class="flex items-center gap-3 px-3 py-3 rounded-xl text-sm font-medium text-gray-600 hover:bg-gray-50 transition"
+            >
+                📱
+                Airtime
+            </a>
+
+
+            <a
+                href="data.html"
+                class="flex items-center gap-3 px-3 py-3 rounded-xl text-sm font-medium text-gray-600 hover:bg-gray-50 transition"
+            >
+                📶
+                Data
+            </a>
+
+
+            <a
+                href="transactions.html"
+                class="flex items-center gap-3 px-3 py-3 rounded-xl bg-orange-50 text-[#D97706] text-sm font-bold"
+            >
+                ↔
+                Transactions
+            </a>
+
+
+            <div class="pt-7">
+
+                <p
+                    class="px-3 mb-3 text-[10px] uppercase tracking-widest font-bold text-gray-400"
+                >
+                    Account
+                </p>
+
+
+                <a
+                    href="profile.html"
+                    class="flex items-center gap-3 px-3 py-3 rounded-xl text-sm font-medium text-gray-600 hover:bg-gray-50 transition"
+                >
+                    ⚙
+                    Profile & Settings
+                </a>
+
+            </div>
+
+        </nav>
+
+
+        <!-- USER -->
+
+        <div class="border-t border-gray-100 p-4">
+
+            <div class="flex items-center gap-3">
+
+                <div
+                    class="w-10 h-10 rounded-full bg-[#17201E] text-white flex items-center justify-center text-xs font-bold"
+                >
+                    FS
+                </div>
+
+
+                <div class="min-w-0">
+
+                    <p class="text-sm font-bold truncate">
+                        Favour Samuel
+                    </p>
+
+                    <p class="text-xs text-gray-400 truncate">
+                        user@example.com
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <div class="lg:ml-64 min-h-screen">
+
+
+        <!-- DESKTOP HEADER -->
+
+        <header
+            class="hidden lg:flex h-20 bg-white border-b border-gray-200 px-8 items-center justify-between"
+        >
+
+            <div>
+
+                <p class="text-sm text-gray-400">
+                    Account
+                </p>
+
+                <h1 class="text-xl font-extrabold">
+                    Transactions
+                </h1>
+
+            </div>
+
+
+            <a
+                href="dashboard.html"
+                class="text-sm font-bold text-[#D97706] hover:text-[#B45309]"
+            >
+                Back to Dashboard
+            </a>
+
+        </header>
+
+
+
+        <!-- CONTENT -->
+
+        <main
+            class="p-5 sm:p-7 lg:p-8 max-w-7xl"
+        >
+
+
+            <!-- MOBILE TITLE -->
+
+            <div
+                class="lg:hidden mb-7"
+            >
+
+                <p class="text-sm text-gray-400">
+                    Account
+                </p>
+
+                <h1
+                    class="text-2xl font-extrabold mt-1"
+                >
+                    Transactions
+                </h1>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 TOP SECTION
+            ================================================== -->
+
+            <div
+                class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-5 mb-7"
+            >
+
+                <div>
+
+                    <h2
+                        class="text-2xl sm:text-3xl font-extrabold tracking-tight"
+                    >
+                        Transaction history
+                    </h2>
+
+                    <p
+                        class="mt-2 text-sm text-gray-400"
+                    >
+                        Keep track of your Giftly activity.
+                    </p>
+
+                </div>
+
+
+                <button
+                    id="clearFilterBtn"
+                    type="button"
+                    class="self-start sm:self-auto text-xs font-bold text-gray-500 hover:text-[#D97706]"
+                >
+                    Reset filters
+                </button>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 SUMMARY CARDS
+            ================================================== -->
+
+            <div
+                class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mb-6"
+            >
+
+
+                <div
+                    class="bg-white border border-gray-200 rounded-2xl p-4 sm:p-5"
+                >
+
+                    <p
+                        class="text-xs text-gray-400"
+                    >
+                        Total transactions
+                    </p>
+
+                    <p
+                        id="totalTransactions"
+                        class="mt-2 text-xl sm:text-2xl font-extrabold"
+                    >
+                        6
+                    </p>
+
+                </div>
+
+
+                <div
+                    class="bg-white border border-gray-200 rounded-2xl p-4 sm:p-5"
+                >
+
+                    <p
+                        class="text-xs text-gray-400"
+                    >
+                        Completed
+                    </p>
+
+                    <p
+                        id="completedTransactions"
+                        class="mt-2 text-xl sm:text-2xl font-extrabold text-green-700"
+                    >
+                        4
+                    </p>
+
+                </div>
+
+
+                <div
+                    class="bg-white border border-gray-200 rounded-2xl p-4 sm:p-5"
+                >
+
+                    <p
+                        class="text-xs text-gray-400"
+                    >
+                        Pending
+                    </p>
+
+                    <p
+                        id="pendingTransactions"
+                        class="mt-2 text-xl sm:text-2xl font-extrabold text-orange-600"
+                    >
+                        1
+                    </p>
+
+                </div>
+
+
+                <div
+                    class="bg-white border border-gray-200 rounded-2xl p-4 sm:p-5"
+                >
+
+                    <p
+                        class="text-xs text-gray-400"
+                    >
+                        Failed
+                    </p>
+
+                    <p
+                        id="failedTransactions"
+                        class="mt-2 text-xl sm:text-2xl font-extrabold text-red-600"
+                    >
+                        1
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 FILTERS
+            ================================================== -->
+
+            <section
+                class="bg-white border border-gray-200 rounded-2xl p-4 sm:p-5 mb-5"
+            >
+
+                <div
+                    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3"
+                >
+
+
+                    <!-- SEARCH -->
+
+                    <div class="lg:col-span-2">
+
+                        <label
+                            for="searchInput"
+                            class="sr-only"
+                        >
+                            Search transactions
+                        </label>
+
+
+                        <input
+                            id="searchInput"
+                            type="search"
+                            placeholder="Search transaction..."
+                            class="w-full h-11 px-4 rounded-xl border border-gray-200 text-sm outline-none focus:border-[#D97706] focus:ring-4 focus:ring-orange-100 transition"
+                        >
+
+                    </div>
+
+
+
+                    <!-- TYPE -->
+
+                    <select
+                        id="typeFilter"
+                        class="w-full h-11 px-4 rounded-xl border border-gray-200 bg-white text-sm outline-none focus:border-[#D97706]"
+                    >
+
+                        <option value="all">
+                            All types
+                        </option>
+
+                        <option value="Gift Card Sale">
+                            Gift Card Sale
+                        </option>
+
+                        <option value="Airtime">
+                            Airtime
+                        </option>
+
+                        <option value="Data">
+                            Data
+                        </option>
+
+                        <option value="Wallet Funding">
+                            Wallet Funding
+                        </option>
+
+                        <option value="Withdrawal">
+                            Withdrawal
+                        </option>
+
+                    </select>
+
+
+
+                    <!-- STATUS -->
+
+                    <select
+                        id="statusFilter"
+                        class="w-full h-11 px-4 rounded-xl border border-gray-200 bg-white text-sm outline-none focus:border-[#D97706]"
+                    >
+
+                        <option value="all">
+                            All statuses
+                        </option>
+
+                        <option value="Successful">
+                            Successful
+                        </option>
+
+                        <option value="Pending">
+                            Pending
+                        </option>
+
+                        <option value="Failed">
+                            Failed
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 TRANSACTIONS
+            ================================================== -->
+
+            <section
+                class="bg-white border border-gray-200 rounded-2xl overflow-hidden"
+            >
+
+
+                <!-- DESKTOP TABLE -->
+
+                <div class="hidden md:block overflow-x-auto">
+
+                    <table class="w-full text-left">
+
+                        <thead
+                            class="bg-gray-50 border-b border-gray-200"
+                        >
+
+                            <tr>
+
+                                <th
+                                    class="px-6 py-4 text-[11px] uppercase tracking-wider text-gray-400 font-bold"
+                                >
+                                    Transaction
+                                </th>
+
+                                <th
+                                    class="px-6 py-4 text-[11px] uppercase tracking-wider text-gray-400 font-bold"
+                                >
+                                    Type
+                                </th>
+
+                                <th
+                                    class="px-6 py-4 text-[11px] uppercase tracking-wider text-gray-400 font-bold"
+                                >
+                                    Amount
+                                </th>
+
+                                <th
+                                    class="px-6 py-4 text-[11px] uppercase tracking-wider text-gray-400 font-bold"
+                                >
+                                    Status
+                                </th>
+
+                                <th
+                                    class="px-6 py-4 text-[11px] uppercase tracking-wider text-gray-400 font-bold"
+                                >
+                                    Date
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody
+                            id="desktopTransactions"
+                            class="divide-y divide-gray-100"
+                        >
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+
+                <!-- MOBILE LIST -->
+
+                <div
+                    id="mobileTransactions"
+                    class="md:hidden divide-y divide-gray-100"
+                >
+
+                </div>
+
+
+
+                <!-- EMPTY STATE -->
+
+                <div
+                    id="emptyState"
+                    class="hidden p-12 text-center"
+                >
+
+                    <div
+                        class="mx-auto w-14 h-14 rounded-2xl bg-gray-100 flex items-center justify-center text-2xl"
+                    >
+                        ↔
+                    </div>
+
+                    <h3
+                        class="mt-4 font-extrabold"
+                    >
+                        No transactions found
+                    </h3>
+
+                    <p
+                        class="mt-1 text-sm text-gray-400"
+                    >
+                        Try changing your search or filters.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- FOOTER -->
+
+            <footer
+                class="py-8 text-center text-xs text-gray-400"
+            >
+                © 2026 Giftly. All rights reserved.
+            </footer>
+
+
+        </main>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script>
+
+        // =====================================================
+        // MOBILE MENU
+        // =====================================================
+
+        const mobileMenuBtn =
+            document.getElementById("mobileMenuBtn");
+
+        const mobileMenu =
+            document.getElementById("mobileMenu");
+
+
+        mobileMenuBtn.addEventListener("click", () => {
+
+            mobileMenu.classList.toggle("hidden");
+
+        });
+
+
+
+        // =====================================================
+        // DEMO TRANSACTIONS
+        //
+        // IMPORTANT:
+        // These are only temporary demo records.
+        // Later we will load real transactions from the backend.
+        // =====================================================
+
+        const transactions = [
+
+            {
+                id: "GT-10482",
+                type: "Gift Card Sale",
+                title: "Amazon Gift Card",
+                amount: "+₦85,000",
+                status: "Successful",
+                date: "Sep 08, 2026"
+            },
+
+            {
+                id: "AT-10481",
+                type: "Airtime",
+                title: "MTN Airtime",
+                amount: "-₦1,000",
+                status: "Successful",
+                date: "Sep 08, 2026"
+            },
+
+            {
+                id: "DT-10480",
+                type: "Data",
+                title: "MTN 5GB Data",
+                amount: "-₦1,500",
+                status: "Successful",
+                date: "Sep 07, 2026"
+            },
+
+            {
+                id: "WF-10479",
+                type: "Wallet Funding",
+                title: "Wallet Deposit",
+                amount: "+₦50,000",
+                status: "Successful",
+                date: "Sep 07, 2026"
+            },
+
+            {
+                id: "GT-10478",
+                type: "Gift Card Sale",
+                title: "Apple Gift Card",
+                amount: "+₦42,500",
+                status: "Pending",
+                date: "Sep 06, 2026"
+            },
+
+            {
+                id: "WD-10477",
+                type: "Withdrawal",
+                title: "Bank Withdrawal",
+                amount: "-₦20,000",
+                status: "Failed",
+                date: "Sep 05, 2026"
+            }
+
+        ];
+
+
+
+        // =====================================================
+        // ELEMENTS
+        // =====================================================
+
+        const desktopTransactions =
+            document.getElementById(
+                "desktopTransactions"
+            );
+
+
+        const mobileTransactions =
+            document.getElementById(
+                "mobileTransactions"
+            );
+
+
+        const emptyState =
+            document.getElementById(
+                "emptyState"
+            );
+
+
+        const searchInput =
+            document.getElementById(
+                "searchInput"
+            );
+
+
+        const typeFilter =
+            document.getElementById(
+                "typeFilter"
+            );
+
+
+        const statusFilter =
+            document.getElementById(
+                "statusFilter"
+            );
+
+
+        const clearFilterBtn =
+            document.getElementById(
+                "clearFilterBtn"
+            );
+
+
+
+        // =====================================================
+        // STATUS STYLE
+        // =====================================================
+
+        function statusStyle(status) {
+
+            if (status === "Successful") {
+
+                return "bg-green-50 text-green-700";
+
+            }
+
+
+            if (status === "Pending") {
+
+                return "bg-orange-50 text-orange-700";
+
+            }
+
+
+            return "bg-red-50 text-red-700";
+
+        }
+
+
+
+        // =====================================================
+        // TYPE ICON
+        // =====================================================
+
+        function typeIcon(type) {
+
+            if (type === "Gift Card Sale") {
+
+                return "🎁";
+
+            }
+
+
+            if (type === "Airtime") {
+
+                return "📱";
+
+            }
+
+
+            if (type === "Data") {
+
+                return "📶";
+
+            }
+
+
+            if (type === "Wallet Funding") {
+
+                return "💰";
+
+            }
+
+
+            return "💸";
+
+        }
+
+
+
+        // =====================================================
+        // RENDER TRANSACTIONS
+        // =====================================================
+
+        function renderTransactions() {
+
+            const search =
+                searchInput.value
+                    .trim()
+                    .toLowerCase();
+
+
+            const type =
+                typeFilter.value;
+
+
+            const status =
+                statusFilter.value;
+
+
+            const filtered =
+                transactions.filter(transaction => {
+
+                    const matchesSearch =
+
+                        transaction.title
+                            .toLowerCase()
+                            .includes(search)
+
+                        ||
+
+                        transaction.id
+                            .toLowerCase()
+                            .includes(search);
+
+
+                    const matchesType =
+                        type === "all"
+                        ||
+                        transaction.type === type;
+
+
+                    const matchesStatus =
+                        status === "all"
+                        ||
+                        transaction.status === status;
+
+
+                    return (
+                        matchesSearch
+                        &&
+                        matchesType
+                        &&
+                        matchesStatus
+                    );
+
+                });
+
+
+
+            // CLEAR
+
+            desktopTransactions.innerHTML = "";
+
+            mobileTransactions.innerHTML = "";
+
+
+
+            // EMPTY
+
+            if (filtered.length === 0) {
+
+                emptyState.classList.remove(
+                    "hidden"
+                );
+
+                return;
+
+            }
+
+
+            emptyState.classList.add(
+                "hidden"
+            );
+
+
+
+            // =================================================
+            // DESKTOP
+            // =================================================
+
+            filtered.forEach(transaction => {
+
+                const row =
+                    document.createElement("tr");
+
+
+                row.className =
+                    "hover:bg-gray-50 transition";
+
+
+                row.innerHTML = `
+
+                    <td class="px-6 py-5">
+
+                        <div class="flex items-center gap-3">
+
+                            <div
+                                class="w-10 h-10 rounded-xl bg-gray-100 flex items-center justify-center"
+                            >
+                                ${typeIcon(transaction.type)}
+                            </div>
+
+                            <div>
+
+                                <p
+                                    class="text-sm font-bold"
+                                >
+                                    ${transaction.title}
+                                </p>
+
+                                <p
+                                    class="mt-1 text-xs text-gray-400"
+                                >
+                                    ${transaction.id}
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </td>
+
+
+                    <td class="px-6 py-5">
+
+                        <span
+                            class="text-sm text-gray-600"
+                        >
+                            ${transaction.type}
+                        </span>
+
+                    </td>
+
+
+                    <td class="px-6 py-5">
+
+                        <span
+                            class="text-sm font-extrabold"
+                        >
+                            ${transaction.amount}
+                        </span>
+
+                    </td>
+
+
+                    <td class="px-6 py-5">
+
+                        <span
+                            class="inline-flex px-2.5 py-1 rounded-full text-[11px] font-bold ${statusStyle(transaction.status)}"
+                        >
+                            ${transaction.status}
+                        </span>
+
+                    </td>
+
+
+                    <td class="px-6 py-5">
+
+                        <span
+                            class="text-sm text-gray-500"
+                        >
+                            ${transaction.date}
+                        </span>
+
+                    </td>
+
+                `;
+
+
+                desktopTransactions.appendChild(
+                    row
+                );
+
+            });
+
+
+
+            // =================================================
+            // MOBILE
+            // =================================================
+
+            filtered.forEach(transaction => {
+
+                const item =
+                    document.createElement("div");
+
+
+                item.className =
+                    "p-4";
+
+
+                item.innerHTML = `
+
+                    <div
+                        class="flex items-start justify-between gap-4"
+                    >
+
+                        <div
+                            class="flex items-center gap-3 min-w-0"
+                        >
+
+                            <div
+                                class="w-10 h-10 shrink-0 rounded-xl bg-gray-100 flex items-center justify-center"
+                            >
+                                ${typeIcon(transaction.type)}
+                            </div>
+
+
+                            <div class="min-w-0">
+
+                                <p
+                                    class="text-sm font-bold truncate"
+                                >
+                                    ${transaction.title}
+                                </p>
+
+                                <p
+                                    class="mt-1 text-xs text-gray-400"
+                                >
+                                    ${transaction.type}
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div
+                            class="text-right shrink-0"
+                        >
+
+                            <p
+                                class="text-sm font-extrabold"
+                            >
+                                ${transaction.amount}
+                            </p>
+
+                            <span
+                                class="inline-flex mt-2 px-2 py-1 rounded-full text-[10px] font-bold ${statusStyle(transaction.status)}"
+                            >
+                                ${transaction.status}
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="mt-3 flex items-center justify-between text-[11px] text-gray-400"
+                    >
+
+                        <span>
+                            ${transaction.id}
+                        </span>
+
+                        <span>
+                            ${transaction.date}
+                        </span>
+
+                    </div>
+
+                `;
+
+
+                mobileTransactions.appendChild(
+                    item
+                );
+
+            });
+
+        }
+
+
+
+        // =====================================================
+        // SUMMARY COUNTS
+        // =====================================================
+
+        function updateSummary() {
+
+            document.getElementById(
+                "totalTransactions"
+            ).textContent =
+                transactions.length;
+
+
+            document.getElementById(
+                "completedTransactions"
+            ).textContent =
+                transactions.filter(
+                    item => item.status === "Successful"
+                ).length;
+
+
+            document.getElementById(
+                "pendingTransactions"
+            ).textContent =
+                transactions.filter(
+                    item => item.status === "Pending"
+                ).length;
+
+
+            document.getElementById(
+                "failedTransactions"
+            ).textContent =
+                transactions.filter(
+                    item => item.status === "Failed"
+                ).length;
+
+        }
+
+
+
+        // =====================================================
+        // FILTER EVENTS
+        // =====================================================
+
+        searchInput.addEventListener(
+            "input",
+            renderTransactions
+        );
+
+
+        typeFilter.addEventListener(
+            "change",
+            renderTransactions
+        );
+
+
+        statusFilter.addEventListener(
+            "change",
+            renderTransactions
+        );
+
+
+
+        // =====================================================
+        // RESET FILTERS
+        // =====================================================
+
+        clearFilterBtn.addEventListener(
+            "click",
+            () => {
+
+                searchInput.value = "";
+
+                typeFilter.value = "all";
+
+                statusFilter.value = "all";
+
+                renderTransactions();
+
+            }
+        );
+
+
+
+        // =====================================================
+        // INITIAL LOAD
+        // =====================================================
+
+        updateSummary();
+
+        renderTransactions();
+
+    </script>
+
+
+</body>
+
+</html>
+

@@ -1,0 +1,1114 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Giftly — Sell Gift Cards. Buy Airtime & Data.</title>
+
+    <link
+        rel="stylesheet"
+        href="./output.css"
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+</head>
+
+
+<body class="bg-[#FAFAF8] text-[#17201E] font-['Inter']">
+
+
+    <!-- =====================================================
+         NAVBAR
+    ====================================================== -->
+
+    <header class="sticky top-0 z-50 bg-[#FAFAF8]/95 backdrop-blur border-b border-gray-200/70">
+
+        <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
+
+            <nav class="h-[72px] flex items-center justify-between">
+
+
+                <!-- LOGO -->
+
+                <a
+                    href="index.html"
+                    class="flex items-center gap-2.5"
+                >
+
+                    <div
+                        class="w-10 h-10 rounded-xl bg-[#D97706] flex items-center justify-center text-white text-lg shadow-sm"
+                    >
+                        G
+                    </div>
+
+                    <span
+                        class="text-xl font-extrabold tracking-tight text-[#17201E]"
+                    >
+                        Giftly
+                    </span>
+
+                </a>
+
+
+                <!-- DESKTOP NAV -->
+
+                <div class="hidden md:flex items-center gap-8">
+
+                    <a
+                        href="#how-it-works"
+                        class="text-sm font-medium text-gray-500 hover:text-[#17201E] transition"
+                    >
+                        How It Works
+                    </a>
+
+                    <a
+                        href="#services"
+                        class="text-sm font-medium text-gray-500 hover:text-[#17201E] transition"
+                    >
+                        Services
+                    </a>
+
+                    <a
+                        href="#why-giftly"
+                        class="text-sm font-medium text-gray-500 hover:text-[#17201E] transition"
+                    >
+                        Why Giftly
+                    </a>
+
+                </div>
+
+
+                <!-- DESKTOP ACTIONS -->
+
+                <div class="hidden md:flex items-center gap-3">
+
+                    <a
+                        href="login.html"
+                        class="px-4 py-2.5 text-sm font-semibold text-[#17201E] hover:text-[#D97706] transition"
+                    >
+                        Log in
+                    </a>
+
+                    <a
+                        href="signup.html"
+                        class="px-5 py-2.5 rounded-xl bg-[#D97706] text-white text-sm font-bold hover:bg-[#B45309] transition shadow-sm"
+                    >
+                        Get Started
+                    </a>
+
+                </div>
+
+
+                <!-- MOBILE MENU BUTTON -->
+
+                <button
+                    id="menuBtn"
+                    type="button"
+                    aria-label="Open menu"
+                    class="md:hidden w-10 h-10 rounded-xl border border-gray-200 bg-white flex items-center justify-center"
+                >
+
+                    <svg
+                        class="w-5 h-5"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        stroke-width="2"
+                    >
+
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M4 6h16M4 12h16M4 18h16"
+                        />
+
+                    </svg>
+
+                </button>
+
+            </nav>
+
+
+            <!-- MOBILE MENU -->
+
+            <div
+                id="mobileMenu"
+                class="hidden md:hidden pb-5"
+            >
+
+                <div class="pt-3 border-t border-gray-200 space-y-1">
+
+                    <a
+                        href="#how-it-works"
+                        class="block px-4 py-3 rounded-xl text-sm font-medium text-gray-600 hover:bg-white"
+                    >
+                        How It Works
+                    </a>
+
+                    <a
+                        href="#services"
+                        class="block px-4 py-3 rounded-xl text-sm font-medium text-gray-600 hover:bg-white"
+                    >
+                        Services
+                    </a>
+
+                    <a
+                        href="#why-giftly"
+                        class="block px-4 py-3 rounded-xl text-sm font-medium text-gray-600 hover:bg-white"
+                    >
+                        Why Giftly
+                    </a>
+
+                    <div class="grid grid-cols-2 gap-3 pt-3">
+
+                        <a
+                            href="login.html"
+                            class="text-center px-4 py-3 rounded-xl border border-gray-200 bg-white text-sm font-semibold"
+                        >
+                            Log in
+                        </a>
+
+                        <a
+                            href="signup.html"
+                            class="text-center px-4 py-3 rounded-xl bg-[#D97706] text-white text-sm font-bold"
+                        >
+                            Get Started
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
+
+    <main>
+
+
+        <section class="overflow-hidden">
+
+            <div
+                class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 pt-14 sm:pt-20 lg:pt-24 pb-16"
+            >
+
+                <div
+                    class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center"
+                >
+
+
+                    <!-- LEFT -->
+
+                    <div class="max-w-2xl">
+
+
+                        <div
+                            class="inline-flex items-center gap-2 px-3.5 py-2 rounded-full bg-[#FFF7ED] border border-[#FED7AA] text-[#B45309] text-xs font-bold"
+                        >
+
+                            <span class="w-1.5 h-1.5 rounded-full bg-[#D97706]"></span>
+
+                            Simple. Fast. Secure.
+
+                        </div>
+
+
+                        <h1
+                            class="mt-6 text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.05]"
+                        >
+
+                            Turn your gift cards
+                            <span class="text-[#D97706]">
+                                into value.
+                            </span>
+
+                        </h1>
+
+
+                        <p
+                            class="mt-6 max-w-xl text-base sm:text-lg leading-8 text-gray-500"
+                        >
+
+                            Sell your unused gift cards through Giftly,
+                            buy airtime and data, and manage your transactions
+                            from one simple dashboard.
+
+                        </p>
+
+
+                        <!-- BUTTONS -->
+
+                        <div
+                            class="mt-8 flex flex-col sm:flex-row gap-3"
+                        >
+
+                            <a
+                                href="signup.html"
+                                class="inline-flex items-center justify-center px-6 py-3.5 rounded-xl bg-[#D97706] text-white text-sm font-bold hover:bg-[#B45309] transition shadow-sm"
+                            >
+                                Create Account
+                            </a>
+
+
+                            <a
+                                href="#how-it-works"
+                                class="inline-flex items-center justify-center px-6 py-3.5 rounded-xl bg-white border border-gray-200 text-sm font-bold text-[#17201E] hover:border-gray-300 transition"
+                            >
+                                See How It Works
+                            </a>
+
+                        </div>
+
+
+                        <!-- TRUST -->
+
+                        <div
+                            class="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 text-xs text-gray-400"
+                        >
+
+                            <span class="flex items-center gap-2">
+                                <span class="text-[#D97706]">✓</span>
+                                Simple process
+                            </span>
+
+                            <span class="flex items-center gap-2">
+                                <span class="text-[#D97706]">✓</span>
+                                Transparent rates
+                            </span>
+
+                            <span class="flex items-center gap-2">
+                                <span class="text-[#D97706]">✓</span>
+                                Secure account
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- RIGHT DASHBOARD PREVIEW -->
+
+                    <div class="relative">
+
+                        <div
+                            class="absolute -top-10 -right-10 w-40 h-40 rounded-full bg-[#FDE68A]/40 blur-3xl"
+                        ></div>
+
+                        <div
+                            class="absolute -bottom-10 -left-10 w-40 h-40 rounded-full bg-[#FED7AA]/40 blur-3xl"
+                        ></div>
+
+
+                        <div
+                            class="relative bg-white rounded-3xl border border-gray-200 shadow-xl p-4 sm:p-6"
+                        >
+
+
+                            <!-- MINI HEADER -->
+
+                            <div
+                                class="flex items-center justify-between"
+                            >
+
+                                <div>
+
+                                    <p class="text-xs text-gray-400">
+                                        Available balance
+                                    </p>
+
+                                    <p
+                                        class="mt-1 text-2xl sm:text-3xl font-extrabold text-[#17201E]"
+                                    >
+                                        ₦125,400
+                                    </p>
+
+                                </div>
+
+
+                                <div
+                                    class="w-10 h-10 rounded-xl bg-[#FFF7ED] flex items-center justify-center text-[#D97706] font-bold"
+                                >
+                                    ₦
+                                </div>
+
+                            </div>
+
+
+                            <!-- WALLET ACTIONS -->
+
+                            <div
+                                class="grid grid-cols-2 gap-3 mt-6"
+                            >
+
+                                <div
+                                    class="rounded-xl bg-[#17201E] text-white p-4"
+                                >
+
+                                    <p class="text-xs text-white/50">
+                                        Wallet
+                                    </p>
+
+                                    <p class="mt-2 text-sm font-bold">
+                                        Manage funds
+                                    </p>
+
+                                </div>
+
+
+                                <div
+                                    class="rounded-xl bg-[#FFF7ED] p-4"
+                                >
+
+                                    <p class="text-xs text-[#B45309]">
+                                        Quick action
+                                    </p>
+
+                                    <p class="mt-2 text-sm font-bold text-[#17201E]">
+                                        Sell Gift Card
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- SERVICES -->
+
+                            <div class="mt-6">
+
+                                <div
+                                    class="flex items-center justify-between"
+                                >
+
+                                    <p class="text-sm font-bold">
+                                        Services
+                                    </p>
+
+                                    <span class="text-xs text-gray-400">
+                                        3 available
+                                    </span>
+
+                                </div>
+
+
+                                <div
+                                    class="mt-3 grid grid-cols-3 gap-2"
+                                >
+
+                                    <div
+                                        class="rounded-xl border border-gray-100 p-3 text-center"
+                                    >
+
+                                        <div class="text-xl">
+                                            🎁
+                                        </div>
+
+                                        <p class="mt-2 text-[11px] font-semibold">
+                                            Sell Cards
+                                        </p>
+
+                                    </div>
+
+
+                                    <div
+                                        class="rounded-xl border border-gray-100 p-3 text-center"
+                                    >
+
+                                        <div class="text-xl">
+                                            📱
+                                        </div>
+
+                                        <p class="mt-2 text-[11px] font-semibold">
+                                            Airtime
+                                        </p>
+
+                                    </div>
+
+
+                                    <div
+                                        class="rounded-xl border border-gray-100 p-3 text-center"
+                                    >
+
+                                        <div class="text-xl">
+                                            🌐
+                                        </div>
+
+                                        <p class="mt-2 text-[11px] font-semibold">
+                                            Data
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- TRANSACTIONS -->
+
+                            <div class="mt-6">
+
+                                <p class="text-sm font-bold">
+                                    Recent activity
+                                </p>
+
+
+                                <div class="mt-3 space-y-3">
+
+
+                                    <div
+                                        class="flex items-center justify-between"
+                                    >
+
+                                        <div class="flex items-center gap-3">
+
+                                            <div
+                                                class="w-8 h-8 rounded-lg bg-green-50 flex items-center justify-center text-xs"
+                                            >
+                                                ↓
+                                            </div>
+
+                                            <div>
+
+                                                <p class="text-xs font-semibold">
+                                                    Gift card sale
+                                                </p>
+
+                                                <p class="text-[10px] text-gray-400">
+                                                    Completed
+                                                </p>
+
+                                            </div>
+
+                                        </div>
+
+                                        <p class="text-xs font-bold text-green-600">
+                                            +₦45,000
+                                        </p>
+
+                                    </div>
+
+
+                                    <div
+                                        class="flex items-center justify-between"
+                                    >
+
+                                        <div class="flex items-center gap-3">
+
+                                            <div
+                                                class="w-8 h-8 rounded-lg bg-orange-50 flex items-center justify-center text-xs"
+                                            >
+                                                ↑
+                                            </div>
+
+                                            <div>
+
+                                                <p class="text-xs font-semibold">
+                                                    Airtime
+                                                </p>
+
+                                                <p class="text-[10px] text-gray-400">
+                                                    Completed
+                                                </p>
+
+                                            </div>
+
+                                        </div>
+
+                                        <p class="text-xs font-bold text-gray-700">
+                                            -₦2,000
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             SERVICES
+        ====================================================== -->
+
+        <section
+            id="services"
+            class="bg-white border-y border-gray-100"
+        >
+
+            <div
+                class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 py-16 sm:py-20"
+            >
+
+                <div class="max-w-2xl">
+
+                    <p
+                        class="text-xs font-bold uppercase tracking-widest text-[#D97706]"
+                    >
+                        What you can do
+                    </p>
+
+                    <h2
+                        class="mt-3 text-3xl sm:text-4xl font-extrabold tracking-tight"
+                    >
+                        Everything you need in one account.
+                    </h2>
+
+                    <p
+                        class="mt-4 text-gray-500 leading-7"
+                    >
+                        Giftly gives users a simple place to manage
+                        gift-card sales and everyday digital services.
+                    </p>
+
+                </div>
+
+
+                <div
+                    class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-5"
+                >
+
+
+                    <!-- SELL -->
+
+                    <div
+                        class="rounded-2xl border border-gray-200 p-6 hover:shadow-md transition"
+                    >
+
+                        <div
+                            class="w-12 h-12 rounded-xl bg-[#FFF7ED] flex items-center justify-center text-2xl"
+                        >
+                            🎁
+                        </div>
+
+                        <h3
+                            class="mt-5 text-lg font-bold"
+                        >
+                            Sell Gift Cards
+                        </h3>
+
+                        <p
+                            class="mt-3 text-sm leading-6 text-gray-500"
+                        >
+                            Submit supported gift cards, check your
+                            estimated value and track verification from
+                            your dashboard.
+                        </p>
+
+                        <span
+                            class="inline-block mt-5 text-xs font-bold text-[#D97706]"
+                        >
+                            Sell your cards →
+                        </span>
+
+                    </div>
+
+
+                    <!-- AIRTIME -->
+
+                    <div
+                        class="rounded-2xl border border-gray-200 p-6 hover:shadow-md transition"
+                    >
+
+                        <div
+                            class="w-12 h-12 rounded-xl bg-gray-100 flex items-center justify-center text-2xl"
+                        >
+                            📱
+                        </div>
+
+                        <h3
+                            class="mt-5 text-lg font-bold"
+                        >
+                            Buy Airtime
+                        </h3>
+
+                        <p
+                            class="mt-3 text-sm leading-6 text-gray-500"
+                        >
+                            Recharge supported mobile networks directly
+                            from your Giftly account.
+                        </p>
+
+                        <span
+                            class="inline-block mt-5 text-xs font-bold text-[#D97706]"
+                        >
+                            Recharge instantly →
+                        </span>
+
+                    </div>
+
+
+                    <!-- DATA -->
+
+                    <div
+                        class="rounded-2xl border border-gray-200 p-6 hover:shadow-md transition"
+                    >
+
+                        <div
+                            class="w-12 h-12 rounded-xl bg-gray-100 flex items-center justify-center text-2xl"
+                        >
+                            🌐
+                        </div>
+
+                        <h3
+                            class="mt-5 text-lg font-bold"
+                        >
+                            Buy Data
+                        </h3>
+
+                        <p
+                            class="mt-3 text-sm leading-6 text-gray-500"
+                        >
+                            Purchase mobile data bundles and keep your
+                            transactions organized in one place.
+                        </p>
+
+                        <span
+                            class="inline-block mt-5 text-xs font-bold text-[#D97706]"
+                        >
+                            Buy data →
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             HOW IT WORKS
+        ====================================================== -->
+
+        <section id="how-it-works">
+
+            <div
+                class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 py-16 sm:py-20"
+            >
+
+                <div class="text-center max-w-2xl mx-auto">
+
+                    <p
+                        class="text-xs font-bold uppercase tracking-widest text-[#D97706]"
+                    >
+                        How it works
+                    </p>
+
+                    <h2
+                        class="mt-3 text-3xl sm:text-4xl font-extrabold tracking-tight"
+                    >
+                        Simple from start to finish.
+                    </h2>
+
+                </div>
+
+
+                <div
+                    class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8"
+                >
+
+
+                    <div class="text-center">
+
+                        <div
+                            class="mx-auto w-12 h-12 rounded-full bg-[#17201E] text-white flex items-center justify-center font-bold"
+                        >
+                            1
+                        </div>
+
+                        <h3 class="mt-5 font-bold">
+                            Create your account
+                        </h3>
+
+                        <p class="mt-2 text-sm leading-6 text-gray-500">
+                            Sign up and get access to your personal
+                            Giftly dashboard.
+                        </p>
+
+                    </div>
+
+
+                    <div class="text-center">
+
+                        <div
+                            class="mx-auto w-12 h-12 rounded-full bg-[#17201E] text-white flex items-center justify-center font-bold"
+                        >
+                            2
+                        </div>
+
+                        <h3 class="mt-5 font-bold">
+                            Use your dashboard
+                        </h3>
+
+                        <p class="mt-2 text-sm leading-6 text-gray-500">
+                            Sell gift cards or use your available balance
+                            for airtime and data.
+                        </p>
+
+                    </div>
+
+
+                    <div class="text-center">
+
+                        <div
+                            class="mx-auto w-12 h-12 rounded-full bg-[#D97706] text-white flex items-center justify-center font-bold"
+                        >
+                            3
+                        </div>
+
+                        <h3 class="mt-5 font-bold">
+                            Track everything
+                        </h3>
+
+                        <p class="mt-2 text-sm leading-6 text-gray-500">
+                            View balances, transactions, payouts and
+                            account activity in one place.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             WHY GIFTLY
+        ====================================================== -->
+
+        <section
+            id="why-giftly"
+            class="bg-[#17201E] text-white"
+        >
+
+            <div
+                class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 py-16 sm:py-20"
+            >
+
+                <div
+                    class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
+                >
+
+                    <div>
+
+                        <p
+                            class="text-xs font-bold uppercase tracking-widest text-[#F59E0B]"
+                        >
+                            Why Giftly
+                        </p>
+
+                        <h2
+                            class="mt-4 text-3xl sm:text-4xl font-extrabold tracking-tight"
+                        >
+                            One account.
+                            <br>
+                            One simple experience.
+                        </h2>
+
+                        <p
+                            class="mt-5 max-w-lg text-sm sm:text-base leading-7 text-white/60"
+                        >
+                            No complicated process. Create an account,
+                            access your dashboard and manage the services
+                            you need.
+                        </p>
+
+                    </div>
+
+
+                    <div
+                        class="grid grid-cols-1 sm:grid-cols-2 gap-4"
+                    >
+
+                        <div
+                            class="rounded-2xl bg-white/5 border border-white/10 p-5"
+                        >
+
+                            <p class="text-2xl">
+                                🔐
+                            </p>
+
+                            <h3 class="mt-4 font-bold">
+                                Secure accounts
+                            </h3>
+
+                            <p class="mt-2 text-xs leading-5 text-white/50">
+                                Your account and transaction history stay
+                                organized in one place.
+                            </p>
+
+                        </div>
+
+
+                        <div
+                            class="rounded-2xl bg-white/5 border border-white/10 p-5"
+                        >
+
+                            <p class="text-2xl">
+                                ⚡
+                            </p>
+
+                            <h3 class="mt-4 font-bold">
+                                Fast service
+                            </h3>
+
+                            <p class="mt-2 text-xs leading-5 text-white/50">
+                                Designed for quick digital transactions.
+                            </p>
+
+                        </div>
+
+
+                        <div
+                            class="rounded-2xl bg-white/5 border border-white/10 p-5"
+                        >
+
+                            <p class="text-2xl">
+                                📊
+                            </p>
+
+                            <h3 class="mt-4 font-bold">
+                                Clear tracking
+                            </h3>
+
+                            <p class="mt-2 text-xs leading-5 text-white/50">
+                                See your transactions and account activity.
+                            </p>
+
+                        </div>
+
+
+                        <div
+                            class="rounded-2xl bg-[#D97706] p-5"
+                        >
+
+                            <p class="text-2xl">
+                                ✦
+                            </p>
+
+                            <h3 class="mt-4 font-bold">
+                                Built for you
+                            </h3>
+
+                            <p class="mt-2 text-xs leading-5 text-white/70">
+                                Everything is designed around a simple
+                                user experience.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             CTA
+        ====================================================== -->
+
+        <section class="bg-white">
+
+            <div
+                class="max-w-4xl mx-auto px-5 sm:px-8 py-16 sm:py-20 text-center"
+            >
+
+                <h2
+                    class="text-3xl sm:text-4xl font-extrabold tracking-tight"
+                >
+                    Ready to get started?
+                </h2>
+
+                <p
+                    class="mt-4 text-gray-500"
+                >
+                    Create your Giftly account and access your dashboard.
+                </p>
+
+                <a
+                    href="signup.html"
+                    class="inline-flex mt-7 px-7 py-3.5 rounded-xl bg-[#D97706] text-white text-sm font-bold hover:bg-[#B45309] transition"
+                >
+                    Create Your Account
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer
+        class="bg-[#F3F4F2] border-t border-gray-200"
+    >
+
+        <div
+            class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 py-10"
+        >
+
+            <div
+                class="flex flex-col md:flex-row md:items-center md:justify-between gap-6"
+            >
+
+                <div>
+
+                    <div class="flex items-center gap-2">
+
+                        <div
+                            class="w-9 h-9 rounded-lg bg-[#D97706] text-white flex items-center justify-center font-bold"
+                        >
+                            G
+                        </div>
+
+                        <span class="font-extrabold">
+                            Giftly
+                        </span>
+
+                    </div>
+
+                    <p class="mt-3 text-xs text-gray-400">
+                        Sell gift cards. Buy airtime & data.
+                    </p>
+
+                </div>
+
+
+                <div
+                    class="flex flex-wrap gap-5 text-xs text-gray-400"
+                >
+
+                    <a
+                        href="#services"
+                        class="hover:text-gray-700"
+                    >
+                        Services
+                    </a>
+
+                    <a
+                        href="#how-it-works"
+                        class="hover:text-gray-700"
+                    >
+                        How It Works
+                    </a>
+
+                    <a
+                        href="login.html"
+                        class="hover:text-gray-700"
+                    >
+                        Login
+                    </a>
+
+                    <a
+                        href="signup.html"
+                        class="hover:text-gray-700"
+                    >
+                        Sign Up
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="mt-8 pt-6 border-t border-gray-200 text-xs text-gray-400"
+            >
+                © 2026 Giftly. All rights reserved.
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script>
+
+        const menuBtn =
+            document.getElementById("menuBtn");
+
+        const mobileMenu =
+            document.getElementById("mobileMenu");
+
+
+        menuBtn.addEventListener("click", () => {
+
+            mobileMenu.classList.toggle("hidden");
+
+        });
+
+
+        // Close mobile menu after clicking a link
+
+        mobileMenu
+            .querySelectorAll("a")
+            .forEach(link => {
+
+                link.addEventListener("click", () => {
+
+                    mobileMenu.classList.add("hidden");
+
+                });
+
+            });
+
+    </script>
+
+
+</body>
+
+</html>
+```

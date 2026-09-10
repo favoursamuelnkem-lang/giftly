@@ -1,0 +1,1655 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Wallet — Giftly</title>
+
+    <link
+        rel="stylesheet"
+        href="./output.css"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+</head>
+
+
+<body
+    class="min-h-screen bg-[#FAFAF8] text-[#17201E] font-['Inter']"
+>
+
+
+<!-- TOAST -->
+<div
+    id="toast"
+    class="fixed top-5 right-5 z-[100] hidden max-w-sm rounded-xl bg-[#17201E] px-5 py-4 text-sm font-semibold text-white shadow-xl"
+>
+    <span id="toastMessage"></span>
+</div>
+
+
+
+    <!-- =====================================================
+         MOBILE HEADER
+    ====================================================== -->
+
+    <header
+        class="lg:hidden sticky top-0 z-40 bg-white border-b border-gray-200"
+    >
+
+        <div
+            class="h-16 px-5 flex items-center justify-between"
+        >
+
+            <a
+                href="dashboard.html"
+                class="flex items-center gap-2.5"
+            >
+
+                <div
+                    class="w-9 h-9 rounded-xl bg-[#D97706] text-white flex items-center justify-center font-extrabold"
+                >
+                    G
+                </div>
+
+                <span class="font-extrabold text-lg">
+                    Giftly
+                </span>
+
+            </a>
+
+
+            <button
+                id="mobileMenuBtn"
+                type="button"
+                class="w-10 h-10 rounded-xl border border-gray-200 flex items-center justify-center"
+            >
+
+                <svg
+                    class="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.8"
+                >
+
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M4 6h16M4 12h16M4 18h16"
+                    />
+
+                </svg>
+
+            </button>
+
+        </div>
+
+
+        <!-- MOBILE MENU -->
+
+        <div
+            id="mobileMenu"
+            class="hidden border-t border-gray-100 bg-white px-5 py-4"
+        >
+
+            <nav class="space-y-1">
+
+                <a
+                    href="dashboard.html"
+                    class="block px-3 py-3 rounded-xl text-sm text-gray-600 hover:bg-gray-50"
+                >
+                    Dashboard
+                </a>
+
+
+                <a
+                    href="wallet.html"
+                    class="block px-3 py-3 rounded-xl bg-orange-50 text-[#D97706] text-sm font-bold"
+                >
+                    Wallet
+                </a>
+
+
+                <a
+                    href="sell-giftcard.html"
+                    class="block px-3 py-3 rounded-xl text-sm text-gray-600 hover:bg-gray-50"
+                >
+                    Sell Gift Card
+                </a>
+
+
+                <a
+                    href="airtime.html"
+                    class="block px-3 py-3 rounded-xl text-sm text-gray-600 hover:bg-gray-50"
+                >
+                    Airtime
+                </a>
+
+
+                <a
+                    href="data.html"
+                    class="block px-3 py-3 rounded-xl text-sm text-gray-600 hover:bg-gray-50"
+                >
+                    Data
+                </a>
+
+
+                <a
+                    href="transactions.html"
+                    class="block px-3 py-3 rounded-xl text-sm text-gray-600 hover:bg-gray-50"
+                >
+                    Transactions
+                </a>
+
+
+                <a
+                    href="profile.html"
+                    class="block px-3 py-3 rounded-xl text-sm text-gray-600 hover:bg-gray-50"
+                >
+                    Profile & Settings
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         DESKTOP SIDEBAR
+    ====================================================== -->
+
+    <aside
+        class="hidden lg:flex fixed inset-y-0 left-0 z-40 w-64 bg-white border-r border-gray-200 flex-col"
+    >
+
+        <!-- LOGO -->
+
+        <div class="h-20 px-6 flex items-center">
+
+            <a
+                href="dashboard.html"
+                class="flex items-center gap-3"
+            >
+
+                <div
+                    class="w-10 h-10 rounded-xl bg-[#D97706] text-white flex items-center justify-center font-extrabold"
+                >
+                    G
+                </div>
+
+                <span
+                    class="text-xl font-extrabold tracking-tight"
+                >
+                    Giftly
+                </span>
+
+            </a>
+
+        </div>
+
+
+
+        <!-- NAVIGATION -->
+
+        <nav class="flex-1 px-4 py-5 space-y-1">
+
+            <a
+                href="dashboard.html"
+                class="flex items-center gap-3 px-3 py-3 rounded-xl text-sm font-medium text-gray-600 hover:bg-gray-50 transition"
+            >
+                🏠
+                Dashboard
+            </a>
+
+
+            <a
+                href="wallet.html"
+                class="flex items-center gap-3 px-3 py-3 rounded-xl bg-orange-50 text-[#D97706] text-sm font-bold"
+            >
+                💰
+                Wallet
+            </a>
+
+
+            <a
+                href="sell-giftcard.html"
+                class="flex items-center gap-3 px-3 py-3 rounded-xl text-sm font-medium text-gray-600 hover:bg-gray-50 transition"
+            >
+                🎁
+                Sell Gift Card
+            </a>
+
+
+            <a
+                href="airtime.html"
+                class="flex items-center gap-3 px-3 py-3 rounded-xl text-sm font-medium text-gray-600 hover:bg-gray-50 transition"
+            >
+                📱
+                Airtime
+            </a>
+
+
+            <a
+                href="data.html"
+                class="flex items-center gap-3 px-3 py-3 rounded-xl text-sm font-medium text-gray-600 hover:bg-gray-50 transition"
+            >
+                📶
+                Data
+            </a>
+
+
+            <a
+                href="transactions.html"
+                class="flex items-center gap-3 px-3 py-3 rounded-xl text-sm font-medium text-gray-600 hover:bg-gray-50 transition"
+            >
+                ↔
+                Transactions
+            </a>
+
+
+            <div class="pt-7">
+
+                <p
+                    class="px-3 mb-3 text-[10px] uppercase tracking-widest font-bold text-gray-400"
+                >
+                    Account
+                </p>
+
+
+                <a
+                    href="profile.html"
+                    class="flex items-center gap-3 px-3 py-3 rounded-xl text-sm font-medium text-gray-600 hover:bg-gray-50 transition"
+                >
+                    ⚙
+                    Profile & Settings
+                </a>
+
+            </div>
+
+        </nav>
+
+
+
+        <!-- USER -->
+
+        <div class="border-t border-gray-100 p-4">
+
+            <div class="flex items-center gap-3">
+
+                <div
+                    class="w-10 h-10 rounded-full bg-[#17201E] text-white flex items-center justify-center text-xs font-bold"
+                >
+                    FS
+                </div>
+
+
+                <div class="min-w-0">
+
+                    <p class="text-sm font-bold truncate">
+                        Favour Samuel
+                    </p>
+
+                    <p class="text-xs text-gray-400 truncate">
+                        user@example.com
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <div class="lg:ml-64 min-h-screen">
+
+
+        <!-- DESKTOP HEADER -->
+
+        <header
+            class="hidden lg:flex h-20 bg-white border-b border-gray-200 px-8 items-center justify-between"
+        >
+
+            <div>
+
+                <p class="text-sm text-gray-400">
+                    Account
+                </p>
+
+                <h1 class="text-xl font-extrabold">
+                    Wallet
+                </h1>
+
+            </div>
+
+
+            <a
+                href="dashboard.html"
+                class="text-sm font-bold text-[#D97706] hover:text-[#B45309]"
+            >
+                Back to Dashboard
+            </a>
+
+        </header>
+
+
+
+        <!-- =================================================
+             CONTENT
+        ================================================== -->
+
+        <main
+            class="p-5 sm:p-7 lg:p-8 max-w-7xl"
+        >
+
+
+            <!-- MOBILE TITLE -->
+
+            <div
+                class="lg:hidden mb-7"
+            >
+
+                <p class="text-sm text-gray-400">
+                    Account
+                </p>
+
+                <h1
+                    class="text-2xl font-extrabold mt-1"
+                >
+                    Wallet
+                </h1>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 BALANCE + ACTIONS
+            ================================================== -->
+
+            <div
+                class="grid grid-cols-1 lg:grid-cols-3 gap-5 mb-6"
+            >
+
+
+                <!-- BALANCE -->
+
+                <section
+                    class="lg:col-span-2 rounded-2xl bg-[#17201E] text-white p-6 sm:p-8"
+                >
+
+                    <div
+                        class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-5"
+                    >
+
+                        <div>
+
+                            <p
+                                class="text-sm text-gray-400"
+                            >
+                                Available balance
+                            </p>
+
+
+                            <h2
+                                id="walletBalance"
+                                class="mt-2 text-3xl sm:text-4xl font-extrabold tracking-tight"
+                            >
+                                ₦125,000.00
+                            </h2>
+
+
+                            <p
+                                class="mt-2 text-xs text-gray-400"
+                            >
+                                Available for purchases and withdrawals
+                            </p>
+
+                        </div>
+
+
+                        <div
+                            class="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center text-xl"
+                        >
+                            ₦
+                        </div>
+
+                    </div>
+
+
+                    <!-- ACTIONS -->
+
+                    <div
+                        class="grid grid-cols-2 gap-3 mt-7"
+                    >
+
+                        <button
+                            id="fundBtn"
+                            type="button"
+                            class="h-11 rounded-xl bg-[#D97706] text-white text-sm font-bold hover:bg-[#B45309] transition"
+                        >
+                            + Fund Wallet
+                        </button>
+
+
+                        <button
+                            id="withdrawBtn"
+                            type="button"
+                            class="h-11 rounded-xl bg-white/10 text-white text-sm font-bold hover:bg-white/15 transition"
+                        >
+                            Withdraw
+                        </button>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- QUICK INFO -->
+
+                <section
+                    class="bg-white border border-gray-200 rounded-2xl p-5 sm:p-6"
+                >
+
+                    <h3 class="font-extrabold">
+                        Wallet activity
+                    </h3>
+
+
+                    <p
+                        class="mt-1 text-xs text-gray-400"
+                    >
+                        Your wallet at a glance.
+                    </p>
+
+
+                    <div
+                        class="mt-6 space-y-5"
+                    >
+
+
+                        <div
+                            class="flex items-center justify-between gap-4"
+                        >
+
+                            <span
+                                class="text-sm text-gray-500"
+                            >
+                                Money received
+                            </span>
+
+                            <span
+                                class="text-sm font-extrabold text-green-700"
+                            >
+                                ₦127,500
+                            </span>
+
+                        </div>
+
+
+                        <div
+                            class="flex items-center justify-between gap-4"
+                        >
+
+                            <span
+                                class="text-sm text-gray-500"
+                            >
+                                Money spent
+                            </span>
+
+                            <span
+                                class="text-sm font-extrabold"
+                            >
+                                ₦2,500
+                            </span>
+
+                        </div>
+
+
+                        <div
+                            class="flex items-center justify-between gap-4"
+                        >
+
+                            <span
+                                class="text-sm text-gray-500"
+                            >
+                                Pending
+                            </span>
+
+                            <span
+                                class="text-sm font-extrabold text-orange-600"
+                            >
+                                ₦0
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+                </section>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 FUND / WITHDRAW MODALS
+            ================================================== -->
+
+
+            <!-- FUND MODAL -->
+
+            <div
+                id="fundModal"
+                class="hidden fixed inset-0 z-50 bg-black/40 px-4 flex items-center justify-center"
+            >
+
+                <div
+                    class="w-full max-w-md bg-white rounded-2xl p-6 sm:p-7"
+                >
+
+                    <div
+                        class="flex items-start justify-between gap-4"
+                    >
+
+                        <div>
+
+                            <h3 class="text-lg font-extrabold">
+                                Fund wallet
+                            </h3>
+
+                            <p
+                                class="mt-1 text-xs text-gray-400"
+                            >
+                                Add money to your Giftly wallet.
+                            </p>
+
+                        </div>
+
+
+                        <button
+                            id="closeFundModal"
+                            type="button"
+                            class="w-9 h-9 rounded-xl bg-gray-100 text-gray-500"
+                        >
+                            ×
+                        </button>
+
+                    </div>
+
+
+                    <form
+                        id="fundForm"
+                        class="mt-6"
+                    >
+
+                        <label
+                            for="fundAmount"
+                            class="block text-sm font-bold"
+                        >
+                            Amount
+                        </label>
+
+
+                        <div class="relative mt-2">
+
+                            <span
+                                class="absolute left-4 top-1/2 -translate-y-1/2 text-sm font-bold text-gray-400"
+                            >
+                                ₦
+                            </span>
+
+
+                            <input
+                                id="fundAmount"
+                                type="number"
+                                min="100"
+                                placeholder="Enter amount"
+                                class="w-full h-12 pl-9 pr-4 rounded-xl border border-gray-200 outline-none text-sm focus:border-[#D97706] focus:ring-4 focus:ring-orange-100"
+                            >
+
+                        </div>
+
+
+                        <div
+                            class="grid grid-cols-3 gap-2 mt-3"
+                        >
+
+                            <button
+                                type="button"
+                                class="quickAmount h-10 rounded-lg border border-gray-200 text-xs font-bold hover:border-[#D97706]"
+                                data-amount="5000"
+                            >
+                                ₦5,000
+                            </button>
+
+                            <button
+                                type="button"
+                                class="quickAmount h-10 rounded-lg border border-gray-200 text-xs font-bold hover:border-[#D97706]"
+                                data-amount="10000"
+                            >
+                                ₦10,000
+                            </button>
+
+                            <button
+                                type="button"
+                                class="quickAmount h-10 rounded-lg border border-gray-200 text-xs font-bold hover:border-[#D97706]"
+                                data-amount="20000"
+                            >
+                                ₦20,000
+                            </button>
+
+                        </div>
+
+
+                        <p
+                            id="fundError"
+                            class="hidden mt-3 text-xs text-red-600"
+                        ></p>
+
+
+                        <button
+                            type="submit"
+                            class="mt-5 w-full h-12 rounded-xl bg-[#D97706] text-white text-sm font-bold hover:bg-[#B45309]"
+                        >
+                            Continue to Payment
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- WITHDRAW MODAL -->
+
+            <div
+                id="withdrawModal"
+                class="hidden fixed inset-0 z-50 bg-black/40 px-4 flex items-center justify-center"
+            >
+
+                <div
+                    class="w-full max-w-md bg-white rounded-2xl p-6 sm:p-7"
+                >
+
+                    <div
+                        class="flex items-start justify-between gap-4"
+                    >
+
+                        <div>
+
+                            <h3 class="text-lg font-extrabold">
+                                Withdraw funds
+                            </h3>
+
+                            <p
+                                class="mt-1 text-xs text-gray-400"
+                            >
+                                Withdraw your available balance.
+                            </p>
+
+                        </div>
+
+
+                        <button
+                            id="closeWithdrawModal"
+                            type="button"
+                            class="w-9 h-9 rounded-xl bg-gray-100 text-gray-500"
+                        >
+                            ×
+                        </button>
+
+                    </div>
+
+
+                    <form
+                        id="withdrawForm"
+                        class="mt-6"
+                    >
+
+                        <label
+                            for="withdrawAmount"
+                            class="block text-sm font-bold"
+                        >
+                            Amount
+                        </label>
+
+
+                        <div class="relative mt-2">
+
+                            <span
+                                class="absolute left-4 top-1/2 -translate-y-1/2 text-sm font-bold text-gray-400"
+                            >
+                                ₦
+                            </span>
+
+
+                            <input
+                                id="withdrawAmount"
+                                type="number"
+                                min="100"
+                                placeholder="Enter amount"
+                                class="w-full h-12 pl-9 pr-4 rounded-xl border border-gray-200 outline-none text-sm focus:border-[#D97706] focus:ring-4 focus:ring-orange-100"
+                            >
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            id="maxWithdraw"
+                            class="mt-2 text-xs font-bold text-[#D97706]"
+                        >
+                            Withdraw available balance
+                        </button>
+
+
+                        <div class="mt-5">
+
+                            <label
+                                for="bankName"
+                                class="block text-sm font-bold"
+                            >
+                                Bank
+                            </label>
+
+
+                            <select
+                                id="bankName"
+                                class="mt-2 w-full h-12 px-4 rounded-xl border border-gray-200 bg-white outline-none text-sm focus:border-[#D97706]"
+                            >
+
+                                <option value="">
+                                    Select bank
+                                </option>
+
+                                <option>
+                                    Access Bank
+                                </option>
+
+                                <option>
+                                    GTBank
+                                </option>
+
+                                <option>
+                                    UBA
+                                </option>
+
+                                <option>
+                                    First Bank
+                                </option>
+
+                                <option>
+                                    Zenith Bank
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="mt-5">
+
+                            <label
+                                for="accountNumber"
+                                class="block text-sm font-bold"
+                            >
+                                Account number
+                            </label>
+
+
+                            <input
+                                id="accountNumber"
+                                type="tel"
+                                inputmode="numeric"
+                                maxlength="10"
+                                placeholder="0123456789"
+                                class="mt-2 w-full h-12 px-4 rounded-xl border border-gray-200 outline-none text-sm focus:border-[#D97706] focus:ring-4 focus:ring-orange-100"
+                            >
+
+                        </div>
+
+
+                        <p
+                            id="withdrawError"
+                            class="hidden mt-3 text-xs text-red-600"
+                        ></p>
+
+
+                        <button
+                            type="submit"
+                            class="mt-5 w-full h-12 rounded-xl bg-[#17201E] text-white text-sm font-bold hover:bg-[#26302D]"
+                        >
+                            Request Withdrawal
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 RECENT ACTIVITY
+            ================================================== -->
+
+            <section
+                class="bg-white border border-gray-200 rounded-2xl overflow-hidden"
+            >
+
+                <div
+                    class="p-5 sm:p-6 border-b border-gray-100 flex items-center justify-between gap-4"
+                >
+
+                    <div>
+
+                        <h3 class="font-extrabold">
+                            Recent wallet activity
+                        </h3>
+
+                        <p
+                            class="mt-1 text-xs text-gray-400"
+                        >
+                            Your latest wallet movements.
+                        </p>
+
+                    </div>
+
+
+                    <a
+                        href="transactions.html"
+                        class="text-xs font-bold text-[#D97706] hover:text-[#B45309]"
+                    >
+                        View all
+                    </a>
+
+                </div>
+
+
+
+                <!-- ACTIVITY LIST -->
+
+                <div
+                    id="activityList"
+                    class="divide-y divide-gray-100"
+                >
+
+                    <!-- ACTIVITY 1 -->
+
+                    <div
+                        class="p-5 sm:px-6 flex items-center justify-between gap-4"
+                    >
+
+                        <div
+                            class="flex items-center gap-3 min-w-0"
+                        >
+
+                            <div
+                                class="w-10 h-10 shrink-0 rounded-xl bg-green-50 text-green-700 flex items-center justify-center"
+                            >
+                                ↑
+                            </div>
+
+
+                            <div class="min-w-0">
+
+                                <p
+                                    class="text-sm font-bold truncate"
+                                >
+                                    Gift Card Sale
+                                </p>
+
+                                <p
+                                    class="mt-1 text-xs text-gray-400"
+                                >
+                                    Amazon Gift Card • Sep 08, 2026
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="text-right shrink-0">
+
+                            <p
+                                class="text-sm font-extrabold text-green-700"
+                            >
+                                +₦85,000
+                            </p>
+
+                            <p
+                                class="mt-1 text-[10px] text-gray-400"
+                            >
+                                Successful
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ACTIVITY 2 -->
+
+                    <div
+                        class="p-5 sm:px-6 flex items-center justify-between gap-4"
+                    >
+
+                        <div
+                            class="flex items-center gap-3 min-w-0"
+                        >
+
+                            <div
+                                class="w-10 h-10 shrink-0 rounded-xl bg-orange-50 text-orange-700 flex items-center justify-center"
+                            >
+                                ↓
+                            </div>
+
+
+                            <div class="min-w-0">
+
+                                <p
+                                    class="text-sm font-bold truncate"
+                                >
+                                    Data Purchase
+                                </p>
+
+                                <p
+                                    class="mt-1 text-xs text-gray-400"
+                                >
+                                    MTN 5GB • Sep 07, 2026
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="text-right shrink-0">
+
+                            <p
+                                class="text-sm font-extrabold"
+                            >
+                                -₦1,500
+                            </p>
+
+                            <p
+                                class="mt-1 text-[10px] text-green-600"
+                            >
+                                Successful
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ACTIVITY 3 -->
+
+                    <div
+                        class="p-5 sm:px-6 flex items-center justify-between gap-4"
+                    >
+
+                        <div
+                            class="flex items-center gap-3 min-w-0"
+                        >
+
+                            <div
+                                class="w-10 h-10 shrink-0 rounded-xl bg-green-50 text-green-700 flex items-center justify-center"
+                            >
+                                ↑
+                            </div>
+
+
+                            <div class="min-w-0">
+
+                                <p
+                                    class="text-sm font-bold truncate"
+                                >
+                                    Wallet Funding
+                                </p>
+
+                                <p
+                                    class="mt-1 text-xs text-gray-400"
+                                >
+                                    Card payment • Sep 07, 2026
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="text-right shrink-0">
+
+                            <p
+                                class="text-sm font-extrabold text-green-700"
+                            >
+                                +₦50,000
+                            </p>
+
+                            <p
+                                class="mt-1 text-[10px] text-green-600"
+                            >
+                                Successful
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 IMPORTANT NOTICE
+            ================================================== -->
+
+            <div
+                class="mt-5 rounded-2xl border border-orange-100 bg-orange-50 p-5"
+            >
+
+                <div class="flex gap-3">
+
+                    <div
+                        class="w-9 h-9 shrink-0 rounded-xl bg-white flex items-center justify-center"
+                    >
+                        !
+                    </div>
+
+
+                    <div>
+
+                        <p
+                            class="text-sm font-bold text-orange-900"
+                        >
+                            Wallet security
+                        </p>
+
+                        <p
+                            class="mt-1 text-xs leading-5 text-orange-800"
+                        >
+                            Never share your password, PIN, OTP, or banking information with anyone claiming to be a Giftly representative.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- FOOTER -->
+
+            <footer
+                class="py-8 text-center text-xs text-gray-400"
+            >
+                © 2026 Giftly. All rights reserved.
+            </footer>
+
+
+        </main>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script>
+
+        // =====================================================
+        // MOBILE MENU
+        // =====================================================
+
+        const mobileMenuBtn =
+            document.getElementById(
+                "mobileMenuBtn"
+            );
+
+
+        const mobileMenu =
+            document.getElementById(
+                "mobileMenu"
+            );
+
+
+        mobileMenuBtn.addEventListener(
+            "click",
+            () => {
+
+                mobileMenu.classList.toggle(
+                    "hidden"
+                );
+
+            }
+        );
+
+
+
+        // =====================================================
+        // MODALS
+        // =====================================================
+
+        const fundBtn =
+            document.getElementById(
+                "fundBtn"
+            );
+
+
+        const withdrawBtn =
+            document.getElementById(
+                "withdrawBtn"
+            );
+
+
+        const fundModal =
+            document.getElementById(
+                "fundModal"
+            );
+
+
+        const withdrawModal =
+            document.getElementById(
+                "withdrawModal"
+            );
+
+
+        const closeFundModal =
+            document.getElementById(
+                "closeFundModal"
+            );
+
+
+        const closeWithdrawModal =
+            document.getElementById(
+                "closeWithdrawModal"
+            );
+
+
+
+        fundBtn.addEventListener(
+            "click",
+            () => {
+
+                fundModal.classList.remove(
+                    "hidden"
+                );
+
+            }
+        );
+
+
+        withdrawBtn.addEventListener(
+            "click",
+            () => {
+
+                withdrawModal.classList.remove(
+                    "hidden"
+                );
+
+            }
+        );
+
+
+        closeFundModal.addEventListener(
+            "click",
+            () => {
+
+                fundModal.classList.add(
+                    "hidden"
+                );
+
+            }
+        );
+
+
+        closeWithdrawModal.addEventListener(
+            "click",
+            () => {
+
+                withdrawModal.classList.add(
+                    "hidden"
+                );
+
+            }
+        );
+
+
+
+        // =====================================================
+        // CLOSE WHEN CLICKING BACKDROP
+        // =====================================================
+
+        fundModal.addEventListener(
+            "click",
+            event => {
+
+                if (
+                    event.target === fundModal
+                ) {
+
+                    fundModal.classList.add(
+                        "hidden"
+                    );
+
+                }
+
+            }
+        );
+
+
+        withdrawModal.addEventListener(
+            "click",
+            event => {
+
+                if (
+                    event.target === withdrawModal
+                ) {
+
+                    withdrawModal.classList.add(
+                        "hidden"
+                    );
+
+                }
+
+            }
+        );
+
+
+
+        // =====================================================
+        // QUICK FUND AMOUNTS
+        // =====================================================
+
+        const quickAmounts =
+            document.querySelectorAll(
+                ".quickAmount"
+            );
+
+
+        const fundAmount =
+            document.getElementById(
+                "fundAmount"
+            );
+
+
+        quickAmounts.forEach(
+            button => {
+
+                button.addEventListener(
+                    "click",
+                    () => {
+
+                        fundAmount.value =
+                            button.dataset.amount;
+
+                    }
+                );
+
+            }
+        );
+
+
+
+        // =====================================================
+        // DEMO BALANCE
+        //
+        // Temporary only.
+        // Later this will come from the logged-in user's
+        // database wallet.
+        // =====================================================
+
+        let walletBalance = 125000;
+
+
+
+        // =====================================================
+        // UPDATE BALANCE
+        // =====================================================
+
+        function updateWalletBalance() {
+
+            document.getElementById(
+                "walletBalance"
+            ).textContent =
+                `₦${walletBalance.toLocaleString(
+                    "en-NG",
+                    {
+                        minimumFractionDigits: 2,
+                        maximumFractionDigits: 2
+                    }
+                )}`;
+
+        }
+
+
+
+        // =====================================================
+        // FUND WALLET
+        // =====================================================
+
+        const fundForm =
+            document.getElementById(
+                "fundForm"
+            );
+
+
+        const fundError =
+            document.getElementById(
+                "fundError"
+            );
+
+
+        fundForm.addEventListener(
+            "submit",
+            event => {
+
+                event.preventDefault();
+
+
+                const amount =
+                    Number(
+                        fundAmount.value
+                    );
+
+
+                fundError.classList.add(
+                    "hidden"
+                );
+
+
+                if (
+                    !amount
+                    ||
+                    amount < 100
+                ) {
+
+                    fundError.textContent =
+                        "Minimum funding amount is ₦100.";
+
+                    fundError.classList.remove(
+                        "hidden"
+                    );
+
+                    return;
+
+                }
+
+
+                /*
+                    IMPORTANT:
+
+                    Do NOT actually add the money here.
+
+                    This button will later open the real
+                    payment provider checkout.
+
+                    The wallet should only be credited
+                    after the backend confirms the payment.
+                */
+
+
+                alert(
+                    `Payment checkout will open for ₦${amount.toLocaleString()}`
+                );
+
+                fundModal.classList.add(
+                    "hidden"
+                );
+
+            }
+        );
+
+
+
+        // =====================================================
+// TOAST NOTIFICATION
+// =====================================================
+
+function showToast(message) {
+
+    const toast =
+        document.getElementById("toast");
+
+    const toastMessage =
+        document.getElementById("toastMessage");
+
+    toastMessage.textContent = message;
+
+    toast.classList.remove("hidden");
+
+    setTimeout(() => {
+
+        toast.classList.add("hidden");
+
+    }, 3000);
+
+}
+
+
+
+        // =====================================================
+        // WITHDRAW
+        // =====================================================
+
+        const withdrawForm =
+            document.getElementById(
+                "withdrawForm"
+            );
+
+
+        const withdrawAmount =
+            document.getElementById(
+                "withdrawAmount"
+            );
+
+
+        const withdrawError =
+            document.getElementById(
+                "withdrawError"
+            );
+
+
+        const maxWithdraw =
+            document.getElementById(
+                "maxWithdraw"
+            );
+
+
+
+        maxWithdraw.addEventListener(
+            "click",
+            () => {
+
+                withdrawAmount.value =
+                    walletBalance;
+
+            }
+        );
+
+
+
+        withdrawForm.addEventListener(
+            "submit",
+            event => {
+
+                event.preventDefault();
+
+
+                withdrawError.classList.add(
+                    "hidden"
+                );
+
+
+                const amount =
+                    Number(
+                        withdrawAmount.value
+                    );
+
+
+                const bank =
+                    document.getElementById(
+                        "bankName"
+                    ).value;
+
+
+                const account =
+                    document.getElementById(
+                        "accountNumber"
+                    ).value.trim();
+
+
+
+                if (
+                    !amount
+                    ||
+                    amount < 100
+                ) {
+
+                    showWithdrawError(
+                        "Minimum withdrawal amount is ₦100."
+                    );
+
+                    return;
+
+                }
+
+
+                if (
+                    amount > walletBalance
+                ) {
+
+                    showWithdrawError(
+                        "You do not have enough available balance."
+                    );
+
+                    return;
+
+                }
+
+
+                if (!bank) {
+
+                    showWithdrawError(
+                        "Please select your bank."
+                    );
+
+                    return;
+
+                }
+
+
+                if (
+                    !/^\d{10}$/.test(account)
+                ) {
+
+                    showWithdrawError(
+                        "Please enter a valid 10-digit account number."
+                    );
+
+                    return;
+
+                }
+
+
+
+                /*
+                    IMPORTANT:
+
+                    This does NOT actually withdraw money.
+
+                    Later the backend will:
+
+                    1. Verify the user.
+                    2. Check available balance.
+                    3. Create withdrawal request.
+                    4. Deduct/hold the amount safely.
+                    5. Send withdrawal to payment provider.
+                    6. Update transaction status.
+                */
+
+
+              showToast(
+    `Withdrawal request ready for ₦${amount.toLocaleString()}`
+);
+
+withdrawModal.classList.add(
+    "hidden"
+);
+            }
+        );
+
+
+
+        function showWithdrawError(
+            message
+        ) {
+
+            withdrawError.textContent =
+                message;
+
+            withdrawError.classList.remove(
+                "hidden"
+            );
+
+        }
+
+
+
+        // =====================================================
+        // INITIAL LOAD
+        // =====================================================
+
+        updateWalletBalance();
+
+    </script>
+
+
+
+
+</body>
+
+</html>
+

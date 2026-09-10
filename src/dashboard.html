@@ -1,0 +1,2406 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Dashboard — Giftly</title>
+
+    <link
+        rel="stylesheet"
+        href="./output.css"
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <style>
+  #giftlyToast {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 100;
+    width: calc(100% - 40px);
+    max-width: 384px;
+  }
+</style>
+
+</head>
+
+
+<body
+    class="min-h-screen bg-[#FAFAF8] text-[#17201E] font-['Inter']"
+>
+
+
+    <!-- =====================================================
+         MOBILE HEADER
+    ====================================================== -->
+
+    <header
+        class="lg:hidden sticky top-0 z-40 bg-white border-b border-gray-200"
+    >
+
+        <div
+            class="h-16 px-5 flex items-center justify-between"
+        >
+
+            <!-- LOGO -->
+
+            <a
+                href="dashboard.html"
+                class="flex items-center gap-2.5"
+            >
+
+                <div
+                    class="w-9 h-9 rounded-xl bg-[#D97706] text-white flex items-center justify-center font-extrabold"
+                >
+                    G
+                </div>
+
+                <span class="font-extrabold text-lg">
+                    Giftly
+                </span>
+
+            </a>
+
+
+            <!-- MENU -->
+
+            <button
+                id="mobileMenuBtn"
+                type="button"
+                class="w-10 h-10 rounded-xl border border-gray-200 flex items-center justify-center hover:bg-gray-50 transition"
+            >
+
+                <svg
+                    class="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.8"
+                >
+
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M4 6h16M4 12h16M4 18h16"
+                    />
+
+                </svg>
+
+            </button>
+
+        </div>
+
+
+        <!-- MOBILE MENU -->
+
+        <div
+            id="mobileMenu"
+            class="hidden border-t border-gray-100 bg-white px-5 py-4"
+        >
+
+            <nav class="space-y-1">
+
+                <a
+                    href="dashboard.html"
+                    class="flex items-center gap-3 px-3 py-3 rounded-xl bg-orange-50 text-[#D97706] text-sm font-bold"
+                >
+                    Dashboard
+                </a>
+
+
+                <a
+                    href="sell-giftcard.html"
+                    class="flex items-center gap-3 px-3 py-3 rounded-xl text-sm font-medium text-gray-600 hover:bg-gray-50"
+                >
+                    Sell Gift Card
+                </a>
+
+
+                <a
+                    href="airtime.html"
+                    class="flex items-center gap-3 px-3 py-3 rounded-xl text-sm font-medium text-gray-600 hover:bg-gray-50"
+                >
+                    Airtime
+                </a>
+
+
+                <a
+                    href="data.html"
+                    class="flex items-center gap-3 px-3 py-3 rounded-xl text-sm font-medium text-gray-600 hover:bg-gray-50"
+                >
+                    Data
+                </a>
+
+
+                <a
+                    href="transactions.html"
+                    class="flex items-center gap-3 px-3 py-3 rounded-xl text-sm font-medium text-gray-600 hover:bg-gray-50"
+                >
+                    Transactions
+                </a>
+
+
+                <a
+                    href="profile.html"
+                    class="flex items-center gap-3 px-3 py-3 rounded-xl text-sm font-medium text-gray-600 hover:bg-gray-50"
+                >
+                    Profile & Settings
+                </a>
+
+
+                <button
+                    id="mobileLogout"
+                    type="button"
+                    class="w-full text-left px-3 py-3 rounded-xl text-sm font-medium text-red-500 hover:bg-red-50"
+                >
+                    Log out
+                </button>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         DESKTOP SIDEBAR
+    ====================================================== -->
+
+    <aside
+        class="hidden lg:flex fixed inset-y-0 left-0 z-40 w-64 bg-white border-r border-gray-200 flex-col"
+    >
+
+        <!-- LOGO -->
+
+        <div class="h-20 px-6 flex items-center">
+
+            <a
+                href="dashboard.html"
+                class="flex items-center gap-3"
+            >
+
+                <div
+                    class="w-10 h-10 rounded-xl bg-[#D97706] text-white flex items-center justify-center font-extrabold"
+                >
+                    G
+                </div>
+
+                <span
+                    class="text-xl font-extrabold tracking-tight"
+                >
+                    Giftly
+                </span>
+
+            </a>
+
+        </div>
+
+
+        <!-- NAVIGATION -->
+
+        <nav class="flex-1 px-4 py-5 space-y-1">
+
+            <p
+                class="px-3 mb-3 text-[10px] uppercase tracking-widest font-bold text-gray-400"
+            >
+                Main Menu
+            </p>
+
+
+            <a
+                href="dashboard.html"
+                class="flex items-center gap-3 px-3 py-3 rounded-xl bg-orange-50 text-[#D97706] text-sm font-bold"
+            >
+
+                <svg
+                    class="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.8"
+                >
+
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M3 10.5 12 3l9 7.5v9a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 19.5v-9Z"
+                    />
+
+                </svg>
+
+                Dashboard
+
+            </a>
+
+
+            <a
+                href="sell-giftcard.html"
+                class="flex items-center gap-3 px-3 py-3 rounded-xl text-sm font-medium text-gray-600 hover:bg-gray-50 transition"
+            >
+
+                <span class="text-lg">🎁</span>
+
+                Sell Gift Card
+
+            </a>
+
+
+            <a
+                href="airtime.html"
+                class="flex items-center gap-3 px-3 py-3 rounded-xl text-sm font-medium text-gray-600 hover:bg-gray-50 transition"
+            >
+
+                <span class="text-lg">📱</span>
+
+                Airtime
+
+            </a>
+
+
+            <a
+                href="data.html"
+                class="flex items-center gap-3 px-3 py-3 rounded-xl text-sm font-medium text-gray-600 hover:bg-gray-50 transition"
+            >
+
+                <span class="text-lg">📶</span>
+
+                Data
+
+            </a>
+
+
+            <a
+                href="transactions.html"
+                class="flex items-center gap-3 px-3 py-3 rounded-xl text-sm font-medium text-gray-600 hover:bg-gray-50 transition"
+            >
+
+                <span class="text-lg">↔</span>
+
+                Transactions
+
+            </a>
+
+
+            <p
+                class="px-3 mt-8 mb-3 text-[10px] uppercase tracking-widest font-bold text-gray-400"
+            >
+                Account
+            </p>
+
+
+            <a
+                href="profile.html"
+                class="flex items-center gap-3 px-3 py-3 rounded-xl text-sm font-medium text-gray-600 hover:bg-gray-50 transition"
+            >
+
+                <span class="text-lg">⚙</span>
+
+                Profile & Settings
+
+            </a>
+
+        </nav>
+
+
+        <!-- USER -->
+
+        <div
+            class="border-t border-gray-100 p-4"
+        >
+
+            <div
+                class="flex items-center gap-3"
+            >
+
+                <div
+                    class="w-10 h-10 rounded-full bg-[#17201E] text-white flex items-center justify-center text-sm font-bold"
+                >
+                    FS
+                </div>
+
+
+                <div class="min-w-0 flex-1">
+
+         <p
+    id="dashboardUserName"
+    data-user-name
+    class="text-sm font-bold truncate"
+>
+    Loading...
+</p>
+
+                  <p
+    data-user-email
+    class="text-xs text-gray-400 truncate"
+>
+    Loading...
+</p>
+                </div>
+
+
+                <button
+                    id="logoutBtn"
+                    type="button"
+                    title="Log out"
+                    class="text-gray-400 hover:text-red-500 transition"
+                >
+
+                    <svg
+                        class="w-5 h-5"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.8"
+                    >
+
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M10 17l5-5-5-5M15 12H3m12-7h4a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-4"
+                        />
+
+                    </svg>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         MAIN AREA
+    ====================================================== -->
+
+    <div class="lg:ml-64 min-h-screen">
+
+
+        <!-- =================================================
+             DESKTOP TOP BAR
+        ================================================== -->
+
+        <header
+            class="hidden lg:flex h-20 bg-white border-b border-gray-200 px-8 items-center justify-between"
+        >
+
+            <div>
+
+                <p class="text-sm text-gray-400">
+                    Dashboard
+                </p>
+
+                <h1
+                    class="text-xl font-extrabold"
+                >
+                    Welcome back 👋
+                </h1>
+
+            </div>
+
+
+            <div class="flex items-center gap-4">
+
+                <button
+                    type="button"
+                    class="w-10 h-10 rounded-xl border border-gray-200 flex items-center justify-center text-gray-500 hover:bg-gray-50 transition"
+                    title="Notifications"
+                >
+
+                    <svg
+                        class="w-5 h-5"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.8"
+                    >
+
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M15 17h5l-1.5-2v-4a6.5 6.5 0 0 0-13 0v4L4 17h5m6 0a3 3 0 0 1-6 0"
+                        />
+
+                    </svg>
+
+                </button>
+
+
+                <a
+                    href="profile.html"
+                    class="w-10 h-10 rounded-full bg-[#17201E] text-white flex items-center justify-center text-xs font-bold"
+                >
+                    FS
+                </a>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =================================================
+             CONTENT
+        ================================================== -->
+
+        <main class="p-5 sm:p-7 lg:p-8 max-w-7xl">
+
+
+            <!-- MOBILE GREETING -->
+
+            <div class="lg:hidden mb-6">
+
+                <p class="text-sm text-gray-400">
+                    Welcome back
+                </p>
+
+               <h1
+    class="text-2xl font-extrabold mt-1"
+>
+    <span id="mobileUserName">Loading...</span> 👋
+</h1>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 WALLET
+            ================================================== -->
+
+            <section
+                class="rounded-2xl bg-[#17201E] text-white p-6 sm:p-7 overflow-hidden relative"
+            >
+
+                <!-- DECORATION -->
+
+                <div
+                    class="absolute -right-16 -top-20 w-56 h-56 rounded-full bg-[#D97706] opacity-20"
+                ></div>
+
+                <div
+                    class="absolute right-16 -bottom-28 w-64 h-64 rounded-full bg-orange-400 opacity-10"
+                ></div>
+
+
+                <div
+                    class="relative"
+                >
+
+                    <div
+                        class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-6"
+                    >
+
+                        <div>
+
+                            <p
+                                class="text-sm text-gray-400"
+                            >
+                                Available balance
+                            </p>
+
+
+                            <div
+                                class="mt-2 flex items-center gap-3"
+                            >
+
+                                <h2
+                                    id="walletBalance"
+                                    class="text-3xl sm:text-4xl font-extrabold tracking-tight"
+                                >
+                                    ₦0.00
+                                </h2>
+
+
+                                <button
+                                    id="toggleBalance"
+                                    type="button"
+                                    class="text-gray-400 hover:text-white transition"
+                                    title="Hide balance"
+                                >
+
+                                    <svg
+                                        id="balanceEye"
+                                        class="w-5 h-5"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        viewBox="0 0 24 24"
+                                        stroke-width="1.8"
+                                    >
+
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            d="M2.25 12s3.75-6.75 9.75-6.75S21.75 12 21.75 12 18 18.75 12 18.75 2.25 12 2.25 12Z"
+                                        />
+
+                                        <circle
+                                            cx="12"
+                                            cy="12"
+                                            r="2.5"
+                                        />
+
+                                    </svg>
+
+                                </button>
+
+                            </div>
+
+
+                            <p class="mt-2 text-xs text-gray-400">
+                                Your Giftly wallet
+                            </p>
+
+                        </div>
+
+
+                        <div class="flex gap-3">
+
+                            <button
+                                id="fundWalletBtn"
+                                type="button"
+                                class="flex-1 sm:flex-none px-5 py-3 rounded-xl bg-[#D97706] text-white text-sm font-bold hover:bg-[#B45309] transition"
+                            >
+                                Fund Wallet
+                            </button>
+
+
+                            <button
+                                id="withdrawBtn"
+                                type="button"
+                                class="flex-1 sm:flex-none px-5 py-3 rounded-xl border border-gray-600 text-white text-sm font-bold hover:bg-white/5 transition"
+                            >
+                                Withdraw
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 QUICK ACTIONS
+            ================================================== -->
+
+            <section class="mt-8">
+
+                <div
+                    class="flex items-center justify-between mb-4"
+                >
+
+                    <div>
+
+                        <h2 class="text-lg font-extrabold">
+                            What would you like to do?
+                        </h2>
+
+                        <p
+                            class="text-sm text-gray-400 mt-1"
+                        >
+                            Choose a service to get started.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
+                >
+
+
+                    <!-- SELL GIFT CARD -->
+
+                    <a
+                        href="sell-giftcard.html"
+                        class="group bg-white border border-gray-200 rounded-2xl p-5 hover:border-orange-200 hover:shadow-md transition"
+                    >
+
+                        <div
+                            class="w-12 h-12 rounded-xl bg-orange-50 flex items-center justify-center text-2xl"
+                        >
+                            🎁
+                        </div>
+
+
+                        <div class="mt-5">
+
+                            <h3
+                                class="font-bold group-hover:text-[#D97706] transition"
+                            >
+                                Sell Gift Card
+                            </h3>
+
+                            <p
+                                class="mt-1 text-sm text-gray-400 leading-5"
+                            >
+                                Trade your gift cards and receive value in your wallet.
+                            </p>
+
+                        </div>
+
+
+                        <div
+                            class="mt-5 text-sm font-bold text-[#D97706]"
+                        >
+                            Start selling →
+                        </div>
+
+                    </a>
+
+
+
+                    <!-- AIRTIME -->
+
+                    <a
+                        href="airtime.html"
+                        class="group bg-white border border-gray-200 rounded-2xl p-5 hover:border-orange-200 hover:shadow-md transition"
+                    >
+
+                        <div
+                            class="w-12 h-12 rounded-xl bg-gray-50 flex items-center justify-center text-2xl"
+                        >
+                            📱
+                        </div>
+
+
+                        <div class="mt-5">
+
+                            <h3
+                                class="font-bold group-hover:text-[#D97706] transition"
+                            >
+                                Buy Airtime
+                            </h3>
+
+                            <p
+                                class="mt-1 text-sm text-gray-400 leading-5"
+                            >
+                                Purchase airtime directly using your wallet.
+                            </p>
+
+                        </div>
+
+
+                        <div
+                            class="mt-5 text-sm font-bold text-[#D97706]"
+                        >
+                            Buy airtime →
+                        </div>
+
+                    </a>
+
+
+
+                    <!-- DATA -->
+
+                    <a
+                        href="data.html"
+                        class="group bg-white border border-gray-200 rounded-2xl p-5 hover:border-orange-200 hover:shadow-md transition"
+                    >
+
+                        <div
+                            class="w-12 h-12 rounded-xl bg-gray-50 flex items-center justify-center text-2xl"
+                        >
+                            📶
+                        </div>
+
+
+                        <div class="mt-5">
+
+                            <h3
+                                class="font-bold group-hover:text-[#D97706] transition"
+                            >
+                                Buy Data
+                            </h3>
+
+                            <p
+                                class="mt-1 text-sm text-gray-400 leading-5"
+                            >
+                                Get mobile data bundles quickly from your wallet.
+                            </p>
+
+                        </div>
+
+
+                        <div
+                            class="mt-5 text-sm font-bold text-[#D97706]"
+                        >
+                            Buy data →
+                        </div>
+
+                    </a>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 RECENT TRANSACTIONS
+            ================================================== -->
+
+            <section
+                class="mt-8 bg-white border border-gray-200 rounded-2xl overflow-hidden"
+            >
+
+                <div
+                    class="px-5 sm:px-6 py-5 border-b border-gray-100 flex items-center justify-between"
+                >
+
+                    <div>
+
+                        <h2 class="font-extrabold">
+                            Recent transactions
+                        </h2>
+
+                        <p
+                            class="text-xs text-gray-400 mt-1"
+                        >
+                            Your latest wallet activity.
+                        </p>
+
+                    </div>
+
+
+                    <a
+                        href="transactions.html"
+                        class="text-sm font-bold text-[#D97706] hover:text-[#B45309]"
+                    >
+                        View all
+                    </a>
+
+                </div>
+
+
+                <!-- TRANSACTIONS -->
+
+                <div id="transactionsList">
+
+
+                    <!-- EMPTY STATE -->
+
+                    <div
+                        class="px-6 py-12 text-center"
+                    >
+
+                        <div
+                            class="mx-auto w-12 h-12 rounded-xl bg-gray-50 flex items-center justify-center text-xl"
+                        >
+                            ↔
+                        </div>
+
+
+                        <h3
+                            class="mt-4 text-sm font-bold"
+                        >
+                            No transactions yet
+                        </h3>
+
+
+                        <p
+                            class="mt-1 text-xs text-gray-400"
+                        >
+                            Your recent activity will appear here.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 FOOTER
+            ================================================== -->
+
+            <footer
+                class="py-8 text-center text-xs text-gray-400"
+            >
+
+                © 2026 Giftly. All rights reserved.
+
+            </footer>
+
+
+        </main>
+
+    </div>
+
+    <!-- =====================================================
+     FUND WALLET MODAL
+====================================================== -->
+
+<div
+    id="fundWalletModal"
+    class="hidden fixed inset-0 z-50 bg-black/40 px-5 flex items-center justify-center"
+>
+
+    <div
+        class="w-full max-w-md bg-white rounded-2xl shadow-xl p-6"
+    >
+
+        <!-- HEADER -->
+
+        <div class="flex items-center justify-between">
+
+            <div>
+
+                <h2 class="text-lg font-extrabold">
+                    Fund Wallet
+                </h2>
+
+                <p class="text-sm text-gray-400 mt-1">
+                    Add money to your Giftly wallet.
+                </p>
+
+            </div>
+
+            <button
+                id="closeFundModal"
+                type="button"
+                class="w-9 h-9 rounded-xl hover:bg-gray-100 text-gray-500 text-xl"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <!-- AMOUNT -->
+
+        <div class="mt-6">
+
+            <label
+                for="fundAmount"
+                class="block text-sm font-semibold"
+            >
+                Amount
+            </label>
+
+            <div class="relative mt-2">
+
+                <span
+                    class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 font-semibold"
+                >
+                    ₦
+                </span>
+
+                <input
+                    id="fundAmount"
+                    type="number"
+                    min="100"
+                    placeholder="Enter amount"
+                    class="w-full h-12 pl-9 pr-4 rounded-xl border border-gray-200 text-sm outline-none focus:border-[#D97706] focus:ring-4 focus:ring-orange-100"
+                >
+
+            </div>
+
+            <p class="mt-2 text-xs text-gray-400">
+                Minimum funding amount: ₦100
+            </p>
+
+        </div>
+
+
+        <!-- ERROR -->
+
+        <div
+            id="fundError"
+            class="hidden mt-4 rounded-xl bg-red-50 border border-red-100 px-4 py-3 text-xs font-medium text-red-600"
+        ></div>
+
+
+        <!-- BUTTONS -->
+
+        <div class="mt-6 flex gap-3">
+
+            <button
+                id="cancelFund"
+                type="button"
+                class="flex-1 h-12 rounded-xl border border-gray-200 text-sm font-bold hover:bg-gray-50"
+            >
+                Cancel
+            </button>
+
+            <button
+                id="continueFund"
+                type="button"
+                class="flex-1 h-12 rounded-xl bg-[#D97706] text-white text-sm font-bold hover:bg-[#B45309]"
+            >
+                Continue
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     WITHDRAW MONEY MODAL
+====================================================== -->
+
+<div
+    id="withdrawModal"
+    class="hidden fixed inset-0 z-50 bg-black/40 px-5 flex items-center justify-center"
+>
+    <div
+        class="w-full max-w-md bg-white rounded-2xl shadow-xl p-6 max-h-[90vh] overflow-y-auto"
+    >
+
+        <!-- HEADER -->
+
+        <div class="flex items-center justify-between">
+
+            <div>
+
+                <h2 class="text-lg font-extrabold">
+                    Withdraw Money
+                </h2>
+
+                <p class="text-sm text-gray-400 mt-1">
+                    Withdraw money from your Giftly wallet.
+                </p>
+
+            </div>
+
+            <button
+                id="closeWithdrawModal"
+                type="button"
+                class="w-9 h-9 rounded-xl hover:bg-gray-100 text-gray-500 text-xl"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <!-- AVAILABLE BALANCE -->
+
+        <div
+            class="mt-5 rounded-xl bg-orange-50 border border-orange-100 px-4 py-3"
+        >
+
+            <p class="text-xs text-gray-500">
+                Available balance
+            </p>
+
+            <p
+                id="withdrawAvailableBalance"
+                class="mt-1 text-lg font-extrabold text-[#D97706]"
+            >
+                ₦0.00
+            </p>
+
+        </div>
+
+
+        <!-- AMOUNT -->
+
+        <div class="mt-5">
+
+            <label
+                for="withdrawAmount"
+                class="block text-sm font-semibold"
+            >
+                Withdrawal amount
+            </label>
+
+            <div class="relative mt-2">
+
+                <span
+                    class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 font-semibold"
+                >
+                    ₦
+                </span>
+
+                <input
+                    id="withdrawAmount"
+                    type="number"
+                    min="100"
+                    placeholder="Enter amount"
+                    class="w-full h-12 pl-9 pr-4 rounded-xl border border-gray-200 text-sm outline-none focus:border-[#D97706] focus:ring-4 focus:ring-orange-100"
+                >
+
+            </div>
+
+        </div>
+
+
+        <!-- BANK -->
+
+        <div class="mt-5">
+
+            <label
+                for="withdrawBank"
+                class="block text-sm font-semibold"
+            >
+                Select bank
+            </label>
+
+            <select
+                id="withdrawBank"
+                class="w-full h-12 mt-2 px-4 rounded-xl border border-gray-200 text-sm outline-none focus:border-[#D97706] focus:ring-4 focus:ring-orange-100"
+            >
+
+                <option value="">
+                    Loading banks...
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- ACCOUNT NUMBER -->
+
+        <div class="mt-5">
+
+            <label
+                for="withdrawAccountNumber"
+                class="block text-sm font-semibold"
+            >
+                Account number
+            </label>
+
+            <input
+                id="withdrawAccountNumber"
+                type="text"
+                inputmode="numeric"
+                maxlength="10"
+                placeholder="Enter 10-digit account number"
+                class="w-full h-12 mt-2 px-4 rounded-xl border border-gray-200 text-sm outline-none focus:border-[#D97706] focus:ring-4 focus:ring-orange-100"
+            >
+
+        </div>
+
+
+        <!-- VERIFY ACCOUNT -->
+
+        <button
+            id="verifyWithdrawAccount"
+            type="button"
+            class="w-full h-11 mt-3 rounded-xl border border-gray-200 text-sm font-bold text-[#17201E] hover:bg-gray-50 transition"
+        >
+            Verify Account
+        </button>
+
+
+        <!-- ACCOUNT NAME -->
+
+        <div
+            id="verifiedAccountBox"
+            class="hidden mt-4 rounded-xl bg-green-50 border border-green-100 px-4 py-3"
+        >
+
+            <p class="text-xs text-green-600 font-medium">
+                Verified account
+            </p>
+
+            <p
+                id="verifiedAccountName"
+                class="mt-1 text-sm font-extrabold text-[#17201E]"
+            >
+            </p>
+
+        </div>
+
+
+        <!-- ERROR -->
+
+        <div
+            id="withdrawError"
+            class="hidden mt-4 rounded-xl bg-red-50 border border-red-100 px-4 py-3 text-xs font-medium text-red-600"
+        >
+        </div>
+
+
+        <!-- BUTTONS -->
+
+        <div class="mt-6 flex gap-3">
+
+            <button
+                id="cancelWithdraw"
+                type="button"
+                class="flex-1 h-12 rounded-xl border border-gray-200 text-sm font-bold hover:bg-gray-50"
+            >
+                Cancel
+            </button>
+
+            <button
+                id="submitWithdraw"
+                type="button"
+                class="flex-1 h-12 rounded-xl bg-[#D97706] text-white text-sm font-bold hover:bg-[#B45309]"
+            >
+                Withdraw
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     GIFTLY TOAST
+====================================================== -->
+<!-- GIFTLY TOAST -->
+
+<div
+    id="giftlyToast"
+    class="fixed top-5 right-5 z-[100] hidden w-[calc(100%-40px)] max-w-sm"
+>
+    <div
+        class="flex items-start gap-3 rounded-2xl border border-green-100 bg-white px-4 py-4 shadow-lg"
+    >
+
+        <div
+            class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-green-50 text-green-600"
+        >
+            ✓
+        </div>
+
+        <div class="min-w-0">
+
+            <p
+                id="giftlyToastTitle"
+                class="text-sm font-bold text-[#17201E]"
+            >
+                Success
+            </p>
+
+            <p
+                id="giftlyToastMessage"
+                class="mt-1 text-xs leading-5 text-gray-500"
+            ></p>
+
+        </div>
+
+    </div>
+</div>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+<script>
+
+
+
+// =====================================================
+// GIFTLY TOAST
+// =====================================================
+// =====================================================
+// GIFTLY TOAST
+// =====================================================
+
+function showToast(title, message) {
+
+    const toast = document.getElementById("giftlyToast");
+    const toastTitle = document.getElementById("giftlyToastTitle");
+    const toastMessage = document.getElementById("giftlyToastMessage");
+
+    if (!toast || !toastTitle || !toastMessage) {
+
+        console.error("Giftly toast elements not found.");
+
+        return;
+    }
+
+    toastTitle.textContent = title;
+    toastMessage.textContent = message;
+
+    toast.classList.remove("hidden");
+
+    clearTimeout(window.giftlyToastTimer);
+
+    window.giftlyToastTimer = setTimeout(() => {
+
+        toast.classList.add("hidden");
+
+    }, 4000);
+
+    
+}
+
+showToast(
+    "Test successful",
+    "Your Giftly toast is working."
+);
+
+// =====================================================
+// GET LOGGED-IN USER
+// =====================================================
+
+const currentUser =
+    JSON.parse(localStorage.getItem("giftlyUser"));
+
+
+// If no user is logged in, send them back to login
+if (!currentUser) {
+
+    window.location.href = "login.html";
+
+}
+
+
+// =====================================================
+// DISPLAY USER INFORMATION
+// =====================================================
+
+const userNameElements =
+    document.querySelectorAll("[data-user-name]");
+
+const userEmailElements =
+    document.querySelectorAll("[data-user-email]");
+
+
+// Display name
+userNameElements.forEach((element) => {
+
+    element.textContent =
+        currentUser.fullName;
+
+});
+
+
+// Display email
+userEmailElements.forEach((element) => {
+
+    element.textContent =
+        currentUser.email;
+
+});
+
+
+// =====================================================
+// MOBILE GREETING
+// =====================================================
+
+const mobileUserName =
+    document.getElementById("mobileUserName");
+
+if (mobileUserName) {
+
+    mobileUserName.textContent =
+        currentUser.fullName;
+
+}
+
+// =====================================================
+// WALLET BALANCE
+// =====================================================
+
+const walletBalance =
+    document.getElementById("walletBalance");
+
+let currentBalance =
+    Number(currentUser.walletBalance || 0);
+
+
+// Display balance
+function displayBalance() {
+
+    walletBalance.textContent =
+        `₦${currentBalance.toLocaleString("en-NG", {
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2
+        })}`;
+
+}
+
+
+// Display current local balance first
+displayBalance();
+
+
+// Get latest balance from MongoDB
+async function loadLatestUserBalance() {
+
+    try {
+
+        const response = await fetch(
+            `http://localhost:5000/api/user/${currentUser.id}`
+        );
+
+
+        const data =
+            await response.json();
+
+
+        if (!response.ok) {
+
+            console.error(
+                "Unable to load latest balance:",
+                data.message
+            );
+
+            return;
+
+        }
+
+
+        // Update balance from MongoDB
+        currentBalance =
+            Number(data.user.walletBalance || 0);
+
+
+        // Update stored user information
+        currentUser.walletBalance =
+            currentBalance;
+
+
+        localStorage.setItem(
+            "giftlyUser",
+            JSON.stringify(currentUser)
+        );
+
+
+        // Display latest balance
+        displayBalance();
+
+
+        console.log(
+            "Latest wallet balance:",
+            currentBalance
+        );
+
+
+    } catch (error) {
+
+        console.error(
+            "Failed to load wallet balance:",
+            error
+        );
+
+    }
+
+}
+
+
+// Load latest balance
+loadLatestUserBalance();
+
+
+// =====================================================
+// PAYMENT RESULT
+// =====================================================
+
+const paymentStatus =
+    new URLSearchParams(window.location.search)
+        .get("payment");
+
+
+if (paymentStatus === "success") {
+
+    showToast(
+        "Wallet funded successfully",
+        "Your payment was successful and your wallet has been updated."
+    );
+
+
+    // Remove ?payment=success from the URL
+    window.history.replaceState(
+        {},
+        document.title,
+        window.location.pathname
+    );
+
+}
+
+
+if (paymentStatus === "failed") {
+
+    showToast(
+        "Payment failed",
+        "We could not verify your payment. Please try again."
+    );
+
+
+    window.history.replaceState(
+        {},
+        document.title,
+        window.location.pathname
+    );
+
+}
+
+
+if (paymentStatus === "cancelled") {
+
+    showToast(
+        "Payment cancelled",
+        "Your wallet was not charged."
+    );
+
+
+    window.history.replaceState(
+        {},
+        document.title,
+        window.location.pathname
+    );
+
+}
+
+
+// =====================================================
+// MOBILE MENU
+// =====================================================
+
+const mobileMenuBtn =
+    document.getElementById("mobileMenuBtn");
+
+const mobileMenu =
+    document.getElementById("mobileMenu");
+
+
+if (mobileMenuBtn && mobileMenu) {
+
+    mobileMenuBtn.addEventListener("click", () => {
+
+        mobileMenu.classList.toggle("hidden");
+
+    });
+
+}
+
+
+// =====================================================
+// BALANCE VISIBILITY
+// =====================================================
+
+const toggleBalance =
+    document.getElementById("toggleBalance");
+
+let balanceVisible = true;
+
+
+if (toggleBalance) {
+
+    toggleBalance.addEventListener("click", () => {
+
+        balanceVisible =
+            !balanceVisible;
+
+
+        if (balanceVisible) {
+
+            walletBalance.textContent =
+                `₦${currentBalance.toLocaleString("en-NG", {
+                    minimumFractionDigits: 2,
+                    maximumFractionDigits: 2
+                })}`;
+
+        } else {
+
+            walletBalance.textContent =
+                "••••••";
+
+        }
+
+    });
+
+}
+
+
+// =====================================================
+// LOGOUT
+// =====================================================
+
+function logout() {
+
+    localStorage.removeItem("giftlyUser");
+
+    window.location.href =
+        "login.html";
+
+}
+
+
+const logoutBtn =
+    document.getElementById("logoutBtn");
+
+const mobileLogout =
+    document.getElementById("mobileLogout");
+
+
+if (logoutBtn) {
+
+    logoutBtn.addEventListener(
+        "click",
+        logout
+    );
+
+}
+
+
+if (mobileLogout) {
+
+    mobileLogout.addEventListener(
+        "click",
+        logout
+    );
+
+}
+
+// =====================================================
+// FUND WALLET MODAL
+// =====================================================
+
+const fundWalletBtn =
+    document.getElementById("fundWalletBtn");
+
+const fundWalletModal =
+    document.getElementById("fundWalletModal");
+
+const closeFundModal =
+    document.getElementById("closeFundModal");
+
+const cancelFund =
+    document.getElementById("cancelFund");
+
+const continueFund =
+    document.getElementById("continueFund");
+
+const fundAmount =
+    document.getElementById("fundAmount");
+
+const fundError =
+    document.getElementById("fundError");
+
+
+// Open modal
+if (fundWalletBtn) {
+
+    fundWalletBtn.addEventListener("click", () => {
+
+        fundWalletModal.classList.remove("hidden");
+
+        fundAmount.value = "";
+
+        fundError.classList.add("hidden");
+
+        fundAmount.focus();
+
+    });
+
+}
+
+
+// Close modal
+function closeFundWalletModal() {
+
+    fundWalletModal.classList.add("hidden");
+
+}
+
+
+if (closeFundModal) {
+
+    closeFundModal.addEventListener(
+        "click",
+        closeFundWalletModal
+    );
+
+}
+
+
+if (cancelFund) {
+
+    cancelFund.addEventListener(
+        "click",
+        closeFundWalletModal
+    );
+
+}
+// =====================================================
+// START WALLET FUNDING
+// =====================================================
+
+if (continueFund) {
+
+    continueFund.addEventListener("click", async () => {
+
+        const amount = Number(fundAmount.value);
+
+        fundError.classList.add("hidden");
+
+
+        // Validate amount
+        if (!amount || amount < 100) {
+
+            fundError.textContent =
+                "Please enter an amount of at least ₦100.";
+
+            fundError.classList.remove("hidden");
+
+            return;
+
+        }
+
+
+        // Disable button
+        continueFund.disabled = true;
+
+        continueFund.textContent =
+            "Processing...";
+
+
+        try {
+
+            const response = await fetch(
+                "http://localhost:5000/api/fund-wallet",
+                {
+                    method: "POST",
+
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+
+                    body: JSON.stringify({
+
+                        userId: currentUser.id,
+
+                        amount: amount
+
+                    })
+                }
+            );
+
+
+            const data = await response.json();
+
+
+            // Backend error
+            if (!response.ok) {
+
+                fundError.textContent =
+                    data.message ||
+                    "Unable to start payment.";
+
+                fundError.classList.remove("hidden");
+
+                return;
+
+            }
+
+
+            // Flutterwave payment link received
+            if (data.link) {
+
+                window.location.href = data.link;
+
+                return;
+
+            }
+
+
+            // No payment link
+            fundError.textContent =
+                "Unable to open Flutterwave payment.";
+
+            fundError.classList.remove("hidden");
+
+
+        } catch (error) {
+
+            console.error(
+                "Wallet funding error:",
+                error
+            );
+
+
+            fundError.textContent =
+                "Unable to connect to Giftly. Please make sure your Giftly server is running.";
+
+            fundError.classList.remove("hidden");
+
+
+        } finally {
+
+            continueFund.disabled = false;
+
+            continueFund.textContent =
+                "Continue";
+
+        }
+
+    });
+
+}
+
+
+
+
+
+
+
+
+
+
+// =====================================================
+// WITHDRAW MONEY MODAL
+// =====================================================
+
+const withdrawBtn =
+    document.getElementById("withdrawBtn");
+
+const withdrawModal =
+    document.getElementById("withdrawModal");
+
+const closeWithdrawModal =
+    document.getElementById("closeWithdrawModal");
+
+const cancelWithdraw =
+    document.getElementById("cancelWithdraw");
+
+const withdrawAmount =
+    document.getElementById("withdrawAmount");
+
+const withdrawBank =
+    document.getElementById("withdrawBank");
+
+const withdrawAccountNumber =
+    document.getElementById("withdrawAccountNumber");
+
+const verifyWithdrawAccount =
+    document.getElementById("verifyWithdrawAccount");
+
+const verifiedAccountBox =
+    document.getElementById("verifiedAccountBox");
+
+const verifiedAccountName =
+    document.getElementById("verifiedAccountName");
+
+const withdrawAvailableBalance =
+    document.getElementById("withdrawAvailableBalance");
+
+const withdrawError =
+    document.getElementById("withdrawError");
+
+const submitWithdraw =
+    document.getElementById("submitWithdraw");
+
+
+// =====================================================
+// WITHDRAWAL STATE
+// =====================================================
+
+let verifiedWithdrawalAccount = false;
+let withdrawalAccountName = "";
+
+
+// =====================================================
+// DISPLAY WITHDRAWAL BALANCE
+// =====================================================
+
+function displayWithdrawBalance() {
+
+    if (!withdrawAvailableBalance) return;
+
+    withdrawAvailableBalance.textContent =
+        `₦${currentBalance.toLocaleString("en-NG", {
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2
+        })}`;
+
+}
+
+
+// =====================================================
+// LOAD BANKS
+// =====================================================
+
+async function loadWithdrawalBanks() {
+
+    if (!withdrawBank) return;
+
+    withdrawBank.innerHTML =
+        `<option value="">Loading banks...</option>`;
+
+    try {
+
+        const response = await fetch(
+            "http://localhost:5000/api/banks"
+        );
+
+        const data = await response.json();
+
+        if (!response.ok) {
+
+            throw new Error(
+                data.message || "Unable to load banks."
+            );
+
+        }
+
+        withdrawBank.innerHTML =
+            `<option value="">Select your bank</option>`;
+
+        data.banks.forEach((bank) => {
+
+            const option =
+                document.createElement("option");
+
+            option.value =
+                bank.code;
+
+            option.textContent =
+                bank.name;
+
+            withdrawBank.appendChild(option);
+
+        });
+
+    } catch (error) {
+
+        console.error(
+            "Load banks error:",
+            error
+        );
+
+        withdrawBank.innerHTML =
+            `<option value="">Unable to load banks</option>`;
+
+    }
+
+}
+
+
+// =====================================================
+// OPEN WITHDRAW MODAL
+// =====================================================
+
+if (withdrawBtn) {
+
+    withdrawBtn.addEventListener("click", () => {
+
+        withdrawModal.classList.remove("hidden");
+
+        displayWithdrawBalance();
+
+        withdrawAmount.value = "";
+
+        withdrawBank.value = "";
+
+        withdrawAccountNumber.value = "";
+
+        verifiedAccountBox.classList.add("hidden");
+
+        verifiedAccountName.textContent = "";
+
+        withdrawError.classList.add("hidden");
+
+        verifiedWithdrawalAccount = false;
+
+        withdrawalAccountName = "";
+
+        loadWithdrawalBanks();
+
+    });
+
+}
+
+
+// =====================================================
+// CLOSE WITHDRAW MODAL
+// =====================================================
+
+function closeWithdrawMoneyModal() {
+
+    withdrawModal.classList.add("hidden");
+
+}
+
+
+if (closeWithdrawModal) {
+
+    closeWithdrawModal.addEventListener(
+        "click",
+        closeWithdrawMoneyModal
+    );
+
+}
+
+
+if (cancelWithdraw) {
+
+    cancelWithdraw.addEventListener(
+        "click",
+        closeWithdrawMoneyModal
+    );
+
+}
+
+
+// =====================================================
+// CLEAR VERIFICATION WHEN ACCOUNT CHANGES
+// =====================================================
+
+withdrawAccountNumber.addEventListener(
+    "input",
+    () => {
+
+        verifiedWithdrawalAccount = false;
+
+        withdrawalAccountName = "";
+
+        verifiedAccountBox.classList.add("hidden");
+
+        verifiedAccountName.textContent = "";
+
+    }
+);
+
+
+// =====================================================
+// VERIFY BANK ACCOUNT
+// =====================================================
+
+if (verifyWithdrawAccount) {
+
+    verifyWithdrawAccount.addEventListener(
+        "click",
+        async () => {
+
+            withdrawError.classList.add("hidden");
+
+            const accountNumber =
+                withdrawAccountNumber.value.trim();
+
+            const bankCode =
+                withdrawBank.value;
+
+
+            // Check bank
+            if (!bankCode) {
+
+                withdrawError.textContent =
+                    "Please select your bank.";
+
+                withdrawError.classList.remove("hidden");
+
+                return;
+
+            }
+
+
+            // Check account number
+            if (!/^\d{10}$/.test(accountNumber)) {
+
+                withdrawError.textContent =
+                    "Please enter a valid 10-digit account number.";
+
+                withdrawError.classList.remove("hidden");
+
+                return;
+
+            }
+
+
+            verifyWithdrawAccount.disabled = true;
+
+            verifyWithdrawAccount.textContent =
+                "Verifying...";
+
+
+            try {
+
+                const response = await fetch(
+                    "http://localhost:5000/api/verify-bank-account",
+                    {
+                        method: "POST",
+
+                        headers: {
+                            "Content-Type":
+                                "application/json"
+                        },
+
+                        body: JSON.stringify({
+
+                            accountNumber:
+                                accountNumber,
+
+                            bankCode:
+                                bankCode
+
+                        })
+
+                    }
+                );
+
+
+                const data =
+                    await response.json();
+
+
+                if (!response.ok) {
+
+                    throw new Error(
+                        data.message ||
+                        "Unable to verify account."
+                    );
+
+                }
+
+
+                // Account successfully verified
+
+                withdrawalAccountName =
+                    data.account.accountName;
+
+                verifiedWithdrawalAccount =
+                    true;
+
+
+                verifiedAccountName.textContent =
+                    data.account.accountName;
+
+                verifiedAccountBox.classList.remove(
+                    "hidden"
+                );
+
+
+            } catch (error) {
+
+                console.error(
+                    "Account verification error:",
+                    error
+                );
+
+                verifiedWithdrawalAccount =
+                    false;
+
+                withdrawalAccountName = "";
+
+                withdrawError.textContent =
+                    error.message ||
+                    "Unable to verify bank account.";
+
+                withdrawError.classList.remove(
+                    "hidden"
+                );
+
+
+            } finally {
+
+                verifyWithdrawAccount.disabled =
+                    false;
+
+                verifyWithdrawAccount.textContent =
+                    "Verify Account";
+
+            }
+
+        }
+    );
+
+}
+
+
+// =====================================================
+// SUBMIT WITHDRAWAL
+// =====================================================
+
+if (submitWithdraw) {
+
+    submitWithdraw.addEventListener(
+        "click",
+        async () => {
+
+            withdrawError.classList.add("hidden");
+
+
+            const amount =
+                Number(withdrawAmount.value);
+
+            const bankCode =
+                withdrawBank.value;
+
+            const accountNumber =
+                withdrawAccountNumber.value.trim();
+
+
+            // ==========================================
+            // VALIDATE AMOUNT
+            // ==========================================
+
+            if (
+                !Number.isFinite(amount) ||
+                amount <= 0
+            ) {
+
+                withdrawError.textContent =
+                    "Please enter a valid withdrawal amount.";
+
+                withdrawError.classList.remove(
+                    "hidden"
+                );
+
+                return;
+
+            }
+
+
+            if (amount < 100) {
+
+                withdrawError.textContent =
+                    "Minimum withdrawal amount is ₦100.";
+
+                withdrawError.classList.remove(
+                    "hidden"
+                );
+
+                return;
+
+            }
+
+
+            // ==========================================
+            // CHECK BALANCE
+            // ==========================================
+
+            if (amount > currentBalance) {
+
+                withdrawError.textContent =
+                    "Insufficient wallet balance.";
+
+                withdrawError.classList.remove(
+                    "hidden"
+                );
+
+                return;
+
+            }
+
+
+            // ==========================================
+            // CHECK BANK
+            // ==========================================
+
+            if (!bankCode) {
+
+                withdrawError.textContent =
+                    "Please select your bank.";
+
+                withdrawError.classList.remove(
+                    "hidden"
+                );
+
+                return;
+
+            }
+
+
+            // ==========================================
+            // CHECK ACCOUNT NUMBER
+            // ==========================================
+
+            if (!/^\d{10}$/.test(accountNumber)) {
+
+                withdrawError.textContent =
+                    "Please enter a valid 10-digit account number.";
+
+                withdrawError.classList.remove(
+                    "hidden"
+                );
+
+                return;
+
+            }
+
+
+            // ==========================================
+            // REQUIRE VERIFICATION
+            // ==========================================
+
+            if (!verifiedWithdrawalAccount) {
+
+                withdrawError.textContent =
+                    "Please verify your bank account first.";
+
+                withdrawError.classList.remove(
+                    "hidden"
+                );
+
+                return;
+
+            }
+
+
+            // ==========================================
+            // DISABLE BUTTON
+            // ==========================================
+
+            submitWithdraw.disabled = true;
+
+            submitWithdraw.textContent =
+                "Processing...";
+
+
+            try {
+
+                const response = await fetch(
+                    "http://localhost:5000/api/withdraw",
+                    {
+                        method: "POST",
+
+                        headers: {
+                            "Content-Type":
+                                "application/json"
+                        },
+
+                        body: JSON.stringify({
+
+                            userId:
+                                currentUser.id,
+
+                            amount:
+                                amount,
+
+                            accountNumber:
+                                accountNumber,
+
+                            bankCode:
+                                bankCode,
+
+                            accountName:
+                                withdrawalAccountName
+
+                        })
+
+                    }
+                );
+
+
+                const data =
+                    await response.json();
+
+
+                // ======================================
+                // BACKEND ERROR
+                // ======================================
+
+                if (!response.ok) {
+
+                    throw new Error(
+                        data.message ||
+                        "Withdrawal failed."
+                    );
+
+                }
+
+
+                // ======================================
+                // UPDATE LOCAL BALANCE
+                // ======================================
+
+                currentBalance =
+                    Number(
+                        data.withdrawal.walletBalance
+                    );
+
+
+                currentUser.walletBalance =
+                    currentBalance;
+
+
+                localStorage.setItem(
+                    "giftlyUser",
+                    JSON.stringify(currentUser)
+                );
+
+
+                displayBalance();
+
+                displayWithdrawBalance();
+
+
+                // ======================================
+                // CLOSE MODAL
+                // ======================================
+
+             closeWithdrawMoneyModal();
+
+console.log("ABOUT TO SHOW TOAST");
+
+showToast(
+    "Withdrawal successful",
+    `₦${amount.toLocaleString("en-NG", {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2
+    })} has been sent to ${withdrawalAccountName}.`
+);
+
+
+            } catch (error) {
+
+                console.error(
+                    "Withdrawal error:",
+                    error
+                );
+
+                withdrawError.textContent =
+                    error.message ||
+                    "Unable to process withdrawal.";
+
+                withdrawError.classList.remove(
+                    "hidden"
+                );
+
+
+            } finally {
+
+                submitWithdraw.disabled =
+                    false;
+
+                submitWithdraw.textContent =
+                    "Withdraw";
+
+            }
+
+        }
+    );
+
+}
+
+
+
+</script>
+
+
+</body>
+
+</html>
+

@@ -1,0 +1,1341 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Profile & Settings — Giftly</title>
+
+    <link
+        rel="stylesheet"
+        href="./output.css"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+</head>
+
+
+<body
+    class="min-h-screen bg-[#FAFAF8] text-[#17201E] font-['Inter']"
+>
+
+
+    <!-- =====================================================
+         MOBILE HEADER
+    ====================================================== -->
+
+    <header
+        class="lg:hidden sticky top-0 z-40 bg-white border-b border-gray-200"
+    >
+
+        <div
+            class="h-16 px-5 flex items-center justify-between"
+        >
+
+            <a
+                href="dashboard.html"
+                class="flex items-center gap-2.5"
+            >
+
+                <div
+                    class="w-9 h-9 rounded-xl bg-[#D97706] text-white flex items-center justify-center font-extrabold"
+                >
+                    G
+                </div>
+
+                <span class="font-extrabold text-lg">
+                    Giftly
+                </span>
+
+            </a>
+
+
+            <button
+                id="mobileMenuBtn"
+                type="button"
+                class="w-10 h-10 rounded-xl border border-gray-200 flex items-center justify-center"
+            >
+
+                <svg
+                    class="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.8"
+                >
+
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M4 6h16M4 12h16M4 18h16"
+                    />
+
+                </svg>
+
+            </button>
+
+        </div>
+
+
+        <!-- MOBILE MENU -->
+
+        <div
+            id="mobileMenu"
+            class="hidden border-t border-gray-100 bg-white px-5 py-4"
+        >
+
+            <nav class="space-y-1">
+
+                <a
+                    href="dashboard.html"
+                    class="block px-3 py-3 rounded-xl text-sm text-gray-600 hover:bg-gray-50"
+                >
+                    Dashboard
+                </a>
+
+
+                <a
+                    href="wallet.html"
+                    class="block px-3 py-3 rounded-xl text-sm text-gray-600 hover:bg-gray-50"
+                >
+                    Wallet
+                </a>
+
+
+                <a
+                    href="sell-giftcard.html"
+                    class="block px-3 py-3 rounded-xl text-sm text-gray-600 hover:bg-gray-50"
+                >
+                    Sell Gift Card
+                </a>
+
+
+                <a
+                    href="airtime.html"
+                    class="block px-3 py-3 rounded-xl text-sm text-gray-600 hover:bg-gray-50"
+                >
+                    Airtime
+                </a>
+
+
+                <a
+                    href="data.html"
+                    class="block px-3 py-3 rounded-xl text-sm text-gray-600 hover:bg-gray-50"
+                >
+                    Data
+                </a>
+
+
+                <a
+                    href="transactions.html"
+                    class="block px-3 py-3 rounded-xl text-sm text-gray-600 hover:bg-gray-50"
+                >
+                    Transactions
+                </a>
+
+
+                <a
+                    href="profile.html"
+                    class="block px-3 py-3 rounded-xl bg-orange-50 text-[#D97706] text-sm font-bold"
+                >
+                    Profile & Settings
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         DESKTOP SIDEBAR
+    ====================================================== -->
+
+    <aside
+        class="hidden lg:flex fixed inset-y-0 left-0 z-40 w-64 bg-white border-r border-gray-200 flex-col"
+    >
+
+        <!-- LOGO -->
+
+        <div class="h-20 px-6 flex items-center">
+
+            <a
+                href="dashboard.html"
+                class="flex items-center gap-3"
+            >
+
+                <div
+                    class="w-10 h-10 rounded-xl bg-[#D97706] text-white flex items-center justify-center font-extrabold"
+                >
+                    G
+                </div>
+
+                <span
+                    class="text-xl font-extrabold tracking-tight"
+                >
+                    Giftly
+                </span>
+
+            </a>
+
+        </div>
+
+
+
+        <!-- NAVIGATION -->
+
+        <nav class="flex-1 px-4 py-5 space-y-1">
+
+            <a
+                href="dashboard.html"
+                class="flex items-center gap-3 px-3 py-3 rounded-xl text-sm font-medium text-gray-600 hover:bg-gray-50 transition"
+            >
+                🏠
+                Dashboard
+            </a>
+
+
+            <a
+                href="wallet.html"
+                class="flex items-center gap-3 px-3 py-3 rounded-xl text-sm font-medium text-gray-600 hover:bg-gray-50 transition"
+            >
+                💰
+                Wallet
+            </a>
+
+
+            <a
+                href="sell-giftcard.html"
+                class="flex items-center gap-3 px-3 py-3 rounded-xl text-sm font-medium text-gray-600 hover:bg-gray-50 transition"
+            >
+                🎁
+                Sell Gift Card
+            </a>
+
+
+            <a
+                href="airtime.html"
+                class="flex items-center gap-3 px-3 py-3 rounded-xl text-sm font-medium text-gray-600 hover:bg-gray-50 transition"
+            >
+                📱
+                Airtime
+            </a>
+
+
+            <a
+                href="data.html"
+                class="flex items-center gap-3 px-3 py-3 rounded-xl text-sm font-medium text-gray-600 hover:bg-gray-50 transition"
+            >
+                📶
+                Data
+            </a>
+
+
+            <a
+                href="transactions.html"
+                class="flex items-center gap-3 px-3 py-3 rounded-xl text-sm font-medium text-gray-600 hover:bg-gray-50 transition"
+            >
+                ↔
+                Transactions
+            </a>
+
+
+            <div class="pt-7">
+
+                <p
+                    class="px-3 mb-3 text-[10px] uppercase tracking-widest font-bold text-gray-400"
+                >
+                    Account
+                </p>
+
+
+                <a
+                    href="profile.html"
+                    class="flex items-center gap-3 px-3 py-3 rounded-xl bg-orange-50 text-[#D97706] text-sm font-bold"
+                >
+                    ⚙
+                    Profile & Settings
+                </a>
+
+            </div>
+
+        </nav>
+
+
+
+        <!-- USER -->
+
+        <div class="border-t border-gray-100 p-4">
+
+            <div class="flex items-center gap-3">
+
+                <div
+                    class="w-10 h-10 rounded-full bg-[#17201E] text-white flex items-center justify-center text-xs font-bold"
+                >
+                    FS
+                </div>
+
+
+                <div class="min-w-0">
+
+                    <p class="text-sm font-bold truncate">
+                        Favour Samuel
+                    </p>
+
+                    <p class="text-xs text-gray-400 truncate">
+                        user@example.com
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <div class="lg:ml-64 min-h-screen">
+
+
+        <!-- DESKTOP HEADER -->
+
+        <header
+            class="hidden lg:flex h-20 bg-white border-b border-gray-200 px-8 items-center justify-between"
+        >
+
+            <div>
+
+                <p class="text-sm text-gray-400">
+                    Account
+                </p>
+
+                <h1 class="text-xl font-extrabold">
+                    Profile & Settings
+                </h1>
+
+            </div>
+
+
+            <a
+                href="dashboard.html"
+                class="text-sm font-bold text-[#D97706] hover:text-[#B45309]"
+            >
+                Back to Dashboard
+            </a>
+
+        </header>
+
+
+
+        <!-- =================================================
+             CONTENT
+        ================================================== -->
+
+        <main
+            class="p-5 sm:p-7 lg:p-8 max-w-5xl"
+        >
+
+
+            <!-- MOBILE TITLE -->
+
+            <div
+                class="lg:hidden mb-7"
+            >
+
+                <p class="text-sm text-gray-400">
+                    Account
+                </p>
+
+                <h1
+                    class="text-2xl font-extrabold mt-1"
+                >
+                    Profile & Settings
+                </h1>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 PROFILE HEADER
+            ================================================== -->
+
+            <section
+                class="bg-white border border-gray-200 rounded-2xl p-5 sm:p-7"
+            >
+
+                <div
+                    class="flex flex-col sm:flex-row sm:items-center gap-5"
+                >
+
+                    <div
+                        class="w-20 h-20 rounded-2xl bg-[#17201E] text-white flex items-center justify-center text-xl font-extrabold shrink-0"
+                    >
+                        FS
+                    </div>
+
+
+                    <div class="min-w-0">
+
+                        <h2
+                            class="text-xl font-extrabold"
+                        >
+                            Favour Samuel
+                        </h2>
+
+                        <p
+                            class="mt-1 text-sm text-gray-400 break-all"
+                        >
+                            user@example.com
+                        </p>
+
+                        <div
+                            class="mt-3 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-green-50 text-green-700 text-xs font-bold"
+                        >
+
+                            <span
+                                class="w-1.5 h-1.5 rounded-full bg-green-500"
+                            ></span>
+
+                            Account active
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 PERSONAL INFORMATION
+            ================================================== -->
+
+            <section
+                class="mt-5 bg-white border border-gray-200 rounded-2xl p-5 sm:p-7"
+            >
+
+                <div>
+
+                    <h3 class="text-lg font-extrabold">
+                        Personal information
+                    </h3>
+
+                    <p
+                        class="mt-1 text-xs text-gray-400"
+                    >
+                        Update the information associated with your account.
+                    </p>
+
+                </div>
+
+
+                <form
+                    id="profileForm"
+                    class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-5"
+                >
+
+                    <!-- FULL NAME -->
+
+                    <div>
+
+                        <label
+                            for="fullName"
+                            class="block text-sm font-bold"
+                        >
+                            Full name
+                        </label>
+
+
+                        <input
+                            id="fullName"
+                            type="text"
+                            value="Favour Samuel"
+                            class="mt-2 w-full h-12 px-4 rounded-xl border border-gray-200 outline-none text-sm focus:border-[#D97706] focus:ring-4 focus:ring-orange-100"
+                        >
+
+                    </div>
+
+
+
+                    <!-- EMAIL -->
+
+                    <div>
+
+                        <label
+                            for="email"
+                            class="block text-sm font-bold"
+                        >
+                            Email address
+                        </label>
+
+
+                        <input
+                            id="email"
+                            type="email"
+                            value="user@example.com"
+                            disabled
+                            class="mt-2 w-full h-12 px-4 rounded-xl border border-gray-200 bg-gray-50 text-gray-500 outline-none text-sm"
+                        >
+
+                    </div>
+
+
+
+                    <div
+                        class="sm:col-span-2"
+                    >
+
+                        <p
+                            id="profileMessage"
+                            class="hidden text-xs font-medium"
+                        ></p>
+
+                    </div>
+
+
+
+                    <div
+                        class="sm:col-span-2"
+                    >
+
+                        <button
+                            type="submit"
+                            class="h-11 px-5 rounded-xl bg-[#17201E] text-white text-sm font-bold hover:bg-[#26302D] transition"
+                        >
+                            Save changes
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 BANK DETAILS
+            ================================================== -->
+
+            <section
+                class="mt-5 bg-white border border-gray-200 rounded-2xl p-5 sm:p-7"
+            >
+
+                <div>
+
+                    <h3 class="text-lg font-extrabold">
+                        Withdrawal account
+                    </h3>
+
+                    <p
+                        class="mt-1 text-xs text-gray-400"
+                    >
+                        Save your bank details for future withdrawals.
+                    </p>
+
+                </div>
+
+
+                <form
+                    id="bankForm"
+                    class="mt-6 space-y-5"
+                >
+
+                    <!-- BANK -->
+
+                    <div>
+
+                        <label
+                            for="bank"
+                            class="block text-sm font-bold"
+                        >
+                            Bank
+                        </label>
+
+
+                        <select
+                            id="bank"
+                            class="mt-2 w-full h-12 px-4 rounded-xl border border-gray-200 bg-white outline-none text-sm focus:border-[#D97706] focus:ring-4 focus:ring-orange-100"
+                        >
+
+                            <option value="">
+                                Select your bank
+                            </option>
+
+                            <option>
+                                Access Bank
+                            </option>
+
+                            <option>
+                                GTBank
+                            </option>
+
+                            <option>
+                                UBA
+                            </option>
+
+                            <option>
+                                First Bank
+                            </option>
+
+                            <option>
+                                Zenith Bank
+                            </option>
+
+                            <option>
+                                Fidelity Bank
+                            </option>
+
+                            <option>
+                                Opay
+                            </option>
+
+                            <option>
+                                PalmPay
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- ACCOUNT NUMBER -->
+
+                    <div>
+
+                        <label
+                            for="accountNumber"
+                            class="block text-sm font-bold"
+                        >
+                            Account number
+                        </label>
+
+
+                        <input
+                            id="accountNumber"
+                            type="tel"
+                            inputmode="numeric"
+                            maxlength="10"
+                            placeholder="0123456789"
+                            class="mt-2 w-full h-12 px-4 rounded-xl border border-gray-200 outline-none text-sm focus:border-[#D97706] focus:ring-4 focus:ring-orange-100"
+                        >
+
+                    </div>
+
+
+
+                    <!-- ACCOUNT NAME -->
+
+                    <div>
+
+                        <label
+                            for="accountName"
+                            class="block text-sm font-bold"
+                        >
+                            Account name
+                        </label>
+
+
+                        <input
+                            id="accountName"
+                            type="text"
+                            placeholder="Account holder name"
+                            class="mt-2 w-full h-12 px-4 rounded-xl border border-gray-200 outline-none text-sm focus:border-[#D97706] focus:ring-4 focus:ring-orange-100"
+                        >
+
+                    </div>
+
+
+                    <p
+                        id="bankMessage"
+                        class="hidden text-xs font-medium"
+                    ></p>
+
+
+                    <button
+                        type="submit"
+                        class="h-11 px-5 rounded-xl bg-[#D97706] text-white text-sm font-bold hover:bg-[#B45309] transition"
+                    >
+                        Save bank details
+                    </button>
+
+                </form>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 CHANGE PASSWORD
+            ================================================== -->
+
+            <section
+                class="mt-5 bg-white border border-gray-200 rounded-2xl p-5 sm:p-7"
+            >
+
+                <div>
+
+                    <h3 class="text-lg font-extrabold">
+                        Change password
+                    </h3>
+
+                    <p
+                        class="mt-1 text-xs text-gray-400"
+                    >
+                        Use a strong password that you do not use elsewhere.
+                    </p>
+
+                </div>
+
+
+                <form
+                    id="passwordForm"
+                    class="mt-6 space-y-5"
+                >
+
+                    <!-- CURRENT PASSWORD -->
+
+                    <div>
+
+                        <label
+                            for="currentPassword"
+                            class="block text-sm font-bold"
+                        >
+                            Current password
+                        </label>
+
+
+                        <input
+                            id="currentPassword"
+                            type="password"
+                            placeholder="Enter current password"
+                            class="mt-2 w-full h-12 px-4 rounded-xl border border-gray-200 outline-none text-sm focus:border-[#D97706] focus:ring-4 focus:ring-orange-100"
+                        >
+
+                    </div>
+
+
+
+                    <!-- NEW PASSWORD -->
+
+                    <div>
+
+                        <label
+                            for="newPassword"
+                            class="block text-sm font-bold"
+                        >
+                            New password
+                        </label>
+
+
+                        <input
+                            id="newPassword"
+                            type="password"
+                            placeholder="Enter new password"
+                            class="mt-2 w-full h-12 px-4 rounded-xl border border-gray-200 outline-none text-sm focus:border-[#D97706] focus:ring-4 focus:ring-orange-100"
+                        >
+
+                    </div>
+
+
+
+                    <!-- CONFIRM PASSWORD -->
+
+                    <div>
+
+                        <label
+                            for="confirmPassword"
+                            class="block text-sm font-bold"
+                        >
+                            Confirm new password
+                        </label>
+
+
+                        <input
+                            id="confirmPassword"
+                            type="password"
+                            placeholder="Confirm new password"
+                            class="mt-2 w-full h-12 px-4 rounded-xl border border-gray-200 outline-none text-sm focus:border-[#D97706] focus:ring-4 focus:ring-orange-100"
+                        >
+
+                    </div>
+
+
+                    <p
+                        id="passwordMessage"
+                        class="hidden text-xs font-medium"
+                    ></p>
+
+
+                    <button
+                        type="submit"
+                        class="h-11 px-5 rounded-xl bg-[#17201E] text-white text-sm font-bold hover:bg-[#26302D] transition"
+                    >
+                        Update password
+                    </button>
+
+                </form>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 SECURITY
+            ================================================== -->
+
+            <section
+                class="mt-5 bg-white border border-gray-200 rounded-2xl p-5 sm:p-7"
+            >
+
+                <div>
+
+                    <h3 class="text-lg font-extrabold">
+                        Security
+                    </h3>
+
+                    <p
+                        class="mt-1 text-xs text-gray-400"
+                    >
+                        Keep your Giftly account protected.
+                    </p>
+
+                </div>
+
+
+                <div
+                    class="mt-6 space-y-4"
+                >
+
+
+                    <!-- EMAIL SECURITY -->
+
+                    <div
+                        class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 p-4 rounded-xl bg-gray-50"
+                    >
+
+                        <div>
+
+                            <p
+                                class="text-sm font-bold"
+                            >
+                                Email verification
+                            </p>
+
+                            <p
+                                class="mt-1 text-xs text-gray-400"
+                            >
+                                Your email is used to secure your account.
+                            </p>
+
+                        </div>
+
+
+                        <span
+                            class="self-start sm:self-auto px-2.5 py-1 rounded-full bg-green-50 text-green-700 text-[11px] font-bold"
+                        >
+                            Verified
+                        </span>
+
+                    </div>
+
+
+
+                    <!-- LOGIN SECURITY -->
+
+                    <div
+                        class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 p-4 rounded-xl bg-gray-50"
+                    >
+
+                        <div>
+
+                            <p
+                                class="text-sm font-bold"
+                            >
+                                Password protection
+                            </p>
+
+                            <p
+                                class="mt-1 text-xs text-gray-400"
+                            >
+                                Keep your password private and secure.
+                            </p>
+
+                        </div>
+
+
+                        <span
+                            class="self-start sm:self-auto px-2.5 py-1 rounded-full bg-green-50 text-green-700 text-[11px] font-bold"
+                        >
+                            Active
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 DANGER ZONE
+            ================================================== -->
+
+            <section
+                class="mt-5 bg-white border border-red-100 rounded-2xl p-5 sm:p-7"
+            >
+
+                <h3
+                    class="text-lg font-extrabold text-red-700"
+                >
+                    Account
+                </h3>
+
+
+                <p
+                    class="mt-1 text-xs text-gray-400"
+                >
+                    Manage your current session.
+                </p>
+
+
+                <div
+                    class="mt-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4"
+                >
+
+                    <div>
+
+                        <p class="text-sm font-bold">
+                            Log out of Giftly
+                        </p>
+
+                        <p
+                            class="mt-1 text-xs text-gray-400"
+                        >
+                            You can log in again at any time.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        id="logoutBtn"
+                        type="button"
+                        class="h-11 px-5 rounded-xl border border-red-200 text-red-600 text-sm font-bold hover:bg-red-50 transition"
+                    >
+                        Log out
+                    </button>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- FOOTER -->
+
+            <footer
+                class="py-8 text-center text-xs text-gray-400"
+            >
+                © 2026 Giftly. All rights reserved.
+            </footer>
+
+
+        </main>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script>
+
+        // =====================================================
+        // MOBILE MENU
+        // =====================================================
+
+        const mobileMenuBtn =
+            document.getElementById(
+                "mobileMenuBtn"
+            );
+
+
+        const mobileMenu =
+            document.getElementById(
+                "mobileMenu"
+            );
+
+
+        mobileMenuBtn.addEventListener(
+            "click",
+            () => {
+
+                mobileMenu.classList.toggle(
+                    "hidden"
+                );
+
+            }
+        );
+
+
+
+        // =====================================================
+        // PERSONAL INFORMATION
+        // =====================================================
+
+        const profileForm =
+            document.getElementById(
+                "profileForm"
+            );
+
+
+        const profileMessage =
+            document.getElementById(
+                "profileMessage"
+            );
+
+
+        profileForm.addEventListener(
+            "submit",
+            event => {
+
+                event.preventDefault();
+
+
+                const name =
+                    document
+                        .getElementById("fullName")
+                        .value
+                        .trim();
+
+
+                if (!name) {
+
+                    profileMessage.textContent =
+                        "Please enter your full name.";
+
+                    profileMessage.className =
+                        "text-xs font-medium text-red-600";
+
+                    return;
+
+                }
+
+
+                profileMessage.textContent =
+                    "Profile updated successfully.";
+
+                profileMessage.className =
+                    "text-xs font-medium text-green-600";
+
+            }
+        );
+
+
+
+        // =====================================================
+        // BANK DETAILS
+        // =====================================================
+
+        const bankForm =
+            document.getElementById(
+                "bankForm"
+            );
+
+
+        const bankMessage =
+            document.getElementById(
+                "bankMessage"
+            );
+
+
+        bankForm.addEventListener(
+            "submit",
+            event => {
+
+                event.preventDefault();
+
+
+                const bank =
+                    document.getElementById(
+                        "bank"
+                    ).value;
+
+
+                const accountNumber =
+                    document.getElementById(
+                        "accountNumber"
+                    ).value
+                    .trim();
+
+
+                const accountName =
+                    document.getElementById(
+                        "accountName"
+                    ).value
+                    .trim();
+
+
+
+                if (!bank) {
+
+                    showBankMessage(
+                        "Please select your bank.",
+                        "error"
+                    );
+
+                    return;
+
+                }
+
+
+                if (
+                    !/^\d{10}$/.test(
+                        accountNumber
+                    )
+                ) {
+
+                    showBankMessage(
+                        "Please enter a valid 10-digit account number.",
+                        "error"
+                    );
+
+                    return;
+
+                }
+
+
+                if (!accountName) {
+
+                    showBankMessage(
+                        "Please enter the account name.",
+                        "error"
+                    );
+
+                    return;
+
+                }
+
+
+                showBankMessage(
+                    "Bank details saved successfully.",
+                    "success"
+                );
+
+            }
+        );
+
+
+
+        function showBankMessage(
+            message,
+            type
+        ) {
+
+            bankMessage.textContent =
+                message;
+
+
+            if (type === "success") {
+
+                bankMessage.className =
+                    "text-xs font-medium text-green-600";
+
+            } else {
+
+                bankMessage.className =
+                    "text-xs font-medium text-red-600";
+
+            }
+
+        }
+
+
+
+        // =====================================================
+        // PASSWORD
+        // =====================================================
+
+        const passwordForm =
+            document.getElementById(
+                "passwordForm"
+            );
+
+
+        const passwordMessage =
+            document.getElementById(
+                "passwordMessage"
+            );
+
+
+        passwordForm.addEventListener(
+            "submit",
+            event => {
+
+                event.preventDefault();
+
+
+                const currentPassword =
+                    document.getElementById(
+                        "currentPassword"
+                    ).value;
+
+
+                const newPassword =
+                    document.getElementById(
+                        "newPassword"
+                    ).value;
+
+
+                const confirmPassword =
+                    document.getElementById(
+                        "confirmPassword"
+                    ).value;
+
+
+
+                if (!currentPassword) {
+
+                    showPasswordMessage(
+                        "Please enter your current password.",
+                        "error"
+                    );
+
+                    return;
+
+                }
+
+
+                if (
+                    newPassword.length < 8
+                ) {
+
+                    showPasswordMessage(
+                        "Your new password must contain at least 8 characters.",
+                        "error"
+                    );
+
+                    return;
+
+                }
+
+
+                if (
+                    newPassword !== confirmPassword
+                ) {
+
+                    showPasswordMessage(
+                        "The new passwords do not match.",
+                        "error"
+                    );
+
+                    return;
+
+                }
+
+
+                showPasswordMessage(
+                    "Password updated successfully.",
+                    "success"
+                );
+
+
+                passwordForm.reset();
+
+            }
+        );
+
+
+
+        function showPasswordMessage(
+            message,
+            type
+        ) {
+
+            passwordMessage.textContent =
+                message;
+
+
+            if (type === "success") {
+
+                passwordMessage.className =
+                    "text-xs font-medium text-green-600";
+
+            } else {
+
+                passwordMessage.className =
+                    "text-xs font-medium text-red-600";
+
+            }
+
+        }
+
+
+
+        // =====================================================
+        // LOGOUT
+        // =====================================================
+
+        const logoutBtn =
+            document.getElementById(
+                "logoutBtn"
+            );
+
+
+        logoutBtn.addEventListener(
+            "click",
+            () => {
+
+                /*
+                    Later we will replace this with
+                    real authentication logout.
+
+                    For now it simply sends the user
+                    back to the login page.
+                */
+
+                window.location.href =
+                    "login.html";
+
+            }
+        );
+
+    </script>
+
+
+</body>
+
+</html>
+

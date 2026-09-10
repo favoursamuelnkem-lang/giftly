@@ -1,0 +1,614 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Create Account — Giftly</title>
+
+    <link
+        rel="stylesheet"
+        href="./output.css"
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+</head>
+
+
+<body class="min-h-screen bg-[#FAFAF8] text-[#17201E] font-['Inter']">
+
+
+    <!-- =====================================================
+         PAGE
+    ====================================================== -->
+
+    <div class="min-h-screen flex flex-col">
+
+
+        <!-- =================================================
+             HEADER
+        ================================================== -->
+
+        <header class="px-5 sm:px-8 py-5">
+
+            <div
+                class="max-w-7xl mx-auto flex items-center justify-between"
+            >
+
+
+                <!-- LOGO -->
+
+                <a
+                    href="index.html"
+                    class="flex items-center gap-2.5"
+                >
+
+                    <div
+                        class="w-10 h-10 rounded-xl bg-[#D97706] text-white flex items-center justify-center font-extrabold shadow-sm"
+                    >
+                        G
+                    </div>
+
+                    <span
+                        class="text-xl font-extrabold tracking-tight"
+                    >
+                        Giftly
+                    </span>
+
+                </a>
+
+
+                <!-- LOGIN -->
+
+                <div class="text-sm">
+
+                    <span class="hidden sm:inline text-gray-500">
+                        Already have an account?
+                    </span>
+
+                    <a
+                        href="login.html"
+                        class="ml-1 font-bold text-[#D97706] hover:text-[#B45309] transition"
+                    >
+                        Log in
+                    </a>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =================================================
+             MAIN
+        ================================================== -->
+
+        <main
+            class="flex-1 flex items-center justify-center px-5 sm:px-8 py-10 sm:py-14"
+        >
+
+            <div class="w-full max-w-md">
+
+
+                <!-- INTRO -->
+
+                <div class="text-center">
+
+                    <div
+                        class="mx-auto w-14 h-14 rounded-2xl bg-[#FFF7ED] border border-[#FED7AA] flex items-center justify-center text-2xl"
+                    >
+                        ✦
+                    </div>
+
+
+                    <h1
+                        class="mt-6 text-3xl sm:text-4xl font-extrabold tracking-tight"
+                    >
+                        Create your account
+                    </h1>
+
+
+                    <p
+                        class="mt-3 text-sm sm:text-base leading-6 text-gray-500"
+                    >
+                        Join Giftly and manage your digital transactions
+                        from one simple dashboard.
+                    </p>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     FORM CARD
+                ================================================== -->
+
+                <div
+                    class="mt-8 bg-white border border-gray-200 rounded-2xl p-5 sm:p-7 shadow-sm"
+                >
+
+                    <form id="signupForm">
+
+
+                        <!-- FULL NAME -->
+
+                        <div>
+
+                            <label
+                                for="fullName"
+                                class="block text-sm font-semibold text-[#17201E]"
+                            >
+                                Full name
+                            </label>
+
+
+                            <input
+                                id="fullName"
+                                type="text"
+                                autocomplete="name"
+                                placeholder="Enter your full name"
+                                class="mt-2 w-full h-12 px-4 rounded-xl border border-gray-200 bg-white text-sm outline-none placeholder:text-gray-400 focus:border-[#D97706] focus:ring-4 focus:ring-orange-100 transition"
+                            >
+
+                        </div>
+
+
+
+                        <!-- EMAIL -->
+
+                        <div class="mt-5">
+
+                            <label
+                                for="email"
+                                class="block text-sm font-semibold text-[#17201E]"
+                            >
+                                Email address
+                            </label>
+
+
+                            <input
+                                id="email"
+                                type="email"
+                                autocomplete="email"
+                                placeholder="you@example.com"
+                                class="mt-2 w-full h-12 px-4 rounded-xl border border-gray-200 bg-white text-sm outline-none placeholder:text-gray-400 focus:border-[#D97706] focus:ring-4 focus:ring-orange-100 transition"
+                            >
+
+                        </div>
+
+
+
+                        <!-- PASSWORD -->
+
+                        <div class="mt-5">
+
+                            <div
+                                class="flex items-center justify-between"
+                            >
+
+                                <label
+                                    for="password"
+                                    class="block text-sm font-semibold text-[#17201E]"
+                                >
+                                    Password
+                                </label>
+
+                                <span class="text-xs text-gray-400">
+                                    Min. 8 characters
+                                </span>
+
+                            </div>
+
+
+                            <div class="relative">
+
+                                <input
+                                    id="password"
+                                    type="password"
+                                    autocomplete="new-password"
+                                    placeholder="Create a password"
+                                    class="mt-2 w-full h-12 px-4 pr-12 rounded-xl border border-gray-200 bg-white text-sm outline-none placeholder:text-gray-400 focus:border-[#D97706] focus:ring-4 focus:ring-orange-100 transition"
+                                >
+
+
+                                <button
+                                    id="togglePassword"
+                                    type="button"
+                                    aria-label="Show password"
+                                    class="absolute right-3 top-[17px] w-8 h-8 rounded-lg text-gray-400 hover:text-[#17201E] hover:bg-gray-50 transition"
+                                >
+
+                                    <svg
+                                        id="eyeIcon"
+                                        class="w-5 h-5 mx-auto"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        viewBox="0 0 24 24"
+                                        stroke-width="1.8"
+                                    >
+
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            d="M2.25 12s3.75-6.75 9.75-6.75S21.75 12 21.75 12 18 18.75 12 18.75 2.25 12 2.25 12Z"
+                                        />
+
+                                        <circle
+                                            cx="12"
+                                            cy="12"
+                                            r="2.5"
+                                        />
+
+                                    </svg>
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- CONFIRM PASSWORD -->
+
+                        <div class="mt-5">
+
+                            <label
+                                for="confirmPassword"
+                                class="block text-sm font-semibold text-[#17201E]"
+                            >
+                                Confirm password
+                            </label>
+
+
+                            <input
+                                id="confirmPassword"
+                                type="password"
+                                autocomplete="new-password"
+                                placeholder="Repeat your password"
+                                class="mt-2 w-full h-12 px-4 rounded-xl border border-gray-200 bg-white text-sm outline-none placeholder:text-gray-400 focus:border-[#D97706] focus:ring-4 focus:ring-orange-100 transition"
+                            >
+
+                        </div>
+
+
+
+                        <!-- TERMS -->
+
+                        <div class="mt-6 flex items-start gap-3">
+
+                            <input
+                                id="terms"
+                                type="checkbox"
+                                class="mt-1 w-4 h-4 accent-[#D97706]"
+                            >
+
+                            <label
+                                for="terms"
+                                class="text-xs sm:text-sm leading-5 text-gray-500"
+                            >
+
+                                I agree to Giftly's
+                                
+                                <a
+                                    href="#"
+                                    class="font-semibold text-[#D97706] hover:underline"
+                                >
+                                    Terms of Service
+                                </a>
+
+                                and
+
+                                <a
+                                    href="#"
+                                    class="font-semibold text-[#D97706] hover:underline"
+                                >
+                                    Privacy Policy
+                                </a>.
+
+                            </label>
+
+                        </div>
+
+
+
+                        <!-- ERROR -->
+
+                        <div
+                            id="errorMessage"
+                            class="hidden mt-4 rounded-xl bg-red-50 border border-red-100 px-4 py-3 text-xs font-medium text-red-600"
+                        ></div>
+
+
+
+                        <!-- SUBMIT -->
+
+                        <button
+                            type="submit"
+                            class="mt-6 w-full h-12 rounded-xl bg-[#D97706] text-white text-sm font-bold hover:bg-[#B45309] transition shadow-sm"
+                        >
+                            Create Account
+                        </button>
+
+
+                    </form>
+
+
+                    <!-- LOGIN LINK -->
+
+                    <p
+                        class="mt-6 text-center text-xs sm:text-sm text-gray-500"
+                    >
+
+                        Already have an account?
+
+                        <a
+                            href="login.html"
+                            class="font-bold text-[#D97706] hover:text-[#B45309]"
+                        >
+                            Log in
+                        </a>
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- SECURITY NOTE -->
+
+                <div
+                    class="mt-6 flex items-center justify-center gap-2 text-xs text-gray-400"
+                >
+
+                    <svg
+                        class="w-4 h-4"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        stroke-width="2"
+                    >
+
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M12 3l7 3v5c0 4.5-3 7.5-7 10-4-2.5-7-5.5-7-10V6l7-3Z"
+                        />
+
+                    </svg>
+
+                    Your account information is protected.
+
+                </div>
+
+            </div>
+
+        </main>
+
+
+
+        <!-- =================================================
+             FOOTER
+        ================================================== -->
+
+        <footer class="px-5 sm:px-8 py-6">
+
+            <div
+                class="max-w-7xl mx-auto text-center text-xs text-gray-400"
+            >
+
+                © 2026 Giftly. All rights reserved.
+
+            </div>
+
+        </footer>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script>
+
+
+        // =====================================================
+        // PASSWORD VISIBILITY
+        // =====================================================
+
+        const password =
+            document.getElementById("password");
+
+        const togglePassword =
+            document.getElementById("togglePassword");
+
+
+        togglePassword.addEventListener("click", () => {
+
+            const isPassword =
+                password.type === "password";
+
+
+            password.type =
+                isPassword ? "text" : "password";
+
+        });
+
+
+
+        // =====================================================
+        // SIGNUP VALIDATION
+        // =====================================================
+
+        const signupForm =
+            document.getElementById("signupForm");
+
+        const errorMessage =
+            document.getElementById("errorMessage");
+
+
+       signupForm.addEventListener("submit", async (event) => {
+
+            event.preventDefault();
+
+
+            const fullName =
+                document.getElementById("fullName").value.trim();
+
+            const email =
+                document.getElementById("email").value.trim();
+
+            const passwordValue =
+                document.getElementById("password").value;
+
+            const confirmPassword =
+                document.getElementById("confirmPassword").value;
+
+            const terms =
+                document.getElementById("terms").checked;
+
+
+            errorMessage.classList.add("hidden");
+
+
+            if (!fullName) {
+
+                showError("Please enter your full name.");
+
+                return;
+
+            }
+
+
+            if (!email || !email.includes("@")) {
+
+                showError("Please enter a valid email address.");
+
+                return;
+
+            }
+
+
+            if (passwordValue.length < 8) {
+
+                showError(
+                    "Your password must contain at least 8 characters."
+                );
+
+                return;
+
+            }
+
+
+            if (passwordValue !== confirmPassword) {
+
+                showError("Your passwords do not match.");
+
+                return;
+
+            }
+
+
+            if (!terms) {
+
+                showError(
+                    "Please agree to the Terms of Service and Privacy Policy."
+                );
+
+                return;
+
+            }
+
+
+            // TEMPORARY FRONTEND TEST
+
+            // =====================================================
+// CONNECT TO GIFTLY BACKEND
+// =====================================================
+
+try {
+
+    const response = await fetch("http://localhost:5000/api/signup", {
+
+        method: "POST",
+
+        headers: {
+            "Content-Type": "application/json"
+        },
+
+        body: JSON.stringify({
+            fullName: fullName,
+            email: email,
+            password: passwordValue
+        })
+
+    });
+
+
+    const data = await response.json();
+
+
+    if (!response.ok) {
+
+        showError(
+            data.message || "Unable to create your account."
+        );
+
+        return;
+
+    }
+
+
+    alert("Account created successfully!");
+
+
+    window.location.href = "login.html";
+
+
+} catch (error) {
+
+    console.error("Signup error:", error);
+
+    showError(
+        "Unable to connect to Giftly. Please make sure the server is running."
+    );
+
+}
+
+        });
+
+
+
+        function showError(message) {
+
+            errorMessage.textContent =
+                message;
+
+            errorMessage.classList.remove("hidden");
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
+

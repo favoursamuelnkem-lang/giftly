@@ -1,0 +1,1218 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Sell Gift Card — Giftly</title>
+
+    <link
+        rel="stylesheet"
+        href="./output.css"
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+</head>
+
+
+<body class="min-h-screen bg-[#FAFAF8] text-[#17201E] font-['Inter']">
+
+
+    <!-- =====================================================
+         MOBILE HEADER
+    ====================================================== -->
+
+    <header
+        class="lg:hidden sticky top-0 z-40 bg-white border-b border-gray-200"
+    >
+
+        <div
+            class="h-16 px-5 flex items-center justify-between"
+        >
+
+            <a
+                href="dashboard.html"
+                class="flex items-center gap-2.5"
+            >
+
+                <div
+                    class="w-9 h-9 rounded-xl bg-[#D97706] text-white flex items-center justify-center font-extrabold"
+                >
+                    G
+                </div>
+
+                <span class="font-extrabold text-lg">
+                    Giftly
+                </span>
+
+            </a>
+
+
+            <button
+                id="mobileMenuBtn"
+                type="button"
+                class="w-10 h-10 rounded-xl border border-gray-200 flex items-center justify-center"
+            >
+
+                <svg
+                    class="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.8"
+                >
+
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M4 6h16M4 12h16M4 18h16"
+                    />
+
+                </svg>
+
+            </button>
+
+        </div>
+
+
+        <!-- MOBILE MENU -->
+
+        <div
+            id="mobileMenu"
+            class="hidden border-t border-gray-100 bg-white px-5 py-4"
+        >
+
+            <nav class="space-y-1">
+
+                <a
+                    href="dashboard.html"
+                    class="block px-3 py-3 rounded-xl text-sm text-gray-600 hover:bg-gray-50"
+                >
+                    Dashboard
+                </a>
+
+                <a
+                    href="sell-giftcard.html"
+                    class="block px-3 py-3 rounded-xl bg-orange-50 text-[#D97706] text-sm font-bold"
+                >
+                    Sell Gift Card
+                </a>
+
+                <a
+                    href="airtime.html"
+                    class="block px-3 py-3 rounded-xl text-sm text-gray-600 hover:bg-gray-50"
+                >
+                    Airtime
+                </a>
+
+                <a
+                    href="data.html"
+                    class="block px-3 py-3 rounded-xl text-sm text-gray-600 hover:bg-gray-50"
+                >
+                    Data
+                </a>
+
+                <a
+                    href="transactions.html"
+                    class="block px-3 py-3 rounded-xl text-sm text-gray-600 hover:bg-gray-50"
+                >
+                    Transactions
+                </a>
+
+                <a
+                    href="profile.html"
+                    class="block px-3 py-3 rounded-xl text-sm text-gray-600 hover:bg-gray-50"
+                >
+                    Profile & Settings
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         DESKTOP SIDEBAR
+    ====================================================== -->
+
+    <aside
+        class="hidden lg:flex fixed inset-y-0 left-0 z-40 w-64 bg-white border-r border-gray-200 flex-col"
+    >
+
+        <!-- LOGO -->
+
+        <div class="h-20 px-6 flex items-center">
+
+            <a
+                href="dashboard.html"
+                class="flex items-center gap-3"
+            >
+
+                <div
+                    class="w-10 h-10 rounded-xl bg-[#D97706] text-white flex items-center justify-center font-extrabold"
+                >
+                    G
+                </div>
+
+                <span
+                    class="text-xl font-extrabold tracking-tight"
+                >
+                    Giftly
+                </span>
+
+            </a>
+
+        </div>
+
+
+
+        <!-- NAVIGATION -->
+
+        <nav class="flex-1 px-4 py-5 space-y-1">
+
+            <a
+                href="dashboard.html"
+                class="flex items-center gap-3 px-3 py-3 rounded-xl text-sm font-medium text-gray-600 hover:bg-gray-50 transition"
+            >
+                🏠
+                Dashboard
+            </a>
+
+
+            <a
+                href="sell-giftcard.html"
+                class="flex items-center gap-3 px-3 py-3 rounded-xl bg-orange-50 text-[#D97706] text-sm font-bold"
+            >
+                🎁
+                Sell Gift Card
+            </a>
+
+
+            <a
+                href="airtime.html"
+                class="flex items-center gap-3 px-3 py-3 rounded-xl text-sm font-medium text-gray-600 hover:bg-gray-50 transition"
+            >
+                📱
+                Airtime
+            </a>
+
+
+            <a
+                href="data.html"
+                class="flex items-center gap-3 px-3 py-3 rounded-xl text-sm font-medium text-gray-600 hover:bg-gray-50 transition"
+            >
+                📶
+                Data
+            </a>
+
+
+            <a
+                href="transactions.html"
+                class="flex items-center gap-3 px-3 py-3 rounded-xl text-sm font-medium text-gray-600 hover:bg-gray-50 transition"
+            >
+                ↔
+                Transactions
+            </a>
+
+
+            <div class="pt-7">
+
+                <p
+                    class="px-3 mb-3 text-[10px] uppercase tracking-widest font-bold text-gray-400"
+                >
+                    Account
+                </p>
+
+
+                <a
+                    href="profile.html"
+                    class="flex items-center gap-3 px-3 py-3 rounded-xl text-sm font-medium text-gray-600 hover:bg-gray-50 transition"
+                >
+                    ⚙
+                    Profile & Settings
+                </a>
+
+            </div>
+
+        </nav>
+
+
+        <!-- USER -->
+
+        <div class="border-t border-gray-100 p-4">
+
+            <div class="flex items-center gap-3">
+
+                <div
+                    class="w-10 h-10 rounded-full bg-[#17201E] text-white flex items-center justify-center text-xs font-bold"
+                >
+                    FS
+                </div>
+
+
+                <div class="min-w-0">
+
+                    <p class="text-sm font-bold truncate">
+                        Favour Samuel
+                    </p>
+
+                    <p class="text-xs text-gray-400 truncate">
+                        user@example.com
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <div class="lg:ml-64 min-h-screen">
+
+
+        <!-- DESKTOP HEADER -->
+
+        <header
+            class="hidden lg:flex h-20 bg-white border-b border-gray-200 px-8 items-center"
+        >
+
+            <div>
+
+                <p class="text-sm text-gray-400">
+                    Gift Cards
+                </p>
+
+                <h1 class="text-xl font-extrabold">
+                    Sell Gift Card
+                </h1>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- CONTENT -->
+
+        <main
+            class="p-5 sm:p-7 lg:p-8 max-w-6xl"
+        >
+
+
+            <!-- MOBILE TITLE -->
+
+            <div class="lg:hidden mb-7">
+
+                <p class="text-sm text-gray-400">
+                    Gift Cards
+                </p>
+
+                <h1 class="text-2xl font-extrabold mt-1">
+                    Sell Gift Card
+                </h1>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 INTRO
+            ================================================== -->
+
+            <div
+                class="rounded-2xl bg-[#17201E] text-white p-6 sm:p-8 relative overflow-hidden"
+            >
+
+                <div
+                    class="absolute -right-20 -top-24 w-64 h-64 rounded-full bg-[#D97706] opacity-20"
+                ></div>
+
+
+                <div class="relative max-w-2xl">
+
+                    <div
+                        class="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center text-2xl"
+                    >
+                        🎁
+                    </div>
+
+
+                    <h2
+                        class="mt-5 text-2xl sm:text-3xl font-extrabold"
+                    >
+                        Sell your gift card
+                    </h2>
+
+
+                    <p
+                        class="mt-2 text-sm sm:text-base text-gray-400 leading-6"
+                    >
+                        Select your gift card, provide the required
+                        information and submit it for verification.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 STEP INDICATOR
+            ================================================== -->
+
+            <div class="mt-8">
+
+                <div class="flex items-center">
+
+                    <div class="flex items-center gap-2">
+
+                        <span
+                            class="w-8 h-8 rounded-full bg-[#D97706] text-white flex items-center justify-center text-xs font-bold"
+                        >
+                            1
+                        </span>
+
+                        <span class="hidden sm:block text-sm font-bold">
+                            Card details
+                        </span>
+
+                    </div>
+
+
+                    <div
+                        class="flex-1 h-px bg-gray-200 mx-3 sm:mx-5"
+                    ></div>
+
+
+                    <div class="flex items-center gap-2">
+
+                        <span
+                            class="w-8 h-8 rounded-full bg-gray-200 text-gray-500 flex items-center justify-center text-xs font-bold"
+                        >
+                            2
+                        </span>
+
+                        <span class="hidden sm:block text-sm text-gray-400">
+                            Verification
+                        </span>
+
+                    </div>
+
+
+                    <div
+                        class="flex-1 h-px bg-gray-200 mx-3 sm:mx-5"
+                    ></div>
+
+
+                    <div class="flex items-center gap-2">
+
+                        <span
+                            class="w-8 h-8 rounded-full bg-gray-200 text-gray-500 flex items-center justify-center text-xs font-bold"
+                        >
+                            3
+                        </span>
+
+                        <span class="hidden sm:block text-sm text-gray-400">
+                            Wallet credit
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 FORM GRID
+            ================================================== -->
+
+            <div
+                class="mt-8 grid grid-cols-1 lg:grid-cols-3 gap-6"
+            >
+
+
+                <!-- =================================================
+                     FORM
+                ================================================== -->
+
+                <section
+                    class="lg:col-span-2 bg-white border border-gray-200 rounded-2xl p-5 sm:p-7"
+                >
+
+                    <form id="sellForm">
+
+
+                        <!-- GIFT CARD BRAND -->
+
+                        <div>
+
+                            <label
+                                for="giftCardBrand"
+                                class="block text-sm font-bold"
+                            >
+                                Gift card brand
+                            </label>
+
+
+                            <select
+                                id="giftCardBrand"
+                                class="mt-2 w-full h-12 px-4 rounded-xl border border-gray-200 bg-white text-sm outline-none focus:border-[#D97706] focus:ring-4 focus:ring-orange-100 transition"
+                            >
+
+                                <option value="">
+                                    Select gift card
+                                </option>
+
+                                <option value="Amazon">
+                                    Amazon
+                                </option>
+
+                                <option value="Apple">
+                                    Apple
+                                </option>
+
+                                <option value="Google Play">
+                                    Google Play
+                                </option>
+
+                                <option value="Steam">
+                                    Steam
+                                </option>
+
+                                <option value="PlayStation">
+                                    PlayStation
+                                </option>
+
+                                <option value="Xbox">
+                                    Xbox
+                                </option>
+
+                                <option value="Razer Gold">
+                                    Razer Gold
+                                </option>
+
+                                <option value="eBay">
+                                    eBay
+                                </option>
+
+                                <option value="Walmart">
+                                    Walmart
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+
+                        <!-- CARD TYPE -->
+
+                        <div class="mt-5">
+
+                            <label class="block text-sm font-bold">
+                                Card type
+                            </label>
+
+
+                            <div
+                                class="mt-2 grid grid-cols-1 sm:grid-cols-2 gap-3"
+                            >
+
+                                <label
+                                    class="cursor-pointer"
+                                >
+
+                                    <input
+                                        type="radio"
+                                        name="cardType"
+                                        value="physical"
+                                        class="peer sr-only"
+                                        checked
+                                    >
+
+
+                                    <div
+                                        class="rounded-xl border border-gray-200 p-4 peer-checked:border-[#D97706] peer-checked:bg-orange-50 transition"
+                                    >
+
+                                        <p class="text-sm font-bold">
+                                            Physical card
+                                        </p>
+
+                                        <p class="mt-1 text-xs text-gray-400">
+                                            I have the physical gift card.
+                                        </p>
+
+                                    </div>
+
+                                </label>
+
+
+                                <label
+                                    class="cursor-pointer"
+                                >
+
+                                    <input
+                                        type="radio"
+                                        name="cardType"
+                                        value="ecode"
+                                        class="peer sr-only"
+                                    >
+
+
+                                    <div
+                                        class="rounded-xl border border-gray-200 p-4 peer-checked:border-[#D97706] peer-checked:bg-orange-50 transition"
+                                    >
+
+                                        <p class="text-sm font-bold">
+                                            E-code
+                                        </p>
+
+                                        <p class="mt-1 text-xs text-gray-400">
+                                            I have a digital code.
+                                        </p>
+
+                                    </div>
+
+                                </label>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- CARD VALUE -->
+
+                        <div class="mt-5">
+
+                            <label
+                                for="cardValue"
+                                class="block text-sm font-bold"
+                            >
+                                Card value
+                            </label>
+
+
+                            <div class="relative mt-2">
+
+                                <span
+                                    class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 text-sm"
+                                >
+                                    $
+                                </span>
+
+
+                                <input
+                                    id="cardValue"
+                                    type="number"
+                                    min="1"
+                                    placeholder="Enter card value"
+                                    class="w-full h-12 pl-9 pr-4 rounded-xl border border-gray-200 text-sm outline-none focus:border-[#D97706] focus:ring-4 focus:ring-orange-100 transition"
+                                >
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- CARD CODE -->
+
+                        <div class="mt-5">
+
+                            <label
+                                for="cardCode"
+                                class="block text-sm font-bold"
+                            >
+                                Gift card code
+                            </label>
+
+
+                            <input
+                                id="cardCode"
+                                type="text"
+                                placeholder="Enter your gift card code"
+                                class="mt-2 w-full h-12 px-4 rounded-xl border border-gray-200 text-sm outline-none focus:border-[#D97706] focus:ring-4 focus:ring-orange-100 transition"
+                            >
+
+
+                            <p
+                                class="mt-2 text-xs text-gray-400"
+                            >
+                                Only submit a valid card you own.
+                            </p>
+
+                        </div>
+
+
+
+                        <!-- UPLOAD -->
+
+                        <div class="mt-5">
+
+                            <label
+                                class="block text-sm font-bold"
+                            >
+                                Upload card image
+                            </label>
+
+
+                            <label
+                                for="cardImage"
+                                class="mt-2 flex flex-col items-center justify-center min-h-36 px-5 py-6 rounded-xl border-2 border-dashed border-gray-200 hover:border-[#D97706] hover:bg-orange-50/30 cursor-pointer transition"
+                            >
+
+                                <div class="text-2xl">
+                                    📷
+                                </div>
+
+
+                                <p
+                                    class="mt-2 text-sm font-bold"
+                                >
+                                    Click to upload
+                                </p>
+
+
+                                <p
+                                    class="mt-1 text-xs text-gray-400 text-center"
+                                >
+                                    JPG, PNG or WEBP · Max 10MB
+                                </p>
+
+
+                                <input
+                                    id="cardImage"
+                                    type="file"
+                                    accept="image/png,image/jpeg,image/webp"
+                                    class="hidden"
+                                >
+
+                            </label>
+
+
+                            <p
+                                id="fileName"
+                                class="hidden mt-2 text-xs font-medium text-[#D97706]"
+                            ></p>
+
+                        </div>
+
+
+
+                        <!-- ERROR -->
+
+                        <div
+                            id="errorMessage"
+                            class="hidden mt-5 rounded-xl bg-red-50 border border-red-100 px-4 py-3 text-xs font-medium text-red-600"
+                        ></div>
+
+
+
+                        <!-- SUBMIT -->
+
+                        <button
+                            type="submit"
+                            class="mt-6 w-full h-12 rounded-xl bg-[#D97706] text-white text-sm font-bold hover:bg-[#B45309] transition"
+                        >
+                            Submit Gift Card
+                        </button>
+
+
+                    </form>
+
+                </section>
+
+
+
+                <!-- =================================================
+                     RATE / SUMMARY
+                ================================================== -->
+
+                <aside
+                    class="lg:col-span-1"
+                >
+
+                    <div
+                        class="bg-white border border-gray-200 rounded-2xl p-5 sm:p-6 lg:sticky lg:top-8"
+                    >
+
+                        <h3 class="font-extrabold">
+                            Trade summary
+                        </h3>
+
+
+                        <p
+                            class="mt-1 text-xs text-gray-400"
+                        >
+                            Your estimated payout.
+                        </p>
+
+
+                        <div
+                            class="mt-6 rounded-xl bg-[#FAFAF8] p-4"
+                        >
+
+                            <div
+                                class="flex items-center justify-between"
+                            >
+
+                                <span class="text-sm text-gray-500">
+                                    Gift card
+                                </span>
+
+                                <span
+                                    id="summaryBrand"
+                                    class="text-sm font-bold"
+                                >
+                                    —
+                                </span>
+
+                            </div>
+
+
+                            <div
+                                class="flex items-center justify-between mt-4"
+                            >
+
+                                <span class="text-sm text-gray-500">
+                                    Card value
+                                </span>
+
+                                <span
+                                    id="summaryValue"
+                                    class="text-sm font-bold"
+                                >
+                                    $0.00
+                                </span>
+
+                            </div>
+
+
+                            <div
+                                class="flex items-center justify-between mt-4"
+                            >
+
+                                <span class="text-sm text-gray-500">
+                                    Current rate
+                                </span>
+
+                                <span
+                                    id="summaryRate"
+                                    class="text-sm font-bold"
+                                >
+                                    —
+                                </span>
+
+                            </div>
+
+
+                            <div
+                                class="border-t border-gray-200 mt-5 pt-5"
+                            >
+
+                                <p class="text-xs text-gray-400">
+                                    Estimated payout
+                                </p>
+
+
+                                <p
+                                    id="estimatedPayout"
+                                    class="mt-1 text-2xl font-extrabold text-[#D97706]"
+                                >
+                                    ₦0.00
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- INFO -->
+
+                        <div
+                            class="mt-5 rounded-xl border border-orange-100 bg-orange-50 p-4"
+                        >
+
+                            <p
+                                class="text-xs font-bold text-[#B45309]"
+                            >
+                                Important
+                            </p>
+
+
+                            <p
+                                class="mt-1 text-xs leading-5 text-orange-800"
+                            >
+                                Your card will be reviewed before any
+                                amount is credited to your Giftly wallet.
+                            </p>
+
+                        </div>
+
+
+
+                        <!-- PROCESS -->
+
+                        <div class="mt-6">
+
+                            <p
+                                class="text-xs font-bold uppercase tracking-wider text-gray-400"
+                            >
+                                How it works
+                            </p>
+
+
+                            <div class="mt-4 space-y-4">
+
+
+                                <div class="flex gap-3">
+
+                                    <span
+                                        class="w-7 h-7 shrink-0 rounded-lg bg-gray-100 flex items-center justify-center text-xs font-bold"
+                                    >
+                                        1
+                                    </span>
+
+                                    <p
+                                        class="text-xs leading-5 text-gray-500"
+                                    >
+                                        Submit your card details.
+                                    </p>
+
+                                </div>
+
+
+                                <div class="flex gap-3">
+
+                                    <span
+                                        class="w-7 h-7 shrink-0 rounded-lg bg-gray-100 flex items-center justify-center text-xs font-bold"
+                                    >
+                                        2
+                                    </span>
+
+                                    <p
+                                        class="text-xs leading-5 text-gray-500"
+                                    >
+                                        Giftly verifies the card.
+                                    </p>
+
+                                </div>
+
+
+                                <div class="flex gap-3">
+
+                                    <span
+                                        class="w-7 h-7 shrink-0 rounded-lg bg-gray-100 flex items-center justify-center text-xs font-bold"
+                                    >
+                                        3
+                                    </span>
+
+                                    <p
+                                        class="text-xs leading-5 text-gray-500"
+                                    >
+                                        Approved trades are credited
+                                        to your wallet.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </aside>
+
+            </div>
+
+
+
+            <!-- FOOTER -->
+
+            <footer
+                class="py-8 text-center text-xs text-gray-400"
+            >
+                © 2026 Giftly. All rights reserved.
+            </footer>
+
+
+        </main>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script>
+
+        // =====================================================
+        // MOBILE MENU
+        // =====================================================
+
+        const mobileMenuBtn =
+            document.getElementById("mobileMenuBtn");
+
+        const mobileMenu =
+            document.getElementById("mobileMenu");
+
+
+        mobileMenuBtn.addEventListener("click", () => {
+
+            mobileMenu.classList.toggle("hidden");
+
+        });
+
+
+
+        // =====================================================
+        // FORM ELEMENTS
+        // =====================================================
+
+        const brand =
+            document.getElementById("giftCardBrand");
+
+        const cardValue =
+            document.getElementById("cardValue");
+
+        const cardCode =
+            document.getElementById("cardCode");
+
+        const cardImage =
+            document.getElementById("cardImage");
+
+        const fileName =
+            document.getElementById("fileName");
+
+        const summaryBrand =
+            document.getElementById("summaryBrand");
+
+        const summaryValue =
+            document.getElementById("summaryValue");
+
+        const summaryRate =
+            document.getElementById("summaryRate");
+
+        const estimatedPayout =
+            document.getElementById("estimatedPayout");
+
+
+
+        // =====================================================
+        // TEMPORARY DISPLAY RATE
+        // =====================================================
+
+        /*
+            IMPORTANT:
+
+            These rates are ONLY placeholders for the UI.
+
+            The real rate will come from the backend/provider
+            after we connect the gift-card trading service.
+        */
+
+        const demoRate = 1450;
+
+
+
+        function updateSummary() {
+
+            const selectedBrand =
+                brand.value;
+
+            const value =
+                Number(cardValue.value) || 0;
+
+
+            summaryBrand.textContent =
+                selectedBrand || "—";
+
+
+            summaryValue.textContent =
+                `$${value.toFixed(2)}`;
+
+
+            if (selectedBrand && value > 0) {
+
+                summaryRate.textContent =
+                    `₦${demoRate.toLocaleString()}/$`;
+
+                const payout =
+                    value * demoRate;
+
+                estimatedPayout.textContent =
+                    `₦${payout.toLocaleString(
+                        "en-NG",
+                        {
+                            minimumFractionDigits: 2,
+                            maximumFractionDigits: 2
+                        }
+                    )}`;
+
+            } else {
+
+                summaryRate.textContent =
+                    "—";
+
+                estimatedPayout.textContent =
+                    "₦0.00";
+
+            }
+
+        }
+
+
+        brand.addEventListener(
+            "change",
+            updateSummary
+        );
+
+
+        cardValue.addEventListener(
+            "input",
+            updateSummary
+        );
+
+
+
+        // =====================================================
+        // FILE UPLOAD
+        // =====================================================
+
+        cardImage.addEventListener("change", () => {
+
+            if (cardImage.files.length > 0) {
+
+                fileName.textContent =
+                    `Selected: ${cardImage.files[0].name}`;
+
+                fileName.classList.remove("hidden");
+
+            } else {
+
+                fileName.classList.add("hidden");
+
+            }
+
+        });
+
+
+
+        // =====================================================
+        // FORM SUBMIT
+        // =====================================================
+
+        const sellForm =
+            document.getElementById("sellForm");
+
+        const errorMessage =
+            document.getElementById("errorMessage");
+
+
+        sellForm.addEventListener("submit", (event) => {
+
+            event.preventDefault();
+
+
+            errorMessage.classList.add("hidden");
+
+
+            if (!brand.value) {
+
+                showError(
+                    "Please select your gift card brand."
+                );
+
+                return;
+
+            }
+
+
+            if (!cardValue.value || Number(cardValue.value) <= 0) {
+
+                showError(
+                    "Please enter the gift card value."
+                );
+
+                return;
+
+            }
+
+
+            if (!cardCode.value.trim()) {
+
+                showError(
+                    "Please enter your gift card code."
+                );
+
+                return;
+
+            }
+
+
+            if (!cardImage.files.length) {
+
+                showError(
+                    "Please upload an image of your gift card."
+                );
+
+                return;
+
+            }
+
+
+            alert(
+                "Gift card submission is ready. The real verification system will be connected to the backend next."
+            );
+
+        });
+
+
+        function showError(message) {
+
+            errorMessage.textContent =
+                message;
+
+            errorMessage.classList.remove("hidden");
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
+

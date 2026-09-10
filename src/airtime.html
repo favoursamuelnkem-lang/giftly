@@ -1,0 +1,1143 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Buy Airtime — Giftly</title>
+
+    <link
+        rel="stylesheet"
+        href="./output.css"
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+</head>
+
+
+<body class="min-h-screen bg-[#FAFAF8] text-[#17201E] font-['Inter']">
+
+
+    <!-- =====================================================
+         MOBILE HEADER
+    ====================================================== -->
+
+    <header
+        class="lg:hidden sticky top-0 z-40 bg-white border-b border-gray-200"
+    >
+
+        <div
+            class="h-16 px-5 flex items-center justify-between"
+        >
+
+            <a
+                href="dashboard.html"
+                class="flex items-center gap-2.5"
+            >
+
+                <div
+                    class="w-9 h-9 rounded-xl bg-[#D97706] text-white flex items-center justify-center font-extrabold"
+                >
+                    G
+                </div>
+
+                <span class="font-extrabold text-lg">
+                    Giftly
+                </span>
+
+            </a>
+
+
+            <button
+                id="mobileMenuBtn"
+                type="button"
+                class="w-10 h-10 rounded-xl border border-gray-200 flex items-center justify-center"
+            >
+
+                <svg
+                    class="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.8"
+                >
+
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M4 6h16M4 12h16M4 18h16"
+                    />
+
+                </svg>
+
+            </button>
+
+        </div>
+
+
+        <!-- MOBILE MENU -->
+
+        <div
+            id="mobileMenu"
+            class="hidden border-t border-gray-100 bg-white px-5 py-4"
+        >
+
+            <nav class="space-y-1">
+
+                <a
+                    href="dashboard.html"
+                    class="block px-3 py-3 rounded-xl text-sm text-gray-600 hover:bg-gray-50"
+                >
+                    Dashboard
+                </a>
+
+                <a
+                    href="sell-giftcard.html"
+                    class="block px-3 py-3 rounded-xl text-sm text-gray-600 hover:bg-gray-50"
+                >
+                    Sell Gift Card
+                </a>
+
+                <a
+                    href="airtime.html"
+                    class="block px-3 py-3 rounded-xl bg-orange-50 text-[#D97706] text-sm font-bold"
+                >
+                    Airtime
+                </a>
+
+                <a
+                    href="data.html"
+                    class="block px-3 py-3 rounded-xl text-sm text-gray-600 hover:bg-gray-50"
+                >
+                    Data
+                </a>
+
+                <a
+                    href="transactions.html"
+                    class="block px-3 py-3 rounded-xl text-sm text-gray-600 hover:bg-gray-50"
+                >
+                    Transactions
+                </a>
+
+                <a
+                    href="profile.html"
+                    class="block px-3 py-3 rounded-xl text-sm text-gray-600 hover:bg-gray-50"
+                >
+                    Profile & Settings
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         DESKTOP SIDEBAR
+    ====================================================== -->
+
+    <aside
+        class="hidden lg:flex fixed inset-y-0 left-0 z-40 w-64 bg-white border-r border-gray-200 flex-col"
+    >
+
+        <!-- LOGO -->
+
+        <div class="h-20 px-6 flex items-center">
+
+            <a
+                href="dashboard.html"
+                class="flex items-center gap-3"
+            >
+
+                <div
+                    class="w-10 h-10 rounded-xl bg-[#D97706] text-white flex items-center justify-center font-extrabold"
+                >
+                    G
+                </div>
+
+                <span
+                    class="text-xl font-extrabold tracking-tight"
+                >
+                    Giftly
+                </span>
+
+            </a>
+
+        </div>
+
+
+
+        <!-- NAVIGATION -->
+
+        <nav class="flex-1 px-4 py-5 space-y-1">
+
+            <a
+                href="dashboard.html"
+                class="flex items-center gap-3 px-3 py-3 rounded-xl text-sm font-medium text-gray-600 hover:bg-gray-50 transition"
+            >
+                🏠
+                Dashboard
+            </a>
+
+
+            <a
+                href="sell-giftcard.html"
+                class="flex items-center gap-3 px-3 py-3 rounded-xl text-sm font-medium text-gray-600 hover:bg-gray-50 transition"
+            >
+                🎁
+                Sell Gift Card
+            </a>
+
+
+            <a
+                href="airtime.html"
+                class="flex items-center gap-3 px-3 py-3 rounded-xl bg-orange-50 text-[#D97706] text-sm font-bold"
+            >
+                📱
+                Airtime
+            </a>
+
+
+            <a
+                href="data.html"
+                class="flex items-center gap-3 px-3 py-3 rounded-xl text-sm font-medium text-gray-600 hover:bg-gray-50 transition"
+            >
+                📶
+                Data
+            </a>
+
+
+            <a
+                href="transactions.html"
+                class="flex items-center gap-3 px-3 py-3 rounded-xl text-sm font-medium text-gray-600 hover:bg-gray-50 transition"
+            >
+                ↔
+                Transactions
+            </a>
+
+
+            <div class="pt-7">
+
+                <p
+                    class="px-3 mb-3 text-[10px] uppercase tracking-widest font-bold text-gray-400"
+                >
+                    Account
+                </p>
+
+
+                <a
+                    href="profile.html"
+                    class="flex items-center gap-3 px-3 py-3 rounded-xl text-sm font-medium text-gray-600 hover:bg-gray-50 transition"
+                >
+                    ⚙
+                    Profile & Settings
+                </a>
+
+            </div>
+
+        </nav>
+
+
+        <!-- USER -->
+
+        <div class="border-t border-gray-100 p-4">
+
+            <div class="flex items-center gap-3">
+
+                <div
+                    class="w-10 h-10 rounded-full bg-[#17201E] text-white flex items-center justify-center text-xs font-bold"
+                >
+                    FS
+                </div>
+
+
+                <div class="min-w-0">
+
+                    <p class="text-sm font-bold truncate">
+                        Favour Samuel
+                    </p>
+
+                    <p class="text-xs text-gray-400 truncate">
+                        user@example.com
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <div class="lg:ml-64 min-h-screen">
+
+
+        <!-- DESKTOP HEADER -->
+
+        <header
+            class="hidden lg:flex h-20 bg-white border-b border-gray-200 px-8 items-center"
+        >
+
+            <div>
+
+                <p class="text-sm text-gray-400">
+                    Services
+                </p>
+
+                <h1 class="text-xl font-extrabold">
+                    Buy Airtime
+                </h1>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- CONTENT -->
+
+        <main
+            class="p-5 sm:p-7 lg:p-8 max-w-6xl"
+        >
+
+
+            <!-- MOBILE TITLE -->
+
+            <div class="lg:hidden mb-7">
+
+                <p class="text-sm text-gray-400">
+                    Services
+                </p>
+
+                <h1 class="text-2xl font-extrabold mt-1">
+                    Buy Airtime
+                </h1>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 PAGE INTRO
+            ================================================== -->
+
+            <div
+                class="mb-8"
+            >
+
+                <h2
+                    class="text-2xl sm:text-3xl font-extrabold tracking-tight"
+                >
+                    Recharge a phone number
+                </h2>
+
+                <p
+                    class="mt-2 text-sm sm:text-base text-gray-400"
+                >
+                    Buy airtime directly from your Giftly wallet.
+                </p>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 MAIN GRID
+            ================================================== -->
+
+            <div
+                class="grid grid-cols-1 lg:grid-cols-3 gap-6"
+            >
+
+
+                <!-- =================================================
+                     AIRTIME FORM
+                ================================================== -->
+
+                <section
+                    class="lg:col-span-2 bg-white border border-gray-200 rounded-2xl p-5 sm:p-7"
+                >
+
+                    <form id="airtimeForm">
+
+
+                        <!-- NETWORK -->
+
+                        <div>
+
+                            <label
+                                class="block text-sm font-bold"
+                                for="network"
+                            >
+                                Select network
+                            </label>
+
+
+                            <div
+                                class="mt-3 grid grid-cols-2 sm:grid-cols-4 gap-3"
+                            >
+
+
+                                <!-- MTN -->
+
+                                <label class="cursor-pointer">
+
+                                    <input
+                                        type="radio"
+                                        name="network"
+                                        value="MTN"
+                                        class="peer sr-only"
+                                        checked
+                                    >
+
+                                    <div
+                                        class="h-20 rounded-xl border border-gray-200 flex flex-col items-center justify-center peer-checked:border-[#D97706] peer-checked:bg-orange-50 transition"
+                                    >
+
+                                        <div class="text-xl">
+                                            📱
+                                        </div>
+
+                                        <span
+                                            class="mt-1 text-xs font-bold"
+                                        >
+                                            MTN
+                                        </span>
+
+                                    </div>
+
+                                </label>
+
+
+
+                                <!-- AIRTEL -->
+
+                                <label class="cursor-pointer">
+
+                                    <input
+                                        type="radio"
+                                        name="network"
+                                        value="Airtel"
+                                        class="peer sr-only"
+                                    >
+
+                                    <div
+                                        class="h-20 rounded-xl border border-gray-200 flex flex-col items-center justify-center peer-checked:border-[#D97706] peer-checked:bg-orange-50 transition"
+                                    >
+
+                                        <div class="text-xl">
+                                            📱
+                                        </div>
+
+                                        <span
+                                            class="mt-1 text-xs font-bold"
+                                        >
+                                            Airtel
+                                        </span>
+
+                                    </div>
+
+                                </label>
+
+
+
+                                <!-- GLO -->
+
+                                <label class="cursor-pointer">
+
+                                    <input
+                                        type="radio"
+                                        name="network"
+                                        value="Glo"
+                                        class="peer sr-only"
+                                    >
+
+                                    <div
+                                        class="h-20 rounded-xl border border-gray-200 flex flex-col items-center justify-center peer-checked:border-[#D97706] peer-checked:bg-orange-50 transition"
+                                    >
+
+                                        <div class="text-xl">
+                                            📱
+                                        </div>
+
+                                        <span
+                                            class="mt-1 text-xs font-bold"
+                                        >
+                                            Glo
+                                        </span>
+
+                                    </div>
+
+                                </label>
+
+
+
+                                <!-- 9MOBILE -->
+
+                                <label class="cursor-pointer">
+
+                                    <input
+                                        type="radio"
+                                        name="network"
+                                        value="9mobile"
+                                        class="peer sr-only"
+                                    >
+
+                                    <div
+                                        class="h-20 rounded-xl border border-gray-200 flex flex-col items-center justify-center peer-checked:border-[#D97706] peer-checked:bg-orange-50 transition"
+                                    >
+
+                                        <div class="text-xl">
+                                            📱
+                                        </div>
+
+                                        <span
+                                            class="mt-1 text-xs font-bold"
+                                        >
+                                            9mobile
+                                        </span>
+
+                                    </div>
+
+                                </label>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- PHONE NUMBER -->
+
+                        <div class="mt-6">
+
+                            <label
+                                for="phoneNumber"
+                                class="block text-sm font-bold"
+                            >
+                                Phone number
+                            </label>
+
+
+                            <input
+                                id="phoneNumber"
+                                type="tel"
+                                inputmode="numeric"
+                                maxlength="11"
+                                placeholder="08012345678"
+                                class="mt-2 w-full h-12 px-4 rounded-xl border border-gray-200 text-sm outline-none focus:border-[#D97706] focus:ring-4 focus:ring-orange-100 transition"
+                            >
+
+
+                            <p
+                                class="mt-2 text-xs text-gray-400"
+                            >
+                                Enter the Nigerian phone number you want to recharge.
+                            </p>
+
+                        </div>
+
+
+
+                        <!-- AMOUNT -->
+
+                        <div class="mt-6">
+
+                            <label
+                                for="amount"
+                                class="block text-sm font-bold"
+                            >
+                                Airtime amount
+                            </label>
+
+
+                            <div
+                                class="mt-3 grid grid-cols-2 sm:grid-cols-4 gap-3"
+                            >
+
+                                <button
+                                    type="button"
+                                    class="amount-btn h-11 rounded-xl border-2 border-[#D97706] bg-orange-50 text-[#D97706] text-sm font-bold"
+                                    data-amount="100"
+                                >
+                                    ₦100
+                                </button>
+
+
+                                <button
+                                    type="button"
+                                    class="amount-btn h-11 rounded-xl border border-gray-200 bg-white text-gray-700 text-sm font-bold hover:border-orange-200"
+                                    data-amount="200"
+                                >
+                                    ₦200
+                                </button>
+
+
+                                <button
+                                    type="button"
+                                    class="amount-btn h-11 rounded-xl border border-gray-200 bg-white text-gray-700 text-sm font-bold hover:border-orange-200"
+                                    data-amount="500"
+                                >
+                                    ₦500
+                                </button>
+
+
+                                <button
+                                    type="button"
+                                    class="amount-btn h-11 rounded-xl border border-gray-200 bg-white text-gray-700 text-sm font-bold hover:border-orange-200"
+                                    data-amount="1000"
+                                >
+                                    ₦1,000
+                                </button>
+
+                            </div>
+
+
+                            <div class="relative mt-3">
+
+                                <span
+                                    class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 text-sm"
+                                >
+                                    ₦
+                                </span>
+
+
+                                <input
+                                    id="amount"
+                                    type="number"
+                                    min="50"
+                                    placeholder="Or enter another amount"
+                                    class="w-full h-12 pl-9 pr-4 rounded-xl border border-gray-200 text-sm outline-none focus:border-[#D97706] focus:ring-4 focus:ring-orange-100 transition"
+                                >
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- ERROR -->
+
+                        <div
+                            id="errorMessage"
+                            class="hidden mt-5 rounded-xl bg-red-50 border border-red-100 px-4 py-3 text-xs font-medium text-red-600"
+                        ></div>
+
+
+
+                        <!-- CONTINUE -->
+
+                        <button
+                            type="submit"
+                            class="mt-6 w-full h-12 rounded-xl bg-[#D97706] text-white text-sm font-bold hover:bg-[#B45309] transition"
+                        >
+                            Continue to Payment
+                        </button>
+
+
+                    </form>
+
+                </section>
+
+
+
+                <!-- =================================================
+                     SUMMARY
+                ================================================== -->
+
+                <aside>
+
+                    <div
+                        class="bg-white border border-gray-200 rounded-2xl p-5 sm:p-6 lg:sticky lg:top-8"
+                    >
+
+                        <h3 class="font-extrabold">
+                            Order summary
+                        </h3>
+
+
+                        <p
+                            class="mt-1 text-xs text-gray-400"
+                        >
+                            Review before payment.
+                        </p>
+
+
+
+                        <!-- WALLET -->
+
+                        <div
+                            class="mt-5 rounded-xl bg-[#17201E] text-white p-4"
+                        >
+
+                            <p
+                                class="text-xs text-gray-400"
+                            >
+                                Wallet balance
+                            </p>
+
+
+                            <p
+                                id="walletBalance"
+                                class="mt-1 text-xl font-extrabold"
+                            >
+                                ₦0.00
+                            </p>
+
+                        </div>
+
+
+
+                        <!-- DETAILS -->
+
+                        <div class="mt-5 space-y-4">
+
+                            <div
+                                class="flex justify-between gap-4"
+                            >
+
+                                <span
+                                    class="text-sm text-gray-500"
+                                >
+                                    Network
+                                </span>
+
+                                <span
+                                    id="summaryNetwork"
+                                    class="text-sm font-bold"
+                                >
+                                    MTN
+                                </span>
+
+                            </div>
+
+
+                            <div
+                                class="flex justify-between gap-4"
+                            >
+
+                                <span
+                                    class="text-sm text-gray-500"
+                                >
+                                    Phone
+                                </span>
+
+                                <span
+                                    id="summaryPhone"
+                                    class="text-sm font-bold"
+                                >
+                                    —
+                                </span>
+
+                            </div>
+
+
+                            <div
+                                class="flex justify-between gap-4"
+                            >
+
+                                <span
+                                    class="text-sm text-gray-500"
+                                >
+                                    Airtime
+                                </span>
+
+                                <span
+                                    id="summaryAmount"
+                                    class="text-sm font-bold"
+                                >
+                                    ₦0
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- TOTAL -->
+
+                        <div
+                            class="border-t border-gray-200 mt-5 pt-5"
+                        >
+
+                            <div
+                                class="flex items-center justify-between"
+                            >
+
+                                <span
+                                    class="text-sm font-bold"
+                                >
+                                    Total
+                                </span>
+
+
+                                <span
+                                    id="summaryTotal"
+                                    class="text-xl font-extrabold text-[#D97706]"
+                                >
+                                    ₦0.00
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- NOTE -->
+
+                        <div
+                            class="mt-5 rounded-xl bg-orange-50 border border-orange-100 p-4"
+                        >
+
+                            <p
+                                class="text-xs leading-5 text-orange-800"
+                            >
+                                Payment will be deducted from your Giftly wallet after confirmation.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </aside>
+
+            </div>
+
+
+
+            <!-- FOOTER -->
+
+            <footer
+                class="py-8 text-center text-xs text-gray-400"
+            >
+                © 2026 Giftly. All rights reserved.
+            </footer>
+
+
+        </main>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script>
+
+        // =====================================================
+        // MOBILE MENU
+        // =====================================================
+
+        const mobileMenuBtn =
+            document.getElementById("mobileMenuBtn");
+
+        const mobileMenu =
+            document.getElementById("mobileMenu");
+
+
+        mobileMenuBtn.addEventListener("click", () => {
+
+            mobileMenu.classList.toggle("hidden");
+
+        });
+
+
+
+        // =====================================================
+        // ELEMENTS
+        // =====================================================
+
+        const phoneNumber =
+            document.getElementById("phoneNumber");
+
+        const amount =
+            document.getElementById("amount");
+
+        const summaryPhone =
+            document.getElementById("summaryPhone");
+
+        const summaryAmount =
+            document.getElementById("summaryAmount");
+
+        const summaryTotal =
+            document.getElementById("summaryTotal");
+
+        const summaryNetwork =
+            document.getElementById("summaryNetwork");
+
+        const errorMessage =
+            document.getElementById("errorMessage");
+
+
+
+        // =====================================================
+        // NETWORK
+        // =====================================================
+
+        const networkInputs =
+            document.querySelectorAll(
+                'input[name="network"]'
+            );
+
+
+        networkInputs.forEach(input => {
+
+            input.addEventListener("change", () => {
+
+                summaryNetwork.textContent =
+                    input.value;
+
+            });
+
+        });
+
+
+
+        // =====================================================
+        // AMOUNT BUTTONS
+        // =====================================================
+
+        const amountButtons =
+            document.querySelectorAll(".amount-btn");
+
+
+        amountButtons.forEach(button => {
+
+            button.addEventListener("click", () => {
+
+                amountButtons.forEach(btn => {
+
+                    btn.classList.remove(
+                        "border-2",
+                        "border-[#D97706]",
+                        "bg-orange-50",
+                        "text-[#D97706]"
+                    );
+
+                    btn.classList.add(
+                        "border",
+                        "border-gray-200",
+                        "bg-white",
+                        "text-gray-700"
+                    );
+
+                });
+
+
+                button.classList.remove(
+                    "border",
+                    "border-gray-200",
+                    "bg-white",
+                    "text-gray-700"
+                );
+
+
+                button.classList.add(
+                    "border-2",
+                    "border-[#D97706]",
+                    "bg-orange-50",
+                    "text-[#D97706]"
+                );
+
+
+                amount.value =
+                    button.dataset.amount;
+
+                updateSummary();
+
+            });
+
+        });
+
+
+
+        // =====================================================
+        // INPUTS
+        // =====================================================
+
+        phoneNumber.addEventListener(
+            "input",
+            updateSummary
+        );
+
+
+        amount.addEventListener(
+            "input",
+            () => {
+
+                amountButtons.forEach(btn => {
+
+                    btn.classList.remove(
+                        "border-2",
+                        "border-[#D97706]",
+                        "bg-orange-50",
+                        "text-[#D97706]"
+                    );
+
+                    btn.classList.add(
+                        "border",
+                        "border-gray-200",
+                        "bg-white",
+                        "text-gray-700"
+                    );
+
+                });
+
+                updateSummary();
+
+            }
+        );
+
+
+
+        // =====================================================
+        // SUMMARY
+        // =====================================================
+
+        function updateSummary() {
+
+            summaryPhone.textContent =
+                phoneNumber.value || "—";
+
+
+            const selectedAmount =
+                Number(amount.value) || 0;
+
+
+            summaryAmount.textContent =
+                `₦${selectedAmount.toLocaleString()}`;
+
+
+            summaryTotal.textContent =
+                `₦${selectedAmount.toLocaleString()}`;
+
+        }
+
+
+
+        // =====================================================
+        // FORM
+        // =====================================================
+
+        const airtimeForm =
+            document.getElementById("airtimeForm");
+
+
+        airtimeForm.addEventListener(
+            "submit",
+            (event) => {
+
+                event.preventDefault();
+
+
+                errorMessage.classList.add("hidden");
+
+
+                const selectedNetwork =
+                    document.querySelector(
+                        'input[name="network"]:checked'
+                    );
+
+
+                const phone =
+                    phoneNumber.value.trim();
+
+
+                const selectedAmount =
+                    Number(amount.value);
+
+
+                if (!selectedNetwork) {
+
+                    showError(
+                        "Please select a network."
+                    );
+
+                    return;
+
+                }
+
+
+                if (
+                    !/^0[789][01]\d{8}$/.test(phone)
+                ) {
+
+                    showError(
+                        "Please enter a valid Nigerian phone number."
+                    );
+
+                    return;
+
+                }
+
+
+                if (
+                    !selectedAmount ||
+                    selectedAmount < 50
+                ) {
+
+                    showError(
+                        "Please enter an airtime amount of at least ₦50."
+                    );
+
+                    return;
+
+                }
+
+
+                alert(
+                    `Airtime order ready: ${selectedNetwork.value} — ${phone} — ₦${selectedAmount.toLocaleString()}`
+                );
+
+            }
+        );
+
+
+
+        // =====================================================
+        // ERROR
+        // =====================================================
+
+        function showError(message) {
+
+            errorMessage.textContent =
+                message;
+
+            errorMessage.classList.remove(
+                "hidden"
+            );
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
+
