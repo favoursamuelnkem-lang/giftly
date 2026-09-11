@@ -192,6 +192,33 @@ app.get("/api/user/:id", async (req, res) => {
   }
 });
 
+
+// ==========================================
+// GET USER TRANSACTIONS
+// ==========================================
+
+app.get("/api/transactions/:userId", async (req, res) => {
+  try {
+    const { userId } = req.params;
+
+    // Find all transactions belonging to this user
+    const transactions = await Transaction.find({
+      userId: userId,
+    }).sort({ createdAt: -1 });
+
+    res.status(200).json({
+      transactions: transactions,
+    });
+  } catch (error) {
+    console.error("Get transactions error:");
+    console.error(error.message);
+
+    res.status(500).json({
+      message: "Unable to load transactions.",
+    });
+  }
+});
+
 // ==========================================
 // GET NIGERIAN BANKS
 // ==========================================
