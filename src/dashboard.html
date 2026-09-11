@@ -799,38 +799,13 @@
 
                 <!-- TRANSACTIONS -->
 
-                <div id="transactionsList">
+              <div id="transactionsList">
 
+    <div class="px-6 py-12 text-center text-sm text-gray-400">
+        Loading transactions...
+    </div>
 
-                    <!-- EMPTY STATE -->
-
-                    <div
-                        class="px-6 py-12 text-center"
-                    >
-
-                        <div
-                            class="mx-auto w-12 h-12 rounded-xl bg-gray-50 flex items-center justify-center text-xl"
-                        >
-                            ↔
-                        </div>
-
-
-                        <h3
-                            class="mt-4 text-sm font-bold"
-                        >
-                            No transactions yet
-                        </h3>
-
-
-                        <p
-                            class="mt-1 text-xs text-gray-400"
-                        >
-                            Your recent activity will appear here.
-                        </p>
-
-                    </div>
-
-                </div>
+</div>
 
             </section>
 
@@ -1266,6 +1241,269 @@ showToast(
 const currentUser =
     JSON.parse(localStorage.getItem("giftlyUser"));
 
+    // =====================================================
+// RECENT TRANSACTIONS
+// =====================================================
+
+async function loadRecentTransactions() {
+
+    const transactionsList =
+        document.getElementById("transactionsList");
+
+    if (!transactionsList) return;
+
+    if (!currentUser || !currentUser.id) {
+
+        transactionsList.innerHTML = `
+            <div class="px-6 py-12 text-center">
+                <h3 class="text-sm font-bold">
+                    No transactions yet
+                </h3>
+
+                <p class="mt-1 text-xs text-gray-400">
+                    Your recent activity will appear here.
+                </p>
+            </div>
+        `;
+
+        return;
+    }
+
+    try {
+
+        const response = await fetch(
+            `https://giftly-1.onrender.com/api/transactions/${currentUser.id}`
+        );
+
+        const data = await response.json();
+
+        if (!response.ok) {
+
+            throw new Error(
+                data.message || "Unable to load transactions."
+            );
+
+        }
+
+        const transactions =
+            data.transactions || [];
+
+        // No transactions
+        if (transactions.length === 0) {
+
+            transactionsList.innerHTML = `
+                <div class="px-6 py-12 text-center">
+
+                    <div
+                        class="mx-auto w-12 h-12 rounded-xl bg-gray-50 flex items-center justify-center text-xl"
+                    >
+                        ↔
+                    </div>
+
+                    <h3 class="mt-4 text-sm font-bold">
+                        No transactions yet
+                    </h3>
+
+                    <p class="mt-1 text-xs text-gray-400">
+                        Your recent activity will appear here.
+                    </p>
+
+                </div>
+            `;
+
+            return;
+        }
+
+        // Show latest 5 transactions
+        const recentTransactions =
+            transactions.slice(0, 5);
+
+        transactionsList.innerHTML = "";
+
+        recentTransactions.forEach(transaction => {
+
+            let type = transaction.type;
+
+            let title = type;
+            let icon = "↔";
+            let isCredit = false;
+
+            // Wallet funding
+            if (type === "wallet_funding") {
+
+                type = "Wallet Funding";
+                title = "Wallet Deposit";
+                icon = "💰";
+                isCredit = true;
+
+            }
+
+            // Withdrawal
+            else if (type === "withdrawal") {
+
+                type = "Withdrawal";
+                title = "Bank Withdrawal";
+                icon = "💸";
+
+            }
+
+            // Airtime
+            else if (type === "airtime") {
+
+                type = "Airtime";
+                title = "Airtime Purchase";
+                icon = "📱";
+
+            }
+
+            // Data
+            else if (type === "data") {
+
+                type = "Data";
+                title = "Data Purchase";
+                icon = "📶";
+
+            }
+
+            // Gift card sale
+            else if (
+                type === "gift_card_sale" ||
+                type === "giftcard_sale"
+            ) {
+
+                type = "Gift Card Sale";
+                title = "Gift Card Sale";
+                icon = "🎁";
+                isCredit = true;
+
+            }
+
+            // Status
+            const status =
+                transaction.status
+                    ? transaction.status.charAt(0).toUpperCase() +
+                      transaction.status.slice(1).toLowerCase()
+                    : "Pending";
+
+            let statusClass =
+                "bg-gray-50 text-gray-600";
+
+            if (status === "Successful") {
+
+                statusClass =
+                    "bg-green-50 text-green-700";
+
+            }
+
+            else if (status === "Pending") {
+
+                statusClass =
+                    "bg-orange-50 text-orange-700";
+
+            }
+
+            else if (status === "Failed") {
+
+                statusClass =
+                    "bg-red-50 text-red-700";
+
+            }
+
+            const amount =
+                `₦${Number(transaction.amount).toLocaleString("en-NG", {
+                    minimumFractionDigits: 2,
+                    maximumFractionDigits: 2
+                })}`;
+
+            const formattedAmount =
+                `${isCredit ? "+" : "-"}${amount}`;
+
+            const date =
+                new Date(transaction.createdAt).toLocaleDateString(
+                    "en-US",
+                    {
+                        month: "short",
+                        day: "2-digit",
+                        year: "numeric"
+                    }
+                );
+
+            const item =
+                document.createElement("div");
+
+            item.className =
+                "px-5 sm:px-6 py-4 flex items-center justify-between gap-4";
+
+            item.innerHTML = `
+
+                <div class="flex items-center gap-3 min-w-0">
+
+                    <div
+                        class="w-10 h-10 shrink-0 rounded-xl bg-gray-50 flex items-center justify-center text-lg"
+                    >
+                        ${icon}
+                    </div>
+
+                    <div class="min-w-0">
+
+                        <p class="text-sm font-bold truncate">
+                            ${title}
+                        </p>
+
+                        <p class="mt-1 text-xs text-gray-400">
+                            ${type} • ${date}
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="text-right shrink-0">
+
+                    <p class="text-sm font-extrabold">
+                        ${formattedAmount}
+                    </p>
+
+                    <span
+                        class="inline-flex mt-1 px-2 py-1 rounded-full text-[10px] font-bold ${statusClass}"
+                    >
+                        ${status}
+                    </span>
+
+                </div>
+
+            `;
+
+            transactionsList.appendChild(item);
+
+        });
+
+    } catch (error) {
+
+        console.error(
+            "Load recent transactions error:",
+            error
+        );
+
+        transactionsList.innerHTML = `
+            <div class="px-6 py-12 text-center">
+
+                <h3 class="text-sm font-bold">
+                    Unable to load transactions
+                </h3>
+
+                <p class="mt-1 text-xs text-gray-400">
+                    Please try again later.
+                </p>
+
+            </div>
+        `;
+
+    }
+
+}
+
 
 // If no user is logged in, send them back to login
 if (!currentUser) {
@@ -1411,6 +1649,7 @@ async function loadLatestUserBalance() {
 
 // Load latest balance
 loadLatestUserBalance();
+loadRecentTransactions();
 
 
 // =====================================================
