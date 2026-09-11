@@ -745,63 +745,124 @@
         // Later we will load real transactions from the backend.
         // =====================================================
 
-        const transactions = [
+       // =====================================================
+// REAL TRANSACTIONS FROM BACKEND
+// =====================================================
 
-            {
-                id: "GT-10482",
-                type: "Gift Card Sale",
-                title: "Amazon Gift Card",
-                amount: "+₦85,000",
-                status: "Successful",
-                date: "Sep 08, 2026"
-            },
+let transactions = [];
 
-            {
-                id: "AT-10481",
-                type: "Airtime",
-                title: "MTN Airtime",
-                amount: "-₦1,000",
-                status: "Successful",
-                date: "Sep 08, 2026"
-            },
+const currentUser =
+    JSON.parse(localStorage.getItem("currentUser"));
 
-            {
-                id: "DT-10480",
-                type: "Data",
-                title: "MTN 5GB Data",
-                amount: "-₦1,500",
-                status: "Successful",
-                date: "Sep 07, 2026"
-            },
 
-            {
-                id: "WF-10479",
-                type: "Wallet Funding",
-                title: "Wallet Deposit",
-                amount: "+₦50,000",
-                status: "Successful",
-                date: "Sep 07, 2026"
-            },
+// =====================================================
+// LOAD TRANSACTIONS
+// =====================================================
 
-            {
-                id: "GT-10478",
-                type: "Gift Card Sale",
-                title: "Apple Gift Card",
-                amount: "+₦42,500",
-                status: "Pending",
-                date: "Sep 06, 2026"
-            },
+async function loadTransactions() {
 
-            {
-                id: "WD-10477",
-                type: "Withdrawal",
-                title: "Bank Withdrawal",
-                amount: "-₦20,000",
-                status: "Failed",
-                date: "Sep 05, 2026"
+    if (!currentUser || !currentUser.id) {
+
+        console.error("User not logged in.");
+
+        return;
+
+    }
+
+    try {
+
+        const response = await fetch(
+            `https://giftly-1.onrender.com/api/transactions/${currentUser.id}`
+        );
+
+        const data = await response.json();
+
+        if (!response.ok) {
+
+            throw new Error(
+                data.message || "Unable to load transactions."
+            );
+
+        }
+
+        transactions = data.transactions.map(transaction => {
+
+            let type = transaction.type;
+
+            // Convert backend type names
+            // to the names used by the UI.
+
+            if (type === "wallet_funding") {
+                type = "Wallet Funding";
             }
 
-        ];
+            else if (type === "withdrawal") {
+                type = "Withdrawal";
+            }
+
+            else if (type === "airtime") {
+                type = "Airtime";
+            }
+
+            else if (type === "data") {
+                type = "Data";
+            }
+
+            const isCredit =
+                transaction.type === "wallet_funding";
+
+            return {
+
+                id: transaction.txRef,
+
+                type: type,
+
+                title:
+                    transaction.type === "wallet_funding"
+                        ? "Wallet Deposit"
+                        : transaction.type === "withdrawal"
+                        ? "Bank Withdrawal"
+                        : type,
+
+                amount:
+                    `${isCredit ? "+" : "-"}₦${Number(
+                        transaction.amount
+                    ).toLocaleString()}`,
+
+                status:
+                    transaction.status.charAt(0).toUpperCase() +
+                    transaction.status.slice(1),
+
+                date:
+                    new Date(
+                        transaction.createdAt
+                    ).toLocaleDateString(
+                        "en-US",
+                        {
+                            month: "short",
+                            day: "2-digit",
+                            year: "numeric"
+                        }
+                    )
+
+            };
+
+        });
+
+        updateSummary();
+
+        renderTransactions();
+
+    } catch (error) {
+
+        console.error(
+            "Load transactions error:",
+            error
+        );
+
+    }
+
+}
 
 
 
